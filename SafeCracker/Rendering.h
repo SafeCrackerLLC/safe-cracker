@@ -5,6 +5,7 @@
 
 #include "Config.h"
 #include "GameLogic.h"
+#include "SafeNetwork.h"
 #include "State.h"
 
 void drawProgressBar();
@@ -16,6 +17,8 @@ void drawTargetArrow();
 void drawVaultWheel();
 void drawLevelSelectScreen();
 void drawFinishedScreen();
+void drawWifiConfigScreen();
+void drawNetworkInfoScreen();
 void drawGame();
 
 void drawProgressBar() {
@@ -129,28 +132,37 @@ void drawLevelSelectScreen() {
   display.setCursor(31, 2);
   display.print("SafeCracker");
 
-  display.setCursor(27, 16);
-  display.print("Choose level");
+  display.setCursor(0, 14);
+  display.print(getWifiStatusLabel());
 
-  for (int i = 0; i < LEVEL_COUNT; i++) {
-    int rowY = 31 + i * 12;
+  int menuItemCount = LEVEL_COUNT + 2;
+
+  for (int i = 0; i < menuItemCount; i++) {
+    int rowY = 26 + i * 10;
+    String label;
+
+    if (i < LEVEL_COUNT) {
+      label = LEVELS[i].name;
+    } else if (i == LEVEL_COUNT) {
+      label = "Network info";
+    } else {
+      label = wifiOfflineMode ? "Go online" : "Go offline";
+    }
 
     if (i == selectedLevelIndex) {
-      display.fillRect(16, rowY - 2, 96, 11, WHITE);
+      display.fillRect(8, rowY - 2, 112, 9, WHITE);
       display.setTextColor(BLACK);
-      display.setCursor(24, rowY);
+      display.setCursor(12, rowY);
       display.print("> ");
-      display.print(LEVELS[i].name);
+      display.print(label);
       display.setTextColor(WHITE);
     } else {
-      display.setCursor(24, rowY);
+      display.setCursor(12, rowY);
       display.print("  ");
-      display.print(LEVELS[i].name);
+      display.print(label);
     }
   }
 
-  display.setCursor(22, 56);
-  display.print("Btn: start");
 }
 
 void drawFinishedScreen() {
@@ -158,24 +170,92 @@ void drawFinishedScreen() {
 
   display.setTextSize(1);
   display.setCursor(37, 4);
-  display.print("Finished!");
+  display.print(levelWasWon ? "Unlocked!" : "Finished");
 
   display.setTextSize(1);
 
-  display.setCursor(12, 26);
+  display.setCursor(12, 18);
   display.print("Targets hit: ");
   display.print(getTargetsHit());
   display.print("/");
   display.print(getTotalTargets());
 
-  display.setCursor(12, 38);
-  display.print("Time left: ");
-  display.print(getRemainingSeconds());
+  display.setCursor(12, 30);
+  display.print("Time: ");
+  display.print(levelSolvedTimeMs / 1000.0, 1);
   display.print("s");
 
-  display.drawRect(39, 51, 50, 12, WHITE);
-  display.setCursor(46, 54);
-  display.print("Again!");
+  display.setCursor(12, 42);
+  display.print("Stability: ");
+  display.print(levelStabilityScore);
+  display.print("%");
+
+  display.setCursor(34, 56);
+  display.print("Btn: menu");
+}
+
+void drawWifiConfigScreen() {
+  display.setTextColor(WHITE);
+  display.setTextSize(1);
+  display.setCursor(13, 2);
+  display.print("WiFi setup");
+
+  display.setCursor(0, 16);
+  display.print("SSID:");
+  display.setCursor(0, 26);
+  display.print(wifiPortalSsid);
+
+  display.setCursor(0, 38);
+  display.print("Pass:");
+  display.print(WIFI_PORTAL_PASSWORD);
+
+  display.setCursor(0, 50);
+  display.print("Open 192.168.4.1");
+  display.setCursor(0, 58);
+  display.print("Btn: offline");
+}
+
+void drawNetworkInfoScreen() {
+  display.setTextColor(WHITE);
+  display.setTextSize(1);
+  display.setCursor(22, 2);
+  display.print("Network info");
+
+  display.setCursor(0, 14);
+  display.print(getWifiStatusLabel());
+
+  display.setCursor(0, 24);
+  display.print("SSID:");
+  if (configuredSsid.length() > 0) {
+    display.print(configuredSsid.substring(0, 15));
+  } else {
+    display.print("-");
+  }
+
+  display.setCursor(0, 34);
+  display.print("URL:");
+  String webhookUrl = getConfiguredWebhookUrl();
+  display.print(webhookUrl.substring(0, 17));
+  display.setCursor(0, 44);
+  display.print(webhookUrl.substring(17, 38));
+
+  for (int i = 0; i < 2; i++) {
+    int x = i == 0 ? 8 : 64;
+    int y = 55;
+
+    if (selectedNetworkInfoAction == i) {
+      display.fillRect(x - 2, y - 2, 54, 10, WHITE);
+      display.setTextColor(BLACK);
+    } else {
+      display.drawRect(x - 2, y - 2, 54, 10, WHITE);
+      display.setTextColor(WHITE);
+    }
+
+    display.setCursor(x, y);
+    display.print(i == 0 ? "Back" : "New setup");
+  }
+
+  display.setTextColor(WHITE);
 }
 
 void drawGame() {
@@ -189,6 +269,18 @@ void drawGame() {
 
   if (gameScreen == GAME_SCREEN_FINISHED) {
     drawFinishedScreen();
+    display.display();
+    return;
+  }
+
+  if (gameScreen == GAME_SCREEN_WIFI_CONFIG) {
+    drawWifiConfigScreen();
+    display.display();
+    return;
+  }
+
+  if (gameScreen == GAME_SCREEN_NETWORK_INFO) {
+    drawNetworkInfoScreen();
     display.display();
     return;
   }

@@ -1,0 +1,16 @@
+services:
+  safecracker-web:
+    build:
+      context: .
+      dockerfile: Containerfile
+    container_name: safecracker-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:18080:8000"
+    environment:
+      SAFECRACKER_DB: /data/safecracker.sqlite3
+    volumes:
+      - safecracker-data:/data:Z
+
+volumes:
+  safecracker-data:

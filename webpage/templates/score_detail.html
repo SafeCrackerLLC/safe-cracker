@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Run #{{ score.id }} | SafeCracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=4">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Run #{{ score.id }}</p>
+          <h1>{{ score.player_name or "Unclaimed run" }}</h1>
+        </div>
+        <a class="api-pill" href="/">Back</a>
+      </header>
+
+      <section class="metrics">
+        <article>
+          <span>Level</span>
+          <strong>{{ score.level_name }}</strong>
+        </article>
+        <article>
+          <span>Time</span>
+          <strong>{{ score.time_seconds }}s</strong>
+        </article>
+        <article>
+          <span>Stability</span>
+          <strong>{{ score.stability }}%</strong>
+        </article>
+        <article>
+          <span>Targets</span>
+          <strong>{{ score.targets_hit }}/{{ score.target_count }}</strong>
+        </article>
+      </section>
+
+      {% if not score.player_name %}
+      <section class="pending">
+        <form class="claim" method="post" action="/scores/{{ score.id }}/claim">
+          <div>
+            <strong>Claim this score</strong>
+            <span>{{ score.device_id }} | {{ score.created_at }}</span>
+          </div>
+          <input name="player_name" maxlength="40" placeholder="Ime" required>
+          <button type="submit">Save</button>
+        </form>
+      </section>
+      {% endif %}
+
+      <section class="content-grid">
+        <div class="panel">
+          <div class="section-head">
+            <h2>Target stability</h2>
+            <p>Stability score za svaki target u runu.</p>
+          </div>
+          <div class="target-list">
+            {% for target in target_stats %}
+            <div class="target-row">
+              <div>
+                <strong>#{{ target.index + 1 }} target {{ "%.2f"|format(target.target) }}</strong>
+                <span>{{ target.samples }} samples | {{ target.overshoots }} overshoots | {{ target.direction_changes }} direction changes</span>
+              </div>
+              <meter min="0" max="100" value="{{ target.stability }}"></meter>
+              <em>{{ target.stability }}%</em>
+            </div>
+            {% else %}
+            <p class="empty">Ovaj run nema target detalje.</p>
+            {% endfor %}
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="section-head">
+            <h2>Run metadata</h2>
+            <p>Podaci spremljeni iz webhooka.</p>
+          </div>
+          <dl class="meta-list">
+            <dt>Device</dt>
+            <dd>{{ score.device_id }}</dd>
+            <dt>Created</dt>
+            <dd>{{ score.created_at }}</dd>
+            <dt>Replay events</dt>
+            <dd>{{ replay | length }}</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="panel replay-panel">
+        <div class="section-head">
+          <h2>Replay</h2>
+          <p>Timeline pokazuje poziciju na skali od lijevo do desno i target koji je bio aktivan.</p>
+        </div>
+        <div id="replayStage" class="replay-stage"></div>
+        <div class="replay-controls">
+          <button id="replayToggle" type="button">Play</button>
+          <input id="replayScrub" type="range" min="0" max="1000" value="0">
+          <output id="replayTime">0.0s</output>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      window.safeCrackerReplay = {{ replay | tojson }};
+      window.safeCrackerTargets = {{ targets | tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='replay.js') }}?v=4"></script>
+  </body>
+</html>

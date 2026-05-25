@@ -22,3 +22,10 @@ Aplikacija koja na ekranu prikazuje bravu sefa koju je potrebno okretati desno i
 - **Slanje rezultata** — WiFi webhoook za prijenos rezultata (vrijeme rješavanja, težina, ime)
 - **Zvučni feedback** — buzzer signalizira točne/netočne poteze i otključavanje
 - **Kućište** — sav hardware zatvoren u ručno izrađenom kučištu
+
+## WiFi i leaderboard
+- ESP32 na bootu proba spremljeni WiFi. Ako nema credentiala ili spajanje ne uspije, otvara hotspot `SafeCracker-XXXX` sa sifrom `safe1234`.
+- Nakon spajanja na hotspot otvori `http://192.168.4.1` i upisi SSID/password i webhook URL, ili odaberi offline mode. Default webhook je `https://ruc-esp.nerizz.com/api/scores`.
+- Glavni meni ima `Network info` za pregled SSID-a/webhooka i otvaranje novog setupa te `Go offline`/`Go online`.
+- Nakon uspjesno rijesenog levela ESP32 salje `POST` na spremljeni webhook s levelom, vremenom, stabilnosti i brojem pogodjenih targeta.
+- Python webhook i leaderboard su u `webpage/`; server se pokrece preko `podman compose -f webpage/compose.yaml up -d --build`.

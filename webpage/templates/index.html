@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="hr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SafeCracker Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=4">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">ESP32 live scores</p>
+          <h1>SafeCracker Leaderboard</h1>
+        </div>
+        <a class="api-pill" href="/api/scores">API</a>
+      </header>
+
+      <section class="metrics">
+        <article>
+          <span>Total</span>
+          <strong>{{ stats.total_scores or 0 }}</strong>
+        </article>
+        <article>
+          <span>Avg time</span>
+          <strong>{{ ((stats.avg_time_ms or 0) / 1000) | round(1) }}s</strong>
+        </article>
+        <article>
+          <span>Avg stability</span>
+          <strong>{{ stats.avg_stability or 0 }}%</strong>
+        </article>
+        <article>
+          <span>Best stability</span>
+          <strong>{{ stats.best_stability or 0 }}%</strong>
+        </article>
+      </section>
+
+      {% if pending %}
+      <section class="pending">
+        <div class="section-head">
+          <h2>Unclaimed scores</h2>
+          <p>Upisi ime za zadnji score koji je dosao s ESP32.</p>
+        </div>
+        <div class="pending-grid">
+          {% for score in pending %}
+          <form class="claim" method="post" action="/scores/{{ score.id }}/claim">
+            <div>
+              <strong>{{ score.level_name }}</strong>
+              <span>{{ score.time_seconds }}s | {{ score.stability }}% | {{ score.device_id }}</span>
+            </div>
+            <input name="player_name" maxlength="40" placeholder="Ime" required>
+            <a class="ghost-button" href="/scores/{{ score.id }}">Details</a>
+            <button type="submit">Save</button>
+          </form>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <section class="content-grid">
+        <div class="panel leaderboard">
+          <div class="section-head">
+            <h2>Leaderboard</h2>
+            <p>Sortirano po levelu, vremenu i stabilnosti.</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Level</th>
+                  <th>Time</th>
+                  <th>Stability</th>
+                  <th>Run</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for score in leaderboard %}
+                <tr>
+                  <td>{{ loop.index }}</td>
+                  <td>{{ score.player_name }}</td>
+                  <td>{{ score.level_name }}</td>
+                  <td>{{ score.time_seconds }}s</td>
+                  <td>{{ score.stability }}%</td>
+                  <td><a class="table-link" href="/scores/{{ score.id }}">Details</a></td>
+                </tr>
+                {% else %}
+                <tr>
+                  <td colspan="6" class="empty">Nema jos claimanih scoreova.</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="section-head">
+            <h2>Level stats</h2>
+            <p>Prosjek po tezini.</p>
+          </div>
+          <div class="bars">
+            {% for level in by_level %}
+            <div class="bar-row">
+              <div>
+                <strong>{{ level.level_name }}</strong>
+                <span>{{ level.attempts }} attempts | {{ (level.avg_time_ms / 1000) | round(1) }}s avg</span>
+              </div>
+              <meter min="0" max="100" value="{{ level.avg_stability }}"></meter>
+              <em>{{ level.avg_stability }}%</em>
+            </div>
+            {% else %}
+            <p class="empty">Grafovi ce se popuniti nakon prvog scorea.</p>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="panel trend-panel">
+        <div class="section-head">
+          <h2>Recent trend</h2>
+          <p>Zadnjih 40 pokusaja.</p>
+        </div>
+        <canvas id="trend" height="180"></canvas>
+      </section>
+    </main>
+
+    <script>
+      window.safeCrackerRecent = {{ recent | tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='app.js') }}?v=4"></script>
+  </body>
+</html>

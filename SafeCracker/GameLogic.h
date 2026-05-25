@@ -6,6 +6,7 @@
 #include "Config.h"
 #include "Feedback.h"
 #include "Level.h"
+#include "SafeNetwork.h"
 #include "Power.h"
 #include "State.h"
 
@@ -34,6 +35,12 @@ bool isCurrentTargetHit();
 void moveSelectedLevel(int direction);
 void updateLevelTimer();
 void updateTargetProgress();
+void resetLevelStats();
+void recordLevelStability(int potDiff);
+void recordReplayEvent(int eventType, bool force);
+int calculateLevelStability();
+int calculateTargetStability(int targetIndex);
+void calculateAllTargetStabilityScores();
 void updateTurnBarFromPot(int potValue);
 void updateVaultRotationFromPot();
 
@@ -48,7 +55,11 @@ void startLevel(const Level& level) {
   levelWasWon = false;
   levelFinishedTime = 0;
   targetHitStartTime = 0;
+  levelSolvedTimeMs = 0;
+  levelStabilityScore = 0;
+  resetLevelStats();
   gameStartTime = millis();
+  recordReplayEvent(REPLAY_EVENT_START, true);
   gameScreen = GAME_SCREEN_PLAYING;
 }
 
@@ -70,10 +81,22 @@ void finishLevel(bool wasWon) {
 
   levelWasWon = wasWon;
   levelFinishedTime = millis();
+  levelSolvedTimeMs = levelFinishedTime - gameStartTime;
+  levelStabilityScore = calculateLevelStability();
+  calculateAllTargetStabilityScores();
+  recordReplayEvent(REPLAY_EVENT_FINISH, true);
   gameScreen = GAME_SCREEN_FINISHED;
 
   if (levelWasWon) {
     playVictorySound();
+    postScoreWebhook(
+      selectedLevelIndex + 1,
+      getCurrentLevel().name,
+      levelSolvedTimeMs,
+      levelStabilityScore,
+      getTargetsHit(),
+      getTotalTargets()
+    );
   } else {
     playLoseSound();
   }
@@ -273,6 +296,7 @@ void updateTargetProgress() {
     return;
   }
 
+  recordReplayEvent(REPLAY_EVENT_TARGET_HIT, true);
   currentTargetIndex++;
   targetHitStartTime = 0;
 
@@ -280,6 +304,141 @@ void updateTargetProgress() {
     finishLevel(true);
   } else {
     clickRight();
+  }
+}
+
+void resetLevelStats() {
+  stabilitySampleCount = 0;
+  stabilityErrorSum = 0;
+  stabilityOvershootCount = 0;
+  stabilityDirectionChanges = 0;
+  lastPotDirection = 0;
+  currentRunTargetCount = min(getCurrentLevel().targetCount, MAX_LEVEL_TARGETS);
+  replayEventCount = 0;
+  lastReplayEventTime = 0;
+  lastReplayEventFill = barFill;
+
+  for (int i = 0; i < MAX_LEVEL_TARGETS; i++) {
+    currentRunTargets[i] = 0;
+    targetStabilityScore[i] = 100;
+    targetStabilitySampleCount[i] = 0;
+    targetStabilityErrorSum[i] = 0;
+    targetStabilityOvershootCount[i] = 0;
+    targetStabilityDirectionChanges[i] = 0;
+    targetLastPotDirection[i] = 0;
+  }
+
+  for (int i = 0; i < currentRunTargetCount; i++) {
+    currentRunTargets[i] = getCurrentLevel().targets[i].fillAmount;
+  }
+}
+
+void recordLevelStability(int potDiff) {
+  if (gameScreen != GAME_SCREEN_PLAYING || isLevelComplete() || isLevelOutOfTime()) {
+    return;
+  }
+
+  float targetFill = getTargetFillAmount();
+  int targetIndex = currentTargetIndex;
+  stabilityErrorSum += constrain(abs(barFill - targetFill) / 2.0, 0.0, 1.0);
+  stabilitySampleCount++;
+
+  if (targetIndex >= 0 && targetIndex < MAX_LEVEL_TARGETS) {
+    targetStabilityErrorSum[targetIndex] += constrain(abs(barFill - targetFill) / 2.0, 0.0, 1.0);
+    targetStabilitySampleCount[targetIndex]++;
+  }
+
+  if (
+    (targetFill > 0 && barFill > targetFill + TARGET_OVERSHOOT_ALLOWANCE) ||
+    (targetFill < 0 && barFill < targetFill - TARGET_OVERSHOOT_ALLOWANCE)
+  ) {
+    stabilityOvershootCount++;
+
+    if (targetIndex >= 0 && targetIndex < MAX_LEVEL_TARGETS) {
+      targetStabilityOvershootCount[targetIndex]++;
+    }
+  }
+
+  int direction = 0;
+  if (potDiff > POT_DEADZONE) {
+    direction = 1;
+  } else if (potDiff < -POT_DEADZONE) {
+    direction = -1;
+  }
+
+  if (direction != 0) {
+    if (lastPotDirection != 0 && direction != lastPotDirection) {
+      stabilityDirectionChanges++;
+    }
+
+    lastPotDirection = direction;
+
+    if (targetIndex >= 0 && targetIndex < MAX_LEVEL_TARGETS) {
+      if (targetLastPotDirection[targetIndex] != 0 && direction != targetLastPotDirection[targetIndex]) {
+        targetStabilityDirectionChanges[targetIndex]++;
+      }
+
+      targetLastPotDirection[targetIndex] = direction;
+    }
+  }
+}
+
+void recordReplayEvent(int eventType, bool force) {
+  if (replayEventCount >= MAX_REPLAY_EVENTS) {
+    return;
+  }
+
+  unsigned long timeNow = millis();
+  unsigned long timeMs = timeNow >= gameStartTime ? timeNow - gameStartTime : 0;
+
+  if (!force) {
+    if (abs(barFill - lastReplayEventFill) < REPLAY_MIN_FILL_DELTA) {
+      return;
+    }
+
+    if (timeNow - lastReplayEventTime < REPLAY_SAMPLE_INTERVAL_MS) {
+      return;
+    }
+  }
+
+  replayEventTimeMs[replayEventCount] = timeMs;
+  replayEventFill[replayEventCount] = barFill;
+  replayEventTargetIndex[replayEventCount] = currentTargetIndex;
+  replayEventType[replayEventCount] = eventType;
+  replayEventCount++;
+  lastReplayEventTime = timeNow;
+  lastReplayEventFill = barFill;
+}
+
+int calculateLevelStability() {
+  if (stabilitySampleCount <= 0) {
+    return 100;
+  }
+
+  float averageError = stabilityErrorSum / stabilitySampleCount;
+  float overshootRate = (float)stabilityOvershootCount / stabilitySampleCount;
+  float directionRate = (float)stabilityDirectionChanges / stabilitySampleCount;
+  float score = 100.0 - averageError * 55.0 - overshootRate * 30.0 - directionRate * 15.0;
+
+  return constrain((int)(score + 0.5), 0, 100);
+}
+
+int calculateTargetStability(int targetIndex) {
+  if (targetIndex < 0 || targetIndex >= MAX_LEVEL_TARGETS || targetStabilitySampleCount[targetIndex] <= 0) {
+    return 100;
+  }
+
+  float averageError = targetStabilityErrorSum[targetIndex] / targetStabilitySampleCount[targetIndex];
+  float overshootRate = (float)targetStabilityOvershootCount[targetIndex] / targetStabilitySampleCount[targetIndex];
+  float directionRate = (float)targetStabilityDirectionChanges[targetIndex] / targetStabilitySampleCount[targetIndex];
+  float score = 100.0 - averageError * 55.0 - overshootRate * 30.0 - directionRate * 15.0;
+
+  return constrain((int)(score + 0.5), 0, 100);
+}
+
+void calculateAllTargetStabilityScores() {
+  for (int i = 0; i < currentRunTargetCount; i++) {
+    targetStabilityScore[i] = calculateTargetStability(i);
   }
 }
 
@@ -294,15 +453,17 @@ void updateLevelTimer() {
 }
 
 void moveSelectedLevel(int direction) {
-  if (LEVEL_COUNT <= 0) {
+  int menuItemCount = LEVEL_COUNT + 2;
+
+  if (menuItemCount <= 0) {
     return;
   }
 
   selectedLevelIndex += direction;
 
   if (selectedLevelIndex < 0) {
-    selectedLevelIndex = LEVEL_COUNT - 1;
-  } else if (selectedLevelIndex >= LEVEL_COUNT) {
+    selectedLevelIndex = menuItemCount - 1;
+  } else if (selectedLevelIndex >= menuItemCount) {
     selectedLevelIndex = 0;
   }
 
@@ -319,6 +480,8 @@ void updateVaultRotationFromPot() {
   int diff = currentValue - lastValue;
 
   updateTurnBarFromPot(currentValue);
+  recordLevelStability(diff);
+  recordReplayEvent(REPLAY_EVENT_MOVE, false);
   updateTargetProgress();
 
   if (gameScreen != GAME_SCREEN_PLAYING) {

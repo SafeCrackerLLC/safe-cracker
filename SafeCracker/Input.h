@@ -6,11 +6,18 @@
 #include "Config.h"
 #include "GameLogic.h"
 #include "Level.h"
+#include "SafeNetwork.h"
 #include "Power.h"
 
 void handleButtonActivity();
 void calibrateJoystickCenter();
 void handleJoystickLevelSelect();
+void handleJoystickNetworkInfo();
+int getMenuItemCount();
+
+int getMenuItemCount() {
+  return LEVEL_COUNT + 2;
+}
 
 void calibrateJoystickCenter() {
   long total = 0;
@@ -56,14 +63,69 @@ void handleJoystickLevelSelect() {
   resetSleepTimer();
 }
 
+void handleJoystickNetworkInfo() {
+  if (gameScreen != GAME_SCREEN_NETWORK_INFO) {
+    return;
+  }
+
+  int joystickY = analogRead(JOYSTICK_Y_PIN);
+  int distanceFromCenter = joystickY - joystickCenterValue;
+
+  if (abs(distanceFromCenter) <= JOYSTICK_DEADZONE) {
+    joystickMenuReady = true;
+    return;
+  }
+
+  if (!joystickMenuReady) {
+    return;
+  }
+
+  if (millis() - lastJoystickMoveTime < JOYSTICK_MENU_REPEAT_MS) {
+    return;
+  }
+
+  selectedNetworkInfoAction = selectedNetworkInfoAction == 0 ? 1 : 0;
+  lastJoystickMoveTime = millis();
+  joystickMenuReady = false;
+  clickRight();
+  resetSleepTimer();
+}
+
 void handleButtonActivity() {
   handleJoystickLevelSelect();
+  handleJoystickNetworkInfo();
 
   if (digitalRead(BUTTON_PIN) == LOW) {
     resetSleepTimer();
 
     if (gameScreen == GAME_SCREEN_LEVEL_SELECT) {
-      startSelectedLevel();
+      if (selectedLevelIndex < LEVEL_COUNT) {
+        startSelectedLevel();
+      } else if (selectedLevelIndex == LEVEL_COUNT) {
+        selectedNetworkInfoAction = 0;
+        gameScreen = GAME_SCREEN_NETWORK_INFO;
+      } else {
+        setWifiOfflineMode(!wifiOfflineMode);
+      }
+
+      delay(250);
+      return;
+    }
+
+    if (gameScreen == GAME_SCREEN_WIFI_CONFIG) {
+      setWifiOfflineMode(true);
+      gameScreen = GAME_SCREEN_LEVEL_SELECT;
+      delay(250);
+      return;
+    }
+
+    if (gameScreen == GAME_SCREEN_NETWORK_INFO) {
+      if (selectedNetworkInfoAction == 0) {
+        gameScreen = GAME_SCREEN_LEVEL_SELECT;
+      } else {
+        startWifiConfigPortal(false);
+      }
+
       delay(250);
       return;
     }
