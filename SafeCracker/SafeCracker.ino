@@ -7,6 +7,7 @@
 #include "GameLogic.h"
 #include "Input.h"
 #include "Level.h"
+#include "SafeNetwork.h"
 #include "Power.h"
 #include "Rendering.h"
 #include "State.h"
@@ -24,6 +25,7 @@ float barFill = 0;
 int lastValue = 0;
 int currentTargetIndex = 0;
 int selectedLevelIndex = 0;
+int selectedNetworkInfoAction = 0;
 int gameScreen = GAME_SCREEN_LEVEL_SELECT;
 bool levelWasWon = false;
 int joystickCenterValue = JOYSTICK_CENTER_VALUE;
@@ -32,6 +34,28 @@ unsigned long gameStartTime = 0;
 unsigned long levelFinishedTime = 0;
 unsigned long targetHitStartTime = 0;
 unsigned long lastJoystickMoveTime = 0;
+unsigned long levelSolvedTimeMs = 0;
+int levelStabilityScore = 0;
+int stabilitySampleCount = 0;
+float stabilityErrorSum = 0;
+int stabilityOvershootCount = 0;
+int stabilityDirectionChanges = 0;
+int lastPotDirection = 0;
+int currentRunTargetCount = 0;
+float currentRunTargets[MAX_LEVEL_TARGETS];
+int targetStabilityScore[MAX_LEVEL_TARGETS];
+int targetStabilitySampleCount[MAX_LEVEL_TARGETS];
+float targetStabilityErrorSum[MAX_LEVEL_TARGETS];
+int targetStabilityOvershootCount[MAX_LEVEL_TARGETS];
+int targetStabilityDirectionChanges[MAX_LEVEL_TARGETS];
+int targetLastPotDirection[MAX_LEVEL_TARGETS];
+int replayEventCount = 0;
+unsigned long replayEventTimeMs[MAX_REPLAY_EVENTS];
+float replayEventFill[MAX_REPLAY_EVENTS];
+int replayEventTargetIndex[MAX_REPLAY_EVENTS];
+int replayEventType[MAX_REPLAY_EVENTS];
+unsigned long lastReplayEventTime = 0;
+float lastReplayEventFill = 0;
 
 // --------------------
 // Device / power state
@@ -39,6 +63,16 @@ unsigned long lastJoystickMoveTime = 0;
 unsigned long lastActivityTime = 0;
 volatile bool sleepRequested = false;
 esp_timer_handle_t sleepTimer = NULL;
+bool wifiConfigPortalActive = false;
+bool wifiConnectInProgress = false;
+bool wifiHasCredentials = false;
+bool wifiOfflineMode = false;
+unsigned long wifiConnectStartedAt = 0;
+String configuredSsid = "";
+String configuredPassword = "";
+String configuredWebhookUrl = "";
+String wifiPortalSsid = "";
+String networkStatusMessage = "";
 
 // --------------------
 // Arduino setup
@@ -52,11 +86,6 @@ void setup() {
 
   Serial.begin(115200);
 
-  lastValue = analogRead(POT_PIN);
-  calibrateJoystickCenter();
-  lastActivityTime = millis();
-  initializeSleepTimer();
-
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println("OLED not found!");
     while (true);
@@ -64,12 +93,19 @@ void setup() {
 
   display.clearDisplay();
   display.display();
+
+  lastValue = analogRead(POT_PIN);
+  calibrateJoystickCenter();
+  lastActivityTime = millis();
+  initializeSleepTimer();
+  initializeNetwork();
 }
 
 // --------------------
 // Arduino game loop
 // --------------------
 void loop() {
+  updateNetwork();
   handleButtonActivity();
 
   if (gameScreen == GAME_SCREEN_PLAYING) {

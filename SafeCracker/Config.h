@@ -7,7 +7,8 @@
 #define BUZZER_PIN 13
 #define VIBRATION_PIN 26
 #define POT_PIN 34
-#define JOYSTICK_Y_PIN 27
+// Joystick Y must use an ADC1 pin because ADC2 pins are not reliable while WiFi is active.
+#define JOYSTICK_Y_PIN 33
 #define BUTTON_PIN 12
 
 // --------------------
@@ -65,6 +66,18 @@ const float TARGET_OVERSHOOT_ALLOWANCE = 0.05;
 const unsigned long TARGET_HIT_HOLD_MS = 250;
 const int BREATH_BOB_CYCLE_MS = 2400;
 const int BREATH_BOB_STEP_MS = 120;
+const char* const SCORE_WEBHOOK_URL = "https://ruc-esp.nerizz.com/api/scores";
+const char* const WIFI_PORTAL_PASSWORD = "safe1234";
+const unsigned long WIFI_CONNECT_TIMEOUT_MS = 12000;
+const unsigned long SCORE_POST_TIMEOUT_MS = 4000;
+const int MAX_LEVEL_TARGETS = 12;
+const int MAX_REPLAY_EVENTS = 180;
+const unsigned long REPLAY_SAMPLE_INTERVAL_MS = 120;
+const float REPLAY_MIN_FILL_DELTA = 0.03;
+const int REPLAY_EVENT_START = 0;
+const int REPLAY_EVENT_MOVE = 1;
+const int REPLAY_EVENT_TARGET_HIT = 2;
+const int REPLAY_EVENT_FINISH = 3;
 
 // --------------------
 // Screen states
@@ -72,6 +85,8 @@ const int BREATH_BOB_STEP_MS = 120;
 const int GAME_SCREEN_LEVEL_SELECT = 0;
 const int GAME_SCREEN_PLAYING = 1;
 const int GAME_SCREEN_FINISHED = 2;
+const int GAME_SCREEN_WIFI_CONFIG = 3;
+const int GAME_SCREEN_NETWORK_INFO = 4;
 
 // --------------------
 // Device settings

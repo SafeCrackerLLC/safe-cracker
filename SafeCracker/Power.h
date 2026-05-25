@@ -50,6 +50,11 @@ void goToSleep() {
 }
 
 void sleepIfInactive() {
+  if (wifiConfigPortalActive) {
+    resetSleepTimer();
+    return;
+  }
+
   if (sleepRequested) {
     goToSleep();
   }
