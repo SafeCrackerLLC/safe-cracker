@@ -274,7 +274,9 @@ void updateNetwork() {
   if (millis() - wifiConnectStartedAt >= WIFI_CONNECT_TIMEOUT_MS) {
     wifiConnectInProgress = false;
     networkStatusMessage = "WiFi failed";
+    Serial.println("WiFi connection failed. Starting setup portal.");
     WiFi.disconnect(false, false);
+    startWifiConfigPortal(false);
   }
 }
 

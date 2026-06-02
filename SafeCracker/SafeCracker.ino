@@ -56,6 +56,7 @@ int replayEventTargetIndex[MAX_REPLAY_EVENTS];
 int replayEventType[MAX_REPLAY_EVENTS];
 unsigned long lastReplayEventTime = 0;
 float lastReplayEventFill = 0;
+unsigned long lastSerialStatusTime = 0;
 
 // --------------------
 // Device / power state
@@ -85,20 +86,43 @@ void setup() {
   digitalWrite(VIBRATION_PIN, LOW);
 
   Serial.begin(115200);
+  delay(1000);
+  Serial.println("SafeCracker booting...");
+  Serial.println("Starting I2C on SDA 21 / SCL 22...");
+  Wire.begin(OLED_SDA_PIN, OLED_SCL_PIN);
 
+  Serial.println("Starting OLED...");
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println("OLED not found!");
     while (true);
   }
+  Serial.println("OLED found.");
+
+  display.ssd1306_command(SSD1306_SETCONTRAST);
+  display.ssd1306_command(255);
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 0);
+  display.println("SafeCracker");
+  display.println("OLED test OK");
+  display.drawRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, WHITE);
+  display.display();
+  delay(2000);
 
   display.clearDisplay();
   display.display();
 
+  Serial.println("Reading potentiometer...");
   lastValue = analogRead(POT_PIN);
+  Serial.println("Calibrating joystick...");
   calibrateJoystickCenter();
+  Serial.println("Starting sleep timer...");
   lastActivityTime = millis();
   initializeSleepTimer();
+  Serial.println("Starting network...");
   initializeNetwork();
+  Serial.println("SafeCracker ready.");
 }
 
 // --------------------
@@ -107,6 +131,14 @@ void setup() {
 void loop() {
   updateNetwork();
   handleButtonActivity();
+
+  if (millis() - lastSerialStatusTime >= 2000) {
+    lastSerialStatusTime = millis();
+    Serial.print("Running. Screen=");
+    Serial.print(gameScreen);
+    Serial.print(" WiFi=");
+    Serial.println(getWifiStatusLabel());
+  }
 
   if (gameScreen == GAME_SCREEN_PLAYING) {
     updateLevelTimer();

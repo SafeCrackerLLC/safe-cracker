@@ -10,6 +10,8 @@
 // Joystick Y must use an ADC1 pin because ADC2 pins are not reliable while WiFi is active.
 #define JOYSTICK_Y_PIN 33
 #define BUTTON_PIN 12
+#define OLED_SDA_PIN 21
+#define OLED_SCL_PIN 22
 
 // --------------------
 // Display setup
