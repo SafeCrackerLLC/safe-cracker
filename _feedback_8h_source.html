@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Izvorni kod datoteke Feedback.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Traži',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_feedback_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Feedback.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_feedback_8h.html">Dokumenacija za ovu datoteku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef FEEDBACK_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define FEEDBACK_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_config_8h.html">Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(<span class="keywordtype">int</span> frequency, <span class="keywordtype">int</span> durationMs);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a0b54cc74f3892acae383cf5e2517ed44">clickRight</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a1c1fa09b5e9c1e70c157af7aa68dd948">clickLeft</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#abcabb7db05b21c7989a2d40e08286f6e">playVictorySound</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a8fc95b180cc807f40bc82861c6f48372">playLoseSound</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">   28</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(<span class="keywordtype">int</span> frequency, <span class="keywordtype">int</span> durationMs) {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  digitalWrite(<a class="code hl_define" href="_config_8h.html#a5b73bba3bf1b089d7f57fc0fb55c84ea">VIBRATION_PIN</a>, HIGH);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  tone(<a class="code hl_define" href="_config_8h.html#ab61d0981ed42df9e18211b273d22cfcd">BUZZER_PIN</a>, frequency, durationMs);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  delay(durationMs);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  noTone(<a class="code hl_define" href="_config_8h.html#ab61d0981ed42df9e18211b273d22cfcd">BUZZER_PIN</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">if</span> (durationMs &lt; <a class="code hl_variable" href="_config_8h.html#aac29105b5960659112c662b4842ddcef">MIN_VIBRATION_PULSE_MS</a>) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    delay(<a class="code hl_variable" href="_config_8h.html#aac29105b5960659112c662b4842ddcef">MIN_VIBRATION_PULSE_MS</a> - durationMs);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  digitalWrite(<a class="code hl_define" href="_config_8h.html#a5b73bba3bf1b089d7f57fc0fb55c84ea">VIBRATION_PIN</a>, LOW);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="_feedback_8h.html#a0b54cc74f3892acae383cf5e2517ed44">   41</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a0b54cc74f3892acae383cf5e2517ed44">clickRight</a>() {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(600, <a class="code hl_variable" href="_config_8h.html#a1f57aad55fe7b38eac1206375fdf7330">CLICK_VIBRATION_MS</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_feedback_8h.html#a1c1fa09b5e9c1e70c157af7aa68dd948">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a1c1fa09b5e9c1e70c157af7aa68dd948">clickLeft</a>() {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(300, <a class="code hl_variable" href="_config_8h.html#a1f57aad55fe7b38eac1206375fdf7330">CLICK_VIBRATION_MS</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_feedback_8h.html#abcabb7db05b21c7989a2d40e08286f6e">   49</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#abcabb7db05b21c7989a2d40e08286f6e">playVictorySound</a>() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(660, 70);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  delay(30);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(880, 80);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  delay(30);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(1040, 110);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="_feedback_8h.html#a8fc95b180cc807f40bc82861c6f48372">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_feedback_8h.html#a8fc95b180cc807f40bc82861c6f48372">playLoseSound</a>() {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(330, 90);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  delay(40);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_function" href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a>(220, 140);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_config_8h_html"><div class="ttname"><a href="_config_8h.html">Config.h</a></div><div class="ttdoc">Centralne hardverske pin definicije i konstante igre.</div></div>
+<div class="ttc" id="a_config_8h_html_a1f57aad55fe7b38eac1206375fdf7330"><div class="ttname"><a href="_config_8h.html#a1f57aad55fe7b38eac1206375fdf7330">CLICK_VIBRATION_MS</a></div><div class="ttdeci">const int CLICK_VIBRATION_MS</div><div class="ttdoc">Trajanje kratkog klik feedbacka u milisekundama.</div><div class="ttdef"><b>Definition</b> <a href="_config_8h_source.html#l00106">Config.h:106</a></div></div>
+<div class="ttc" id="a_config_8h_html_a5b73bba3bf1b089d7f57fc0fb55c84ea"><div class="ttname"><a href="_config_8h.html#a5b73bba3bf1b089d7f57fc0fb55c84ea">VIBRATION_PIN</a></div><div class="ttdeci">#define VIBRATION_PIN</div><div class="ttdoc">GPIO pin vibracijskog motora.</div><div class="ttdef"><b>Definition</b> <a href="_config_8h_source.html#l00018">Config.h:18</a></div></div>
+<div class="ttc" id="a_config_8h_html_aac29105b5960659112c662b4842ddcef"><div class="ttname"><a href="_config_8h.html#aac29105b5960659112c662b4842ddcef">MIN_VIBRATION_PULSE_MS</a></div><div class="ttdeci">const int MIN_VIBRATION_PULSE_MS</div><div class="ttdoc">Minimalno trajanje vibracijskog impulsa u milisekundama.</div><div class="ttdef"><b>Definition</b> <a href="_config_8h_source.html#l00108">Config.h:108</a></div></div>
+<div class="ttc" id="a_config_8h_html_ab61d0981ed42df9e18211b273d22cfcd"><div class="ttname"><a href="_config_8h.html#ab61d0981ed42df9e18211b273d22cfcd">BUZZER_PIN</a></div><div class="ttdeci">#define BUZZER_PIN</div><div class="ttdoc">GPIO pin pasivne zujalice.</div><div class="ttdef"><b>Definition</b> <a href="_config_8h_source.html#l00016">Config.h:16</a></div></div>
+<div class="ttc" id="a_feedback_8h_html_a0b54cc74f3892acae383cf5e2517ed44"><div class="ttname"><a href="_feedback_8h.html#a0b54cc74f3892acae383cf5e2517ed44">clickRight</a></div><div class="ttdeci">void clickRight()</div><div class="ttdoc">Kratki feedback za pozitivni/desni pomak.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Feedback.h:41</a></div></div>
+<div class="ttc" id="a_feedback_8h_html_a1c1fa09b5e9c1e70c157af7aa68dd948"><div class="ttname"><a href="_feedback_8h.html#a1c1fa09b5e9c1e70c157af7aa68dd948">clickLeft</a></div><div class="ttdeci">void clickLeft()</div><div class="ttdoc">Kratki feedback za negativni/lijevi pomak.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">Feedback.h:45</a></div></div>
+<div class="ttc" id="a_feedback_8h_html_a6e201db8cc98eb85a467a8784fbf7aef"><div class="ttname"><a href="_feedback_8h.html#a6e201db8cc98eb85a467a8784fbf7aef">beepWithVibration</a></div><div class="ttdeci">void beepWithVibration(int frequency, int durationMs)</div><div class="ttdoc">Pusti ton i istovremeno aktivira vibracijski motor.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">Feedback.h:28</a></div></div>
+<div class="ttc" id="a_feedback_8h_html_a8fc95b180cc807f40bc82861c6f48372"><div class="ttname"><a href="_feedback_8h.html#a8fc95b180cc807f40bc82861c6f48372">playLoseSound</a></div><div class="ttdeci">void playLoseSound()</div><div class="ttdoc">Melodija koja oznacava neuspjesan zavrsetak levela.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">Feedback.h:57</a></div></div>
+<div class="ttc" id="a_feedback_8h_html_abcabb7db05b21c7989a2d40e08286f6e"><div class="ttname"><a href="_feedback_8h.html#abcabb7db05b21c7989a2d40e08286f6e">playVictorySound</a></div><div class="ttdeci">void playVictorySound()</div><div class="ttdoc">Melodija koja oznacava uspjesno rijesen level.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">Feedback.h:49</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a href="_feedback_8h.html">Feedback.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

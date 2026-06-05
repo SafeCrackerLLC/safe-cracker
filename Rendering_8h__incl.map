@@ -1,0 +1,49 @@
+<map id="Rendering.h" name="Rendering.h">
+<area shape="rect" id="Node000001" title="OLED renderiranje svih ekrana igre." alt="" coords="186,5,286,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="87,299,171,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,28,119,46,85,61,53,81,36,97,25,112,10,153,8,178,12,209,22,249,47,274,78,291,76,296,44,278,17,252,7,210,3,178,5,151,20,109,32,93,50,77,82,56,117,41,185,23"/>
+<area shape="rect" id="Node000003" href="$Config_8h.html" title="Centralne hardverske pin definicije i konstante igre." alt="" coords="62,225,137,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="195,33,150,50,101,75,54,109,34,130,18,153,15,171,24,188,41,204,62,217,59,221,38,208,20,192,10,172,13,151,30,126,50,105,98,70,148,45,193,28"/>
+<area shape="rect" id="Node000004" href="$GameLogic_8h.html" title="Pravila levela, pogodak ciljeva, score, replay i napredak igre." alt="" coords="182,79,289,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="238,31,238,65,233,65,233,31"/>
+<area shape="rect" id="Node000007" href="$SafeNetwork_8h.html" title="WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook." alt="" coords="518,152,636,177"/>
+<area shape="poly" id="edge29_Node000001_Node000007" title=" " alt="" coords="287,23,376,41,426,56,474,76,521,107,558,140,555,144,518,111,472,81,424,61,375,46,286,28"/>
+<area shape="rect" id="Node000013" href="$State_8h.html" title="Globalno stanje firmwarea dijeljeno izmedju modula." alt="" coords="386,225,454,251"/>
+<area shape="poly" id="edge30_Node000001_Node000013" title=" " alt="" coords="262,28,296,47,337,74,377,109,410,151,421,181,424,211,418,211,416,182,405,153,374,112,334,78,294,52,259,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="183,102,85,122,43,136,18,154,13,163,12,174,16,200,28,227,43,249,66,272,93,290,90,294,63,276,39,252,24,229,11,202,6,174,8,161,14,150,41,132,84,117,182,97"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="227,106,122,217,118,214,223,103"/>
+<area shape="rect" id="Node000005" href="$Feedback_8h.html" title="Zajednicki zvucni i vibracijski feedback za igru." alt="" coords="28,152,124,177"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="211,106,115,149,113,144,209,102"/>
+<area shape="rect" id="Node000006" href="$Level_8h.html" title="Definicije levela i ciljnih polozaja trake." alt="" coords="297,152,366,177"/>
+<area shape="poly" id="edge9_Node000004_Node000006" title=" " alt="" coords="253,102,306,141,303,146,250,106"/>
+<area shape="poly" id="edge10_Node000004_Node000007" title=" " alt="" coords="290,101,509,147,508,152,289,106"/>
+<area shape="poly" id="edge28_Node000004_Node000013" title=" " alt="" coords="287,102,335,120,359,133,380,150,402,180,415,211,410,213,397,182,376,154,356,138,333,125,285,107"/>
+<area shape="rect" id="Node000016" href="$Power_8h.html" title="Upravljanje neaktivnoscu i ESP32 deep sleep nacinom rada." alt="" coords="199,152,272,177"/>
+<area shape="poly" id="edge22_Node000004_Node000016" title=" " alt="" coords="238,104,238,138,233,138,233,104"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="69,179,52,212,49,231,53,250,70,272,93,290,90,294,66,276,48,252,44,231,47,210,65,176"/>
+<area shape="poly" id="edge8_Node000005_Node000003" title=" " alt="" coords="82,177,94,211,89,213,77,179"/>
+<area shape="poly" id="edge11_Node000007_Node000002" title=" " alt="" coords="568,179,526,216,497,236,466,253,392,279,316,296,245,306,185,311,184,305,244,300,315,290,391,274,464,248,494,232,522,212,564,175"/>
+<area shape="poly" id="edge17_Node000007_Node000003" title=" " alt="" coords="518,175,356,196,151,228,150,223,356,190,517,170"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1046,225,1153,251"/>
+<area shape="poly" id="edge12_Node000007_Node000008" title=" " alt="" coords="637,170,810,192,1033,223,1032,228,810,197,636,176"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="530,225,640,251"/>
+<area shape="poly" id="edge13_Node000007_Node000009" title=" " alt="" coords="581,177,585,212,580,212,576,178"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="664,225,727,251"/>
+<area shape="poly" id="edge14_Node000007_Node000010" title=" " alt="" coords="597,175,666,216,663,220,595,180"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="751,225,854,251"/>
+<area shape="poly" id="edge15_Node000007_Node000011" title=" " alt="" coords="614,175,754,219,752,224,612,180"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="878,225,1022,251"/>
+<area shape="poly" id="edge16_Node000007_Node000012" title=" " alt="" coords="637,175,878,220,877,225,636,180"/>
+<area shape="poly" id="edge18_Node000007_Node000013" title=" " alt="" coords="553,180,459,222,457,217,551,175"/>
+<area shape="poly" id="edge19_Node000013_Node000002" title=" " alt="" coords="386,250,185,299,184,294,385,245"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="422,299,572,324"/>
+<area shape="poly" id="edge20_Node000013_Node000014" title=" " alt="" coords="434,249,476,287,472,291,430,253"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="298,299,397,324"/>
+<area shape="poly" id="edge21_Node000013_Node000015" title=" " alt="" coords="410,253,371,291,367,287,406,249"/>
+<area shape="poly" id="edge23_Node000016_Node000002" title=" " alt="" coords="250,176,274,210,280,232,274,252,256,272,234,287,186,305,184,300,232,282,253,268,269,249,274,232,269,213,245,179"/>
+<area shape="poly" id="edge26_Node000016_Node000003" title=" " alt="" coords="215,180,135,221,133,217,213,175"/>
+<area shape="poly" id="edge27_Node000016_Node000013" title=" " alt="" coords="266,175,378,218,376,223,264,180"/>
+<area shape="poly" id="edge24_Node000016_Node000015" title=" " alt="" coords="250,176,295,224,337,285,332,288,291,227,246,179"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="161,225,260,251"/>
+<area shape="poly" id="edge25_Node000016_Node000017" title=" " alt="" coords="234,179,222,213,217,212,229,177"/>
+</map>

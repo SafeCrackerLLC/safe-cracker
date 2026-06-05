@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Opis datoteke Input.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Traži');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Input_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcije</a>  </div>
+  <div class="headertitle"><div class="title">Opis datoteke Input.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Obrada tipke i joysticka za navigaciju kroz ekrane.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="Config_8h_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Level_8h_source.html">Level.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SafeNetwork_8h_source.html">SafeNetwork.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Power_8h_source.html">Power.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graf include međuovisnosti za Input.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="Input_8h__incl.png" border="0" usemap="#aInput_8h" alt=""/></div>
+<map name="aInput_8h" id="aInput_8h">
+<area shape="rect" title="Obrada tipke i joysticka za navigaciju kroz ekrane." alt="" coords="728,5,794,31"/>
+<area shape="rect" title=" " alt="" coords="822,299,906,324"/>
+<area shape="poly" title=" " alt="" coords="728,22,522,27,384,38,246,56,183,69,126,84,78,103,41,125,17,150,11,163,8,178,10,194,16,211,43,249,58,258,82,267,159,281,260,292,378,299,621,306,808,308,808,313,621,312,378,304,260,297,158,286,81,272,55,263,39,253,11,213,5,195,3,178,6,162,13,147,38,120,76,98,124,79,182,63,245,51,383,32,521,22,728,17"/>
+<area shape="rect" href="Config_8h.html" title="Centralne hardverske pin definicije i konstante igre." alt="" coords="752,225,826,251"/>
+<area shape="poly" title=" " alt="" coords="762,31,756,94,757,135,762,177,777,212,772,214,757,178,751,136,751,94,757,31"/>
+<area shape="rect" href="GameLogic_8h.html" title="Pravila levela, pogodak ciljeva, score, replay i napredak igre." alt="" coords="802,79,909,104"/>
+<area shape="poly" title=" " alt="" coords="778,29,831,68,828,72,775,33"/>
+<area shape="rect" href="Level_8h.html" title="Definicije levela i ciljnih polozaja trake." alt="" coords="1101,152,1170,177"/>
+<area shape="poly" title=" " alt="" coords="795,25,872,46,961,76,1039,110,1104,143,1102,148,1036,115,959,81,870,51,794,30"/>
+<area shape="rect" href="SafeNetwork_8h.html" title="WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook." alt="" coords="536,152,655,177"/>
+<area shape="poly" title=" " alt="" coords="743,33,711,54,676,81,643,112,616,143,612,139,640,109,673,77,708,50,741,28"/>
+<area shape="rect" href="Power_8h.html" title="Upravljanje neaktivnoscu i ESP32 deep sleep nacinom rada." alt="" coords="1003,152,1076,177"/>
+<area shape="poly" title=" " alt="" coords="796,26,856,47,922,76,974,109,1017,141,1014,145,971,113,920,81,854,52,794,31"/>
+<area shape="poly" title=" " alt="" coords="867,103,881,124,892,151,896,188,893,225,876,287,871,285,888,224,891,188,887,153,876,127,862,106"/>
+<area shape="poly" title=" " alt="" coords="828,106,796,125,782,138,772,153,767,167,768,183,778,212,773,214,762,184,762,167,767,151,778,134,793,121,825,102"/>
+<area shape="rect" href="Feedback_8h.html" title="Zajednicki zvucni i vibracijski feedback za igru." alt="" coords="781,152,877,177"/>
+<area shape="poly" title=" " alt="" coords="854,105,841,140,836,138,849,103"/>
+<area shape="poly" title=" " alt="" coords="901,101,1089,149,1087,154,900,107"/>
+<area shape="poly" title=" " alt="" coords="815,107,652,151,650,146,813,101"/>
+<area shape="rect" href="State_8h.html" title="Globalno stanje firmwarea dijeljeno izmedju modula." alt="" coords="952,225,1020,251"/>
+<area shape="poly" title=" " alt="" coords="876,102,905,123,935,150,959,181,977,211,972,214,954,184,931,154,902,127,873,106"/>
+<area shape="poly" title=" " alt="" coords="886,102,998,144,996,149,884,107"/>
+<area shape="poly" title=" " alt="" coords="835,177,860,285,855,286,829,178"/>
+<area shape="poly" title=" " alt="" coords="825,179,805,215,800,212,820,176"/>
+<area shape="poly" title=" " alt="" coords="615,175,741,248,827,291,825,295,739,253,613,180"/>
+<area shape="poly" title=" " alt="" coords="628,175,746,218,744,223,626,180"/>
+<area shape="rect" title=" " alt="" coords="221,225,328,251"/>
+<area shape="poly" title=" " alt="" coords="545,180,340,225,339,220,544,175"/>
+<area shape="rect" title=" " alt="" coords="352,225,463,251"/>
+<area shape="poly" title=" " alt="" coords="567,180,452,223,450,218,565,175"/>
+<area shape="rect" title=" " alt="" coords="487,225,550,251"/>
+<area shape="poly" title=" " alt="" coords="585,179,543,218,539,214,582,175"/>
+<area shape="rect" title=" " alt="" coords="574,225,676,251"/>
+<area shape="poly" title=" " alt="" coords="603,177,618,212,613,214,598,179"/>
+<area shape="rect" title=" " alt="" coords="53,225,197,251"/>
+<area shape="poly" title=" " alt="" coords="537,178,211,226,210,221,536,172"/>
+<area shape="poly" title=" " alt="" coords="656,174,939,225,938,231,655,179"/>
+<area shape="poly" title=" " alt="" coords="968,253,897,294,894,289,965,248"/>
+<area shape="rect" title=" " alt="" coords="930,299,1080,324"/>
+<area shape="poly" title=" " alt="" coords="992,250,1001,285,996,286,987,252"/>
+<area shape="rect" title=" " alt="" coords="1144,299,1242,324"/>
+<area shape="poly" title=" " alt="" coords="1021,248,1148,292,1146,297,1019,253"/>
+<area shape="poly" title=" " alt="" coords="1045,178,1048,213,1045,234,1035,252,1017,267,988,279,920,300,918,295,986,274,1014,262,1031,249,1039,232,1043,213,1040,178"/>
+<area shape="poly" title=" " alt="" coords="1004,179,840,225,839,220,1002,174"/>
+<area shape="poly" title=" " alt="" coords="1033,179,1005,216,1001,213,1029,176"/>
+<area shape="poly" title=" " alt="" coords="1077,174,1157,200,1191,213,1208,224,1215,239,1216,256,1208,287,1203,285,1211,255,1210,240,1204,227,1188,217,1155,205,1076,179"/>
+<area shape="rect" title=" " alt="" coords="1096,225,1194,251"/>
+<area shape="poly" title=" " alt="" coords="1058,175,1118,215,1115,220,1055,180"/>
+</map>
+</div>
+</div>
+<p><a href="Input_8h_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcije</h2></td></tr>
+<tr class="memitem:ab0f1612fa4336a8988c51c2d2c61476a" id="r_ab0f1612fa4336a8988c51c2d2c61476a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Input_8h.html#ab0f1612fa4336a8988c51c2d2c61476a">handleButtonActivity</a> ()</td></tr>
+<tr class="memdesc:ab0f1612fa4336a8988c51c2d2c61476a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obradjuje joystick i tipku za trenutno aktivni ekran.  <br /></td></tr>
+<tr class="separator:ab0f1612fa4336a8988c51c2d2c61476a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a344e42f6a8747066d439fe9a277a8bb8" id="r_a344e42f6a8747066d439fe9a277a8bb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Input_8h.html#a344e42f6a8747066d439fe9a277a8bb8">calibrateJoystickCenter</a> ()</td></tr>
+<tr class="memdesc:a344e42f6a8747066d439fe9a277a8bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uzorkuje joystick i sprema njegovu neutralnu vrijednost.  <br /></td></tr>
+<tr class="separator:a344e42f6a8747066d439fe9a277a8bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447f2ed7549f595fbe0648540d5a6fff" id="r_a447f2ed7549f595fbe0648540d5a6fff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Input_8h.html#a447f2ed7549f595fbe0648540d5a6fff">handleJoystickLevelSelect</a> ()</td></tr>
+<tr class="memdesc:a447f2ed7549f595fbe0648540d5a6fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pomice selekciju u glavnom meniju kada je joystick izvan deadzonea.  <br /></td></tr>
+<tr class="separator:a447f2ed7549f595fbe0648540d5a6fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8062c1a749bac43de9312c34c828e5f8" id="r_a8062c1a749bac43de9312c34c828e5f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Input_8h.html#a8062c1a749bac43de9312c34c828e5f8">handleJoystickNetworkInfo</a> ()</td></tr>
+<tr class="memdesc:a8062c1a749bac43de9312c34c828e5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prebacuje akciju na ekranu s mreznim informacijama.  <br /></td></tr>
+<tr class="separator:a8062c1a749bac43de9312c34c828e5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90d8d943c73a5dde51464f8a3e73e5fe" id="r_a90d8d943c73a5dde51464f8a3e73e5fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Input_8h.html#a90d8d943c73a5dde51464f8a3e73e5fe">getMenuItemCount</a> ()</td></tr>
+<tr class="separator:a90d8d943c73a5dde51464f8a3e73e5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>Obrada tipke i joysticka za navigaciju kroz ekrane. </p>
+
+<p class="definition">Definirano u datoteci <a class="el" href="Input_8h_source.html">Input.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacije funkcija</h2>
+<a id="a344e42f6a8747066d439fe9a277a8bb8" name="a344e42f6a8747066d439fe9a277a8bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a344e42f6a8747066d439fe9a277a8bb8">&#9670;&#160;</a></span>calibrateJoystickCenter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calibrateJoystickCenter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uzorkuje joystick i sprema njegovu neutralnu vrijednost. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Input_8h_source.html#l00032">32</a> datoteke <a class="el" href="Input_8h_source.html">Input.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00116">JOYSTICK_CENTER_SAMPLE_COUNT</a>, <a class="el" href="Config_8h_source.html#l00022">JOYSTICK_Y_PIN</a>, <a class="el" href="State_8h.html#a905271ee143caff5f5b4adc41b30566c">joystickCenterValue</a><a class="el" href="State_8h.html#aba7816ec1877980bd8a7f385282f33c5">joystickMenuReady</a>.</p>
+
+</div>
+</div>
+<a id="a90d8d943c73a5dde51464f8a3e73e5fe" name="a90d8d943c73a5dde51464f8a3e73e5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d8d943c73a5dde51464f8a3e73e5fe">&#9670;&#160;</a></span>getMenuItemCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getMenuItemCount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Ukupan broj stavki u glavnom meniju. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="Input_8h_source.html#l00028">28</a> datoteke <a class="el" href="Input_8h_source.html">Input.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Level_8h_source.html#l00069">LEVEL_COUNT</a>.</p>
+
+</div>
+</div>
+<a id="ab0f1612fa4336a8988c51c2d2c61476a" name="ab0f1612fa4336a8988c51c2d2c61476a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f1612fa4336a8988c51c2d2c61476a">&#9670;&#160;</a></span>handleButtonActivity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleButtonActivity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obradjuje joystick i tipku za trenutno aktivni ekran. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Input_8h_source.html#l00104">104</a> datoteke <a class="el" href="Input_8h_source.html">Input.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00024">BUTTON_PIN</a>, <a class="el" href="Config_8h_source.html#l00166">GAME_SCREEN_FINISHED</a>, <a class="el" href="Config_8h_source.html#l00162">GAME_SCREEN_LEVEL_SELECT</a>, <a class="el" href="Config_8h_source.html#l00170">GAME_SCREEN_NETWORK_INFO</a>, <a class="el" href="Config_8h_source.html#l00168">GAME_SCREEN_WIFI_CONFIG</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="Input_8h_source.html#l00044">handleJoystickLevelSelect()</a>, <a class="el" href="Input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>, <a class="el" href="Level_8h_source.html#l00069">LEVEL_COUNT</a>, <a class="el" href="Power_8h_source.html#l00045">resetSleepTimer()</a>, <a class="el" href="State_8h.html#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a>, <a class="el" href="State_8h.html#a6ffe85ffca1af90d9c7c5230c66cc225">selectedNetworkInfoAction</a>, <a class="el" href="SafeNetwork_8h_source.html#l00280">setWifiOfflineMode()</a>, <a class="el" href="GameLogic_8h_source.html#l00129">showLevelSelect()</a>, <a class="el" href="GameLogic_8h_source.html#l00125">startSelectedLevel()</a>, <a class="el" href="SafeNetwork_8h_source.html#l00238">startWifiConfigPortal()</a><a class="el" href="State_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a>.</p>
+
+</div>
+</div>
+<a id="a447f2ed7549f595fbe0648540d5a6fff" name="a447f2ed7549f595fbe0648540d5a6fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447f2ed7549f595fbe0648540d5a6fff">&#9670;&#160;</a></span>handleJoystickLevelSelect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleJoystickLevelSelect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pomice selekciju u glavnom meniju kada je joystick izvan deadzonea. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Input_8h_source.html#l00044">44</a> datoteke <a class="el" href="Input_8h_source.html">Input.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00162">GAME_SCREEN_LEVEL_SELECT</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="Config_8h_source.html#l00118">JOYSTICK_DEADZONE</a>, <a class="el" href="Config_8h_source.html#l00120">JOYSTICK_MENU_REPEAT_MS</a>, <a class="el" href="Config_8h_source.html#l00022">JOYSTICK_Y_PIN</a>, <a class="el" href="State_8h.html#a905271ee143caff5f5b4adc41b30566c">joystickCenterValue</a>, <a class="el" href="State_8h.html#aba7816ec1877980bd8a7f385282f33c5">joystickMenuReady</a>, <a class="el" href="State_8h.html#af149df421c92a52e55075968d2811cc5">lastJoystickMoveTime</a>, <a class="el" href="GameLogic_8h_source.html#l00514">moveSelectedLevel()</a><a class="el" href="Power_8h_source.html#l00045">resetSleepTimer()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a>.</p>
+
+</div>
+</div>
+<a id="a8062c1a749bac43de9312c34c828e5f8" name="a8062c1a749bac43de9312c34c828e5f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8062c1a749bac43de9312c34c828e5f8">&#9670;&#160;</a></span>handleJoystickNetworkInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleJoystickNetworkInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prebacuje akciju na ekranu s mreznim informacijama. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Input_8h_source.html#l00076">76</a> datoteke <a class="el" href="Input_8h_source.html">Input.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Feedback_8h_source.html#l00041">clickRight()</a>, <a class="el" href="Config_8h_source.html#l00170">GAME_SCREEN_NETWORK_INFO</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="Config_8h_source.html#l00118">JOYSTICK_DEADZONE</a>, <a class="el" href="Config_8h_source.html#l00120">JOYSTICK_MENU_REPEAT_MS</a>, <a class="el" href="Config_8h_source.html#l00022">JOYSTICK_Y_PIN</a>, <a class="el" href="State_8h.html#a905271ee143caff5f5b4adc41b30566c">joystickCenterValue</a>, <a class="el" href="State_8h.html#aba7816ec1877980bd8a7f385282f33c5">joystickMenuReady</a>, <a class="el" href="State_8h.html#af149df421c92a52e55075968d2811cc5">lastJoystickMoveTime</a>, <a class="el" href="Power_8h_source.html#l00045">resetSleepTimer()</a><a class="el" href="State_8h.html#a6ffe85ffca1af90d9c7c5230c66cc225">selectedNetworkInfoAction</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a class="el" href="Input_8h.html">Input.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

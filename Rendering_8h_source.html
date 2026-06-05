@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Izvorni kod datoteke Rendering.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Traži');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Rendering_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Rendering.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Rendering_8h.html">Dokumenacija za ovu datoteku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef RENDERING_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define RENDERING_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Config_8h.html">Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="GameLogic_8h.html">GameLogic.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="SafeNetwork_8h.html">SafeNetwork.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="State_8h.html">State.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#adbef28b46dbfb0d8bae922c94bac4bea">drawProgressBar</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a2dada9823c458ed2227991b123b80feb">drawTimer</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a36d67f19f1cddef35875925628e7806d">drawBreathMessage</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a3c9864d6621b83cedd7db3bae3d799b0">drawTargetMessage</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a8356c72a84046aca6c2845422e74eddf">drawTurnBar</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a22a2de4e85f749e05ff044a1f8938418">drawTargetArrow</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a5446a8a751dbd71789b31d84e5600911">drawVaultWheel</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a982ae4bf299c3dc99b97e69772d1532b">drawLevelSelectScreen</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a0795f248523b2f967265dbdf67d4940d">drawFinishedScreen</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#abbf7254f04320b15b1012bd38f56539b">drawWifiConfigScreen</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a37d3fbe6dc04bdd3b47d11208299aca4">drawNetworkInfoScreen</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a04898df17a3b6a6a3c827c1c698da846">drawGame</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="Rendering_8h.html#adbef28b46dbfb0d8bae922c94bac4bea">   41</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#adbef28b46dbfb0d8bae922c94bac4bea">drawProgressBar</a>() {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawRect(<a class="code hl_variable" href="Config_8h.html#a2149513fcb52fd54a1c9524352fdea54">PROGRESS_BAR_X</a>, <a class="code hl_variable" href="Config_8h.html#af28bf82a0437f0ae8d28e0ed17eac662">PROGRESS_BAR_Y</a>, <a class="code hl_variable" href="Config_8h.html#a03d7a6dd59674b569f84f77fc3613fec">PROGRESS_BAR_WIDTH</a>, <a class="code hl_variable" href="Config_8h.html#a612a3e1fceb630ab86b76241dda5fde0">PROGRESS_BAR_HEIGHT</a>, WHITE);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">int</span> fillHeight = <a class="code hl_function" href="GameLogic_8h.html#acd4e0d9a167a1dd4352dc3e715ca9558">getLevelProgress</a>() * (<a class="code hl_variable" href="Config_8h.html#a612a3e1fceb630ab86b76241dda5fde0">PROGRESS_BAR_HEIGHT</a> - 2);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordtype">int</span> fillY = <a class="code hl_variable" href="Config_8h.html#af28bf82a0437f0ae8d28e0ed17eac662">PROGRESS_BAR_Y</a> + <a class="code hl_variable" href="Config_8h.html#a612a3e1fceb630ab86b76241dda5fde0">PROGRESS_BAR_HEIGHT</a> - 1 - fillHeight;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillRect(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_variable" href="Config_8h.html#a2149513fcb52fd54a1c9524352fdea54">PROGRESS_BAR_X</a> + 1,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    fillY,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="Config_8h.html#a03d7a6dd59674b569f84f77fc3613fec">PROGRESS_BAR_WIDTH</a> - 2,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    fillHeight,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    WHITE</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  );</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a2dada9823c458ed2227991b123b80feb">   56</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a2dada9823c458ed2227991b123b80feb">drawTimer</a>() {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(<a class="code hl_variable" href="Config_8h.html#a425ac2a2fb413d1317d58451914ee729">TIMER_X</a>, <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a> - 4);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_function" href="GameLogic_8h.html#aaee43aa4695451a3184a1b0447eca67d">getRemainingSeconds</a>());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;s&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a36d67f19f1cddef35875925628e7806d">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a36d67f19f1cddef35875925628e7806d">drawBreathMessage</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">int</span> moveOffset = <a class="code hl_function" href="GameLogic_8h.html#a14b8e0a0bd17818b7bf6cd18a5094edc">getBreathTextMoveOffset</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawRect(</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_variable" href="Config_8h.html#a61a69455db0abd4f695a18090b8b81a7">BREATH_TEXT_BOX_X</a>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="Config_8h.html#ac0bf95a08985eb63d08b57d9da184861">BREATH_TEXT_BOX_Y</a>,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="Config_8h.html#a1b9820528668ce2e1025272232227062">BREATH_TEXT_BOX_WIDTH</a>,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_variable" href="Config_8h.html#acc449c7653e2bbc59621afb5e7f789ec">BREATH_TEXT_BOX_HEIGHT</a>,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    WHITE</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  );</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(<a class="code hl_variable" href="Config_8h.html#a991d3c6274414a3f61c4b010c7c84a45">BREATH_TEXT_X</a> + moveOffset, <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a> - 4 + moveOffset);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_function" href="GameLogic_8h.html#a0a93fa744094216f64caff4744d62b65">getBreathMessage</a>());</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a3c9864d6621b83cedd7db3bae3d799b0">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a3c9864d6621b83cedd7db3bae3d799b0">drawTargetMessage</a>() {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* targetMessage = <a class="code hl_function" href="GameLogic_8h.html#a0a02590cea83db37539a9dd69a2372ea">getTargetMessage</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (targetMessage[0] == <span class="charliteral">&#39;\0&#39;</span>) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordflow">if</span> (targetMessage[0] == <span class="charliteral">&#39;C&#39;</span>) {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(92, <a class="code hl_variable" href="Config_8h.html#ab78e0ae0021d7a038baa686297fc13e1">TARGET_MESSAGE_Y</a>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(94, <a class="code hl_variable" href="Config_8h.html#ab78e0ae0021d7a038baa686297fc13e1">TARGET_MESSAGE_Y</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(targetMessage);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a8356c72a84046aca6c2845422e74eddf">  100</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a8356c72a84046aca6c2845422e74eddf">drawTurnBar</a>() {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawRect(<a class="code hl_variable" href="Config_8h.html#a4097264b481e61fce1fd5f4d1f698919">BAR_X</a>, <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a>, <a class="code hl_variable" href="Config_8h.html#a74c0aab6b42576716415a4ae62282acf">BAR_WIDTH</a>, <a class="code hl_variable" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a>, WHITE);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawLine(<a class="code hl_variable" href="Config_8h.html#a7979dfab2712debd00104df908030ba6">BAR_CENTER_X</a>, <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a>, <a class="code hl_variable" href="Config_8h.html#a7979dfab2712debd00104df908030ba6">BAR_CENTER_X</a>, <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + <a class="code hl_variable" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> - 1, WHITE);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawLine(<a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>(), <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a>, <a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>(), <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + <a class="code hl_variable" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> - 1, WHITE);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">int</span> halfBarWidth = (<a class="code hl_variable" href="Config_8h.html#a74c0aab6b42576716415a4ae62282acf">BAR_WIDTH</a> / 2) - 2;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordtype">int</span> fillWidth = abs(<a class="code hl_variable" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>) * halfBarWidth;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a> &gt; 0) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillRect(<a class="code hl_variable" href="Config_8h.html#a7979dfab2712debd00104df908030ba6">BAR_CENTER_X</a> + 1, <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + 2, fillWidth, <a class="code hl_variable" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> - 4, WHITE);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a> &lt; 0) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillRect(<a class="code hl_variable" href="Config_8h.html#a7979dfab2712debd00104df908030ba6">BAR_CENTER_X</a> - fillWidth, <a class="code hl_variable" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + 2, fillWidth, <a class="code hl_variable" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> - 4, WHITE);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a22a2de4e85f749e05ff044a1f8938418">  115</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a22a2de4e85f749e05ff044a1f8938418">drawTargetArrow</a>() {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keywordtype">int</span> arrowY = <a class="code hl_function" href="GameLogic_8h.html#a6cec561367eb7e61a40651ebd91b3f9a">getTargetArrowY</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillTriangle(</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>(),</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    arrowY - <a class="code hl_variable" href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a>,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>() - <a class="code hl_variable" href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a>,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    arrowY,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>() + <a class="code hl_variable" href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a>,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    arrowY,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    WHITE</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  );</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawLine(<a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>(), arrowY, <a class="code hl_function" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a>(), arrowY + 2, WHITE);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a5446a8a751dbd71789b31d84e5600911">  130</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a5446a8a751dbd71789b31d84e5600911">drawVaultWheel</a>() {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawCircle(<a class="code hl_variable" href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a>, <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a>, <a class="code hl_variable" href="Config_8h.html#aa2a1116be28be79803ed8f7c794ffe48">VAULT_OUTER_RADIUS</a>, WHITE);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawCircle(<a class="code hl_variable" href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a>, <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a>, <a class="code hl_variable" href="Config_8h.html#aa2a1116be28be79803ed8f7c794ffe48">VAULT_OUTER_RADIUS</a> - 2, WHITE);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillCircle(<a class="code hl_variable" href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a>, <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a>, <a class="code hl_variable" href="Config_8h.html#ac01cff2cefba2af554f9ef8dd69e14a8">VAULT_INNER_RADIUS</a>, WHITE);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="Config_8h.html#a4afe7840c966ecea463d80d51c16feed">VAULT_HANDLE_COUNT</a>; i++) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">float</span> handleAngle = <a class="code hl_variable" href="State_8h.html#ac948bc97d4abc9834a5736534fb75c71">vaultAngle</a> + (<a class="code hl_variable" href="Config_8h.html#a5f9840573841dd75587ae8a05b2496ff">FULL_ROTATION</a> / <a class="code hl_variable" href="Config_8h.html#a4afe7840c966ecea463d80d51c16feed">VAULT_HANDLE_COUNT</a>) * i;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">int</span> handleX = <a class="code hl_variable" href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a> + cos(handleAngle) * <a class="code hl_variable" href="Config_8h.html#a64814c17e16b62eb70e1af3fd522cd54">VAULT_HANDLE_LENGTH</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">int</span> handleY = <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a> + sin(handleAngle) * <a class="code hl_variable" href="Config_8h.html#a64814c17e16b62eb70e1af3fd522cd54">VAULT_HANDLE_LENGTH</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawLine(<a class="code hl_variable" href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a>, <a class="code hl_variable" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a>, handleX, handleY, WHITE);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillCircle(handleX, handleY, <a class="code hl_variable" href="Config_8h.html#a3489fd7d81a981e8caf7f51574b28395">VAULT_HANDLE_RADIUS</a>, WHITE);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  }</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="}">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a982ae4bf299c3dc99b97e69772d1532b">  145</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a982ae4bf299c3dc99b97e69772d1532b">drawLevelSelectScreen</a>() {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(31, 2);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;SafeCracker&quot;</span>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 14);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_function" href="SafeNetwork_8h.html#a704f9fc20fc6288159dc16183e1f04d1">getWifiStatusLabel</a>());</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keywordtype">int</span> menuItemCount = <a class="code hl_variable" href="Level_8h.html#a4230c304b15bcb81df17870b0f18713f">LEVEL_COUNT</a> + 2;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; menuItemCount; i++) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">int</span> rowY = 26 + i * 10;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    String label;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">if</span> (i &lt; <a class="code hl_variable" href="Level_8h.html#a4230c304b15bcb81df17870b0f18713f">LEVEL_COUNT</a>) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>      label = <a class="code hl_variable" href="Level_8h.html#a3df09124b854fbd672acb588c177b1f3">LEVELS</a>[i].<a class="code hl_variable" href="structLevel.html#a52f84e7189dd4ce6a85de42187d10f89">name</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == <a class="code hl_variable" href="Level_8h.html#a4230c304b15bcb81df17870b0f18713f">LEVEL_COUNT</a>) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      label = <span class="stringliteral">&quot;Network info&quot;</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      label = <a class="code hl_variable" href="State_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a> ? <span class="stringliteral">&quot;Go online&quot;</span> : <span class="stringliteral">&quot;Go offline&quot;</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordflow">if</span> (i == <a class="code hl_variable" href="State_8h.html#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a>) {</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillRect(8, rowY - 2, 112, 9, WHITE);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(BLACK);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(12, rowY);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;&gt; &quot;</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(label);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(12, rowY);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;  &quot;</span>);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(label);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    }</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>}</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a0795f248523b2f967265dbdf67d4940d">  185</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a0795f248523b2f967265dbdf67d4940d">drawFinishedScreen</a>() {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(37, 4);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_variable" href="State_8h.html#a4ab1e53ce890129bc067a3594cddf591">levelWasWon</a> ? <span class="stringliteral">&quot;Unlocked!&quot;</span> : <span class="stringliteral">&quot;Finished&quot;</span>);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(12, 18);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Targets hit: &quot;</span>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_function" href="GameLogic_8h.html#aecb71596ba8d373f6e1a63c0db461e5a">getTargetsHit</a>());</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;/&quot;</span>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_function" href="GameLogic_8h.html#ab60dffd57f0f57742201875c6a00f18f">getTotalTargets</a>());</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(12, 30);</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Time: &quot;</span>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_variable" href="State_8h.html#ac7e0e01a3dfcfa54df59e93b9395c309">levelSolvedTimeMs</a> / 1000.0, 1);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;s&quot;</span>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(12, 42);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Stability: &quot;</span>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_variable" href="State_8h.html#aea1bcb681cd3a43565f1b8e6655f877a">levelStabilityScore</a>);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;%&quot;</span>);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(34, 56);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Btn: menu&quot;</span>);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>}</div>
+</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="foldopen" id="foldopen00214" data-start="{" data-end="}">
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="Rendering_8h.html#abbf7254f04320b15b1012bd38f56539b">  214</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#abbf7254f04320b15b1012bd38f56539b">drawWifiConfigScreen</a>() {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(13, 2);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;WiFi setup&quot;</span>);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 16);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;SSID:&quot;</span>);</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 26);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_variable" href="State_8h.html#a59f5d414ddd8ae744696f1ddc496d9ee">wifiPortalSsid</a>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 38);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Pass:&quot;</span>);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_variable" href="Config_8h.html#a272acef23e95be3918b2a41e39d4e5c8">WIFI_PORTAL_PASSWORD</a>);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 50);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Open 192.168.4.1&quot;</span>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 58);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Btn: offline&quot;</span>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="foldopen" id="foldopen00235" data-start="{" data-end="}">
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a37d3fbe6dc04bdd3b47d11208299aca4">  235</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a37d3fbe6dc04bdd3b47d11208299aca4">drawNetworkInfoScreen</a>() {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextSize(1);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(22, 2);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;Network info&quot;</span>);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 14);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_function" href="SafeNetwork_8h.html#a704f9fc20fc6288159dc16183e1f04d1">getWifiStatusLabel</a>());</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 24);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;SSID:&quot;</span>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>.length() &gt; 0) {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<a class="code hl_variable" href="State_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>.substring(0, 15));</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 34);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(<span class="stringliteral">&quot;URL:&quot;</span>);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  String webhookUrl = <a class="code hl_function" href="SafeNetwork_8h.html#a89c112a8050702fe26f21cf4930474fe">getConfiguredWebhookUrl</a>();</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(webhookUrl.substring(0, 17));</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(0, 44);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(webhookUrl.substring(17, 38));</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++) {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">int</span> x = i == 0 ? 8 : 64;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordtype">int</span> y = 55;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#a6ffe85ffca1af90d9c7c5230c66cc225">selectedNetworkInfoAction</a> == i) {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.fillRect(x - 2, y - 2, 54, 10, WHITE);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(BLACK);</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.drawRect(x - 2, y - 2, 54, 10, WHITE);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    }</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setCursor(x, y);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.print(i == 0 ? <span class="stringliteral">&quot;Back&quot;</span> : <span class="stringliteral">&quot;New setup&quot;</span>);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.setTextColor(WHITE);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
+</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="foldopen" id="foldopen00278" data-start="{" data-end="}">
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="Rendering_8h.html#a04898df17a3b6a6a3c827c1c698da846">  278</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Rendering_8h.html#a04898df17a3b6a6a3c827c1c698da846">drawGame</a>() {</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.clearDisplay();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a> == <a class="code hl_variable" href="Config_8h.html#a7db67170c771142abd37dcf787c2fbc4">GAME_SCREEN_LEVEL_SELECT</a>) {</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <a class="code hl_function" href="Rendering_8h.html#a982ae4bf299c3dc99b97e69772d1532b">drawLevelSelectScreen</a>();</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.display();</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>  }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a> == <a class="code hl_variable" href="Config_8h.html#a421ce23d2866c9e6217e2bff1845de83">GAME_SCREEN_FINISHED</a>) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    <a class="code hl_function" href="Rendering_8h.html#a0795f248523b2f967265dbdf67d4940d">drawFinishedScreen</a>();</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.display();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a> == <a class="code hl_variable" href="Config_8h.html#a09b9de13ddc8243b81082b4544153e8f">GAME_SCREEN_WIFI_CONFIG</a>) {</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>    <a class="code hl_function" href="Rendering_8h.html#abbf7254f04320b15b1012bd38f56539b">drawWifiConfigScreen</a>();</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.display();</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a> == <a class="code hl_variable" href="Config_8h.html#aad5888c7b9894fc3cc4d2f0dbbd87183">GAME_SCREEN_NETWORK_INFO</a>) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <a class="code hl_function" href="Rendering_8h.html#a37d3fbe6dc04bdd3b47d11208299aca4">drawNetworkInfoScreen</a>();</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.display();</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <a class="code hl_function" href="Rendering_8h.html#adbef28b46dbfb0d8bae922c94bac4bea">drawProgressBar</a>();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <a class="code hl_function" href="Rendering_8h.html#a8356c72a84046aca6c2845422e74eddf">drawTurnBar</a>();</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <a class="code hl_function" href="Rendering_8h.html#a22a2de4e85f749e05ff044a1f8938418">drawTargetArrow</a>();</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <a class="code hl_function" href="Rendering_8h.html#a5446a8a751dbd71789b31d84e5600911">drawVaultWheel</a>();</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <a class="code hl_function" href="Rendering_8h.html#a2dada9823c458ed2227991b123b80feb">drawTimer</a>();</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <a class="code hl_function" href="Rendering_8h.html#a36d67f19f1cddef35875925628e7806d">drawBreathMessage</a>();</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <a class="code hl_function" href="Rendering_8h.html#a3c9864d6621b83cedd7db3bae3d799b0">drawTargetMessage</a>();</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.display();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>}</div>
+</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div><div class="ttdoc">Centralne hardverske pin definicije i konstante igre.</div></div>
+<div class="ttc" id="aConfig_8h_html_a03d7a6dd59674b569f84f77fc3613fec"><div class="ttname"><a href="Config_8h.html#a03d7a6dd59674b569f84f77fc3613fec">PROGRESS_BAR_WIDTH</a></div><div class="ttdeci">const int PROGRESS_BAR_WIDTH</div><div class="ttdoc">Sirina vertikalne trake napretka kroz level.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00082">Config.h:82</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a09b9de13ddc8243b81082b4544153e8f"><div class="ttname"><a href="Config_8h.html#a09b9de13ddc8243b81082b4544153e8f">GAME_SCREEN_WIFI_CONFIG</a></div><div class="ttdeci">const int GAME_SCREEN_WIFI_CONFIG</div><div class="ttdoc">Ekran koji prikazuje WiFi AP podatke za konfiguraciju.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00168">Config.h:168</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a1b9820528668ce2e1025272232227062"><div class="ttname"><a href="Config_8h.html#a1b9820528668ce2e1025272232227062">BREATH_TEXT_BOX_WIDTH</a></div><div class="ttdeci">const int BREATH_TEXT_BOX_WIDTH</div><div class="ttdoc">Sirina okvira poruke disanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00094">Config.h:94</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a2149513fcb52fd54a1c9524352fdea54"><div class="ttname"><a href="Config_8h.html#a2149513fcb52fd54a1c9524352fdea54">PROGRESS_BAR_X</a></div><div class="ttdeci">const int PROGRESS_BAR_X</div><div class="ttdoc">X koordinata vertikalne trake napretka kroz level.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00078">Config.h:78</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a272acef23e95be3918b2a41e39d4e5c8"><div class="ttname"><a href="Config_8h.html#a272acef23e95be3918b2a41e39d4e5c8">WIFI_PORTAL_PASSWORD</a></div><div class="ttdeci">const char *const WIFI_PORTAL_PASSWORD</div><div class="ttdoc">Lozinka lokalnog WiFi konfiguracijskog portala.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00136">Config.h:136</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a3489fd7d81a981e8caf7f51574b28395"><div class="ttname"><a href="Config_8h.html#a3489fd7d81a981e8caf7f51574b28395">VAULT_HANDLE_RADIUS</a></div><div class="ttdeci">const int VAULT_HANDLE_RADIUS</div><div class="ttdoc">Radijus kruzica na kraju rucke brave.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00052">Config.h:52</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a4097264b481e61fce1fd5f4d1f698919"><div class="ttname"><a href="Config_8h.html#a4097264b481e61fce1fd5f4d1f698919">BAR_X</a></div><div class="ttdeci">const int BAR_X</div><div class="ttdoc">X koordinata lijevog ruba horizontalne trake okretanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00058">Config.h:58</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a421ce23d2866c9e6217e2bff1845de83"><div class="ttname"><a href="Config_8h.html#a421ce23d2866c9e6217e2bff1845de83">GAME_SCREEN_FINISHED</a></div><div class="ttdeci">const int GAME_SCREEN_FINISHED</div><div class="ttdoc">Ekran s rezultatom nakon zavrsetka levela.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00166">Config.h:166</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a425ac2a2fb413d1317d58451914ee729"><div class="ttname"><a href="Config_8h.html#a425ac2a2fb413d1317d58451914ee729">TIMER_X</a></div><div class="ttdeci">const int TIMER_X</div><div class="ttdoc">X koordinata teksta timera.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00086">Config.h:86</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a4afe7840c966ecea463d80d51c16feed"><div class="ttname"><a href="Config_8h.html#a4afe7840c966ecea463d80d51c16feed">VAULT_HANDLE_COUNT</a></div><div class="ttdeci">const int VAULT_HANDLE_COUNT</div><div class="ttdoc">Broj rucki koje se crtaju na bravi.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00054">Config.h:54</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a4ec625905c145e8508567083f2b40bc9"><div class="ttname"><a href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a></div><div class="ttdeci">const int VAULT_CENTER_Y</div><div class="ttdoc">Y koordinata sredista nacrtane brave.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00044">Config.h:44</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a5f9840573841dd75587ae8a05b2496ff"><div class="ttname"><a href="Config_8h.html#a5f9840573841dd75587ae8a05b2496ff">FULL_ROTATION</a></div><div class="ttdeci">const float FULL_ROTATION</div><div class="ttdoc">Jedan puni krug u radijanima.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00056">Config.h:56</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a612a3e1fceb630ab86b76241dda5fde0"><div class="ttname"><a href="Config_8h.html#a612a3e1fceb630ab86b76241dda5fde0">PROGRESS_BAR_HEIGHT</a></div><div class="ttdeci">const int PROGRESS_BAR_HEIGHT</div><div class="ttdoc">Visina vertikalne trake napretka kroz level.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00084">Config.h:84</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a61a69455db0abd4f695a18090b8b81a7"><div class="ttname"><a href="Config_8h.html#a61a69455db0abd4f695a18090b8b81a7">BREATH_TEXT_BOX_X</a></div><div class="ttdeci">const int BREATH_TEXT_BOX_X</div><div class="ttdoc">X koordinata okvira poruke disanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00090">Config.h:90</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a64814c17e16b62eb70e1af3fd522cd54"><div class="ttname"><a href="Config_8h.html#a64814c17e16b62eb70e1af3fd522cd54">VAULT_HANDLE_LENGTH</a></div><div class="ttdeci">const int VAULT_HANDLE_LENGTH</div><div class="ttdoc">Duljina jedne rucke/kazaljke brave.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00050">Config.h:50</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a74c0aab6b42576716415a4ae62282acf"><div class="ttname"><a href="Config_8h.html#a74c0aab6b42576716415a4ae62282acf">BAR_WIDTH</a></div><div class="ttdeci">const int BAR_WIDTH</div><div class="ttdoc">Sirina horizontalne trake okretanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00062">Config.h:62</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a7979dfab2712debd00104df908030ba6"><div class="ttname"><a href="Config_8h.html#a7979dfab2712debd00104df908030ba6">BAR_CENTER_X</a></div><div class="ttdeci">const int BAR_CENTER_X</div><div class="ttdoc">X koordinata sredine trake okretanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00066">Config.h:66</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a7db67170c771142abd37dcf787c2fbc4"><div class="ttname"><a href="Config_8h.html#a7db67170c771142abd37dcf787c2fbc4">GAME_SCREEN_LEVEL_SELECT</a></div><div class="ttdeci">const int GAME_SCREEN_LEVEL_SELECT</div><div class="ttdoc">Pocetni meni za izbor levela i mreznih opcija.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00162">Config.h:162</a></div></div>
+<div class="ttc" id="aConfig_8h_html_a991d3c6274414a3f61c4b010c7c84a45"><div class="ttname"><a href="Config_8h.html#a991d3c6274414a3f61c4b010c7c84a45">BREATH_TEXT_X</a></div><div class="ttdeci">const int BREATH_TEXT_X</div><div class="ttdoc">X koordinata poruke disanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00088">Config.h:88</a></div></div>
+<div class="ttc" id="aConfig_8h_html_aa2a1116be28be79803ed8f7c794ffe48"><div class="ttname"><a href="Config_8h.html#aa2a1116be28be79803ed8f7c794ffe48">VAULT_OUTER_RADIUS</a></div><div class="ttdeci">const int VAULT_OUTER_RADIUS</div><div class="ttdoc">Vanjski radijus brave na OLED-u.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00046">Config.h:46</a></div></div>
+<div class="ttc" id="aConfig_8h_html_aad5888c7b9894fc3cc4d2f0dbbd87183"><div class="ttname"><a href="Config_8h.html#aad5888c7b9894fc3cc4d2f0dbbd87183">GAME_SCREEN_NETWORK_INFO</a></div><div class="ttdeci">const int GAME_SCREEN_NETWORK_INFO</div><div class="ttdoc">Ekran s trenutnim mreznim statusom i setup akcijama.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00170">Config.h:170</a></div></div>
+<div class="ttc" id="aConfig_8h_html_ab78e0ae0021d7a038baa686297fc13e1"><div class="ttname"><a href="Config_8h.html#ab78e0ae0021d7a038baa686297fc13e1">TARGET_MESSAGE_Y</a></div><div class="ttdeci">const int TARGET_MESSAGE_Y</div><div class="ttdoc">Y koordinata kratke poruke za trenutni cilj.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00098">Config.h:98</a></div></div>
+<div class="ttc" id="aConfig_8h_html_ab840ebf86a6074b9db8d8b43aaf0f039"><div class="ttname"><a href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a></div><div class="ttdeci">const int BAR_Y</div><div class="ttdoc">Y koordinata gornjeg ruba horizontalne trake okretanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00060">Config.h:60</a></div></div>
+<div class="ttc" id="aConfig_8h_html_ac01cff2cefba2af554f9ef8dd69e14a8"><div class="ttname"><a href="Config_8h.html#ac01cff2cefba2af554f9ef8dd69e14a8">VAULT_INNER_RADIUS</a></div><div class="ttdeci">const int VAULT_INNER_RADIUS</div><div class="ttdoc">Unutarnji radijus sredista brave.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00048">Config.h:48</a></div></div>
+<div class="ttc" id="aConfig_8h_html_ac0bf95a08985eb63d08b57d9da184861"><div class="ttname"><a href="Config_8h.html#ac0bf95a08985eb63d08b57d9da184861">BREATH_TEXT_BOX_Y</a></div><div class="ttdeci">const int BREATH_TEXT_BOX_Y</div><div class="ttdoc">Y koordinata okvira poruke disanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00092">Config.h:92</a></div></div>
+<div class="ttc" id="aConfig_8h_html_acc34e9f02552732321a45df5fbc42f98"><div class="ttname"><a href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a></div><div class="ttdeci">const int BAR_HEIGHT</div><div class="ttdoc">Visina horizontalne trake okretanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00064">Config.h:64</a></div></div>
+<div class="ttc" id="aConfig_8h_html_acc449c7653e2bbc59621afb5e7f789ec"><div class="ttname"><a href="Config_8h.html#acc449c7653e2bbc59621afb5e7f789ec">BREATH_TEXT_BOX_HEIGHT</a></div><div class="ttdeci">const int BREATH_TEXT_BOX_HEIGHT</div><div class="ttdoc">Visina okvira poruke disanja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00096">Config.h:96</a></div></div>
+<div class="ttc" id="aConfig_8h_html_ae5d5106050888257344c8c02dee4a4ab"><div class="ttname"><a href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a></div><div class="ttdeci">const int TARGET_ARROW_SIZE</div><div class="ttdoc">Velicina trokuta strelice trenutnog cilja.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00070">Config.h:70</a></div></div>
+<div class="ttc" id="aConfig_8h_html_ae7b1513fdb2fe295824f6e7bca0575db"><div class="ttname"><a href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a></div><div class="ttdeci">const int VAULT_CENTER_X</div><div class="ttdoc">X koordinata sredista nacrtane brave.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00042">Config.h:42</a></div></div>
+<div class="ttc" id="aConfig_8h_html_af28bf82a0437f0ae8d28e0ed17eac662"><div class="ttname"><a href="Config_8h.html#af28bf82a0437f0ae8d28e0ed17eac662">PROGRESS_BAR_Y</a></div><div class="ttdeci">const int PROGRESS_BAR_Y</div><div class="ttdoc">Y koordinata vertikalne trake napretka kroz level.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00080">Config.h:80</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html"><div class="ttname"><a href="GameLogic_8h.html">GameLogic.h</a></div><div class="ttdoc">Pravila levela, pogodak ciljeva, score, replay i napredak igre.</div></div>
+<div class="ttc" id="aGameLogic_8h_html_a0a02590cea83db37539a9dd69a2372ea"><div class="ttname"><a href="GameLogic_8h.html#a0a02590cea83db37539a9dd69a2372ea">getTargetMessage</a></div><div class="ttdeci">const char * getTargetMessage()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00268">GameLogic.h:268</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_a0a93fa744094216f64caff4744d62b65"><div class="ttname"><a href="GameLogic_8h.html#a0a93fa744094216f64caff4744d62b65">getBreathMessage</a></div><div class="ttdeci">const char * getBreathMessage()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00209">GameLogic.h:209</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_a14b8e0a0bd17818b7bf6cd18a5094edc"><div class="ttname"><a href="GameLogic_8h.html#a14b8e0a0bd17818b7bf6cd18a5094edc">getBreathTextMoveOffset</a></div><div class="ttdeci">int getBreathTextMoveOffset()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00294">GameLogic.h:294</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_a6cec561367eb7e61a40651ebd91b3f9a"><div class="ttname"><a href="GameLogic_8h.html#a6cec561367eb7e61a40651ebd91b3f9a">getTargetArrowY</a></div><div class="ttdeci">int getTargetArrowY()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00304">GameLogic.h:304</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_aae04e1e3c18aa687e7d46b5637b77ca6"><div class="ttname"><a href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a></div><div class="ttdeci">int getTargetX()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00314">GameLogic.h:314</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_aaee43aa4695451a3184a1b0447eca67d"><div class="ttname"><a href="GameLogic_8h.html#aaee43aa4695451a3184a1b0447eca67d">getRemainingSeconds</a></div><div class="ttdeci">int getRemainingSeconds()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00197">GameLogic.h:197</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_ab60dffd57f0f57742201875c6a00f18f"><div class="ttname"><a href="GameLogic_8h.html#ab60dffd57f0f57742201875c6a00f18f">getTotalTargets</a></div><div class="ttdeci">int getTotalTargets()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00193">GameLogic.h:193</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_acd4e0d9a167a1dd4352dc3e715ca9558"><div class="ttname"><a href="GameLogic_8h.html#acd4e0d9a167a1dd4352dc3e715ca9558">getLevelProgress</a></div><div class="ttdeci">float getLevelProgress()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00236">GameLogic.h:236</a></div></div>
+<div class="ttc" id="aGameLogic_8h_html_aecb71596ba8d373f6e1a63c0db461e5a"><div class="ttname"><a href="GameLogic_8h.html#aecb71596ba8d373f6e1a63c0db461e5a">getTargetsHit</a></div><div class="ttdeci">int getTargetsHit()</div><div class="ttdef"><b>Definition</b> <a href="GameLogic_8h_source.html#l00185">GameLogic.h:185</a></div></div>
+<div class="ttc" id="aLevel_8h_html_a3df09124b854fbd672acb588c177b1f3"><div class="ttname"><a href="Level_8h.html#a3df09124b854fbd672acb588c177b1f3">LEVELS</a></div><div class="ttdeci">const Level LEVELS[]</div><div class="ttdoc">Popis svih levela prikazanih u glavnom meniju.</div><div class="ttdef"><b>Definition</b> <a href="Level_8h_source.html#l00063">Level.h:63</a></div></div>
+<div class="ttc" id="aLevel_8h_html_a4230c304b15bcb81df17870b0f18713f"><div class="ttname"><a href="Level_8h.html#a4230c304b15bcb81df17870b0f18713f">LEVEL_COUNT</a></div><div class="ttdeci">const int LEVEL_COUNT</div><div class="ttdoc">Ukupan broj dostupnih levela.</div><div class="ttdef"><b>Definition</b> <a href="Level_8h_source.html#l00069">Level.h:69</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a04898df17a3b6a6a3c827c1c698da846"><div class="ttname"><a href="Rendering_8h.html#a04898df17a3b6a6a3c827c1c698da846">drawGame</a></div><div class="ttdeci">void drawGame()</div><div class="ttdoc">Crta ekran prema trenutnom gameScreen stanju.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00278">Rendering.h:278</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a0795f248523b2f967265dbdf67d4940d"><div class="ttname"><a href="Rendering_8h.html#a0795f248523b2f967265dbdf67d4940d">drawFinishedScreen</a></div><div class="ttdeci">void drawFinishedScreen()</div><div class="ttdoc">Crta ekran rezultata nakon zavrsetka levela.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00185">Rendering.h:185</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a22a2de4e85f749e05ff044a1f8938418"><div class="ttname"><a href="Rendering_8h.html#a22a2de4e85f749e05ff044a1f8938418">drawTargetArrow</a></div><div class="ttdeci">void drawTargetArrow()</div><div class="ttdoc">Crta animiranu strelicu iznad cilja.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00115">Rendering.h:115</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a2dada9823c458ed2227991b123b80feb"><div class="ttname"><a href="Rendering_8h.html#a2dada9823c458ed2227991b123b80feb">drawTimer</a></div><div class="ttdeci">void drawTimer()</div><div class="ttdoc">Crta preostalo vrijeme trenutnog levela.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00056">Rendering.h:56</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a36d67f19f1cddef35875925628e7806d"><div class="ttname"><a href="Rendering_8h.html#a36d67f19f1cddef35875925628e7806d">drawBreathMessage</a></div><div class="ttdeci">void drawBreathMessage()</div><div class="ttdoc">Crta poruku INHALE/EXHALE/DONE/TIME.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00064">Rendering.h:64</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a37d3fbe6dc04bdd3b47d11208299aca4"><div class="ttname"><a href="Rendering_8h.html#a37d3fbe6dc04bdd3b47d11208299aca4">drawNetworkInfoScreen</a></div><div class="ttdeci">void drawNetworkInfoScreen()</div><div class="ttdoc">Crta SSID, webhook i akcije za ponovno podesavanje mreze.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00235">Rendering.h:235</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a3c9864d6621b83cedd7db3bae3d799b0"><div class="ttname"><a href="Rendering_8h.html#a3c9864d6621b83cedd7db3bae3d799b0">drawTargetMessage</a></div><div class="ttdeci">void drawTargetMessage()</div><div class="ttdoc">Crta pomocnu poruku za trenutni cilj.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00081">Rendering.h:81</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a5446a8a751dbd71789b31d84e5600911"><div class="ttname"><a href="Rendering_8h.html#a5446a8a751dbd71789b31d84e5600911">drawVaultWheel</a></div><div class="ttdeci">void drawVaultWheel()</div><div class="ttdoc">Crta animirani kotac brave.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00130">Rendering.h:130</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a8356c72a84046aca6c2845422e74eddf"><div class="ttname"><a href="Rendering_8h.html#a8356c72a84046aca6c2845422e74eddf">drawTurnBar</a></div><div class="ttdeci">void drawTurnBar()</div><div class="ttdoc">Crta horizontalnu traku okretanja i marker cilja.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00100">Rendering.h:100</a></div></div>
+<div class="ttc" id="aRendering_8h_html_a982ae4bf299c3dc99b97e69772d1532b"><div class="ttname"><a href="Rendering_8h.html#a982ae4bf299c3dc99b97e69772d1532b">drawLevelSelectScreen</a></div><div class="ttdeci">void drawLevelSelectScreen()</div><div class="ttdoc">Crta glavni meni s levelima i WiFi opcijama.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00145">Rendering.h:145</a></div></div>
+<div class="ttc" id="aRendering_8h_html_abbf7254f04320b15b1012bd38f56539b"><div class="ttname"><a href="Rendering_8h.html#abbf7254f04320b15b1012bd38f56539b">drawWifiConfigScreen</a></div><div class="ttdeci">void drawWifiConfigScreen()</div><div class="ttdoc">Crta upute za spajanje na konfiguracijski WiFi portal.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00214">Rendering.h:214</a></div></div>
+<div class="ttc" id="aRendering_8h_html_adbef28b46dbfb0d8bae922c94bac4bea"><div class="ttname"><a href="Rendering_8h.html#adbef28b46dbfb0d8bae922c94bac4bea">drawProgressBar</a></div><div class="ttdeci">void drawProgressBar()</div><div class="ttdoc">Crta vertikalni napredak kroz ciljeve.</div><div class="ttdef"><b>Definition</b> <a href="Rendering_8h_source.html#l00041">Rendering.h:41</a></div></div>
+<div class="ttc" id="aSafeNetwork_8h_html"><div class="ttname"><a href="SafeNetwork_8h.html">SafeNetwork.h</a></div><div class="ttdoc">WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook.</div></div>
+<div class="ttc" id="aSafeNetwork_8h_html_a704f9fc20fc6288159dc16183e1f04d1"><div class="ttname"><a href="SafeNetwork_8h.html#a704f9fc20fc6288159dc16183e1f04d1">getWifiStatusLabel</a></div><div class="ttdeci">const char * getWifiStatusLabel()</div><div class="ttdef"><b>Definition</b> <a href="SafeNetwork_8h_source.html#l00328">SafeNetwork.h:328</a></div></div>
+<div class="ttc" id="aSafeNetwork_8h_html_a89c112a8050702fe26f21cf4930474fe"><div class="ttname"><a href="SafeNetwork_8h.html#a89c112a8050702fe26f21cf4930474fe">getConfiguredWebhookUrl</a></div><div class="ttdeci">String getConfiguredWebhookUrl()</div><div class="ttdef"><b>Definition</b> <a href="SafeNetwork_8h_source.html#l00084">SafeNetwork.h:84</a></div></div>
+<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div><div class="ttdoc">Globalno stanje firmwarea dijeljeno izmedju modula.</div></div>
+<div class="ttc" id="aState_8h_html_a0bfe2d2aa5f691bd08207e4ddf759964"><div class="ttname"><a href="State_8h.html#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a></div><div class="ttdeci">int selectedLevelIndex</div><div class="ttdoc">Indeks trenutno odabrane stavke u glavnom meniju.</div></div>
+<div class="ttc" id="aState_8h_html_a110ed8ba7a149b4a8ec44feae275cf59"><div class="ttname"><a href="State_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a></div><div class="ttdeci">bool wifiOfflineMode</div><div class="ttdoc">Oznacava da uredjaj namjerno radi bez WiFi slanja scoreova.</div></div>
+<div class="ttc" id="aState_8h_html_a4ab1e53ce890129bc067a3594cddf591"><div class="ttname"><a href="State_8h.html#a4ab1e53ce890129bc067a3594cddf591">levelWasWon</a></div><div class="ttdeci">bool levelWasWon</div><div class="ttdoc">Oznacava je li zadnji zavrseni level uspjesno rijesen.</div></div>
+<div class="ttc" id="aState_8h_html_a59f5d414ddd8ae744696f1ddc496d9ee"><div class="ttname"><a href="State_8h.html#a59f5d414ddd8ae744696f1ddc496d9ee">wifiPortalSsid</a></div><div class="ttdeci">String wifiPortalSsid</div><div class="ttdoc">SSID lokalnog konfiguracijskog AP-a.</div></div>
+<div class="ttc" id="aState_8h_html_a69115c35be6c18f2e6413033e28c09d4"><div class="ttname"><a href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a></div><div class="ttdeci">float barFill</div><div class="ttdoc">Trenutna popunjenost trake od -1.0 do 1.0.</div></div>
+<div class="ttc" id="aState_8h_html_a6ffe85ffca1af90d9c7c5230c66cc225"><div class="ttname"><a href="State_8h.html#a6ffe85ffca1af90d9c7c5230c66cc225">selectedNetworkInfoAction</a></div><div class="ttdeci">int selectedNetworkInfoAction</div><div class="ttdoc">Odabrana akcija na ekranu mreznih informacija.</div></div>
+<div class="ttc" id="aState_8h_html_ab3cfa0d4080bf5ad5847aa85b3431557"><div class="ttname"><a href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a></div><div class="ttdeci">int gameScreen</div><div class="ttdoc">Trenutni ekran aplikacije, jedna od GAME_SCREEN_* konstanti.</div></div>
+<div class="ttc" id="aState_8h_html_ab90955ee2e481997c47040f24594f6a7"><div class="ttname"><a href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a></div><div class="ttdeci">Adafruit_SSD1306 display</div><div class="ttdoc">OLED driver instanca.</div></div>
+<div class="ttc" id="aState_8h_html_ac7e0e01a3dfcfa54df59e93b9395c309"><div class="ttname"><a href="State_8h.html#ac7e0e01a3dfcfa54df59e93b9395c309">levelSolvedTimeMs</a></div><div class="ttdeci">unsigned long levelSolvedTimeMs</div><div class="ttdoc">Ukupno vrijeme rjesavanja zadnjeg levela u milisekundama.</div></div>
+<div class="ttc" id="aState_8h_html_ac948bc97d4abc9834a5736534fb75c71"><div class="ttname"><a href="State_8h.html#ac948bc97d4abc9834a5736534fb75c71">vaultAngle</a></div><div class="ttdeci">float vaultAngle</div><div class="ttdoc">Trenutni kut animirane brave u radijanima.</div></div>
+<div class="ttc" id="aState_8h_html_aea1bcb681cd3a43565f1b8e6655f877a"><div class="ttname"><a href="State_8h.html#aea1bcb681cd3a43565f1b8e6655f877a">levelStabilityScore</a></div><div class="ttdeci">int levelStabilityScore</div><div class="ttdoc">Stabilnost zadnjeg pokusaja od 0 do 100.</div></div>
+<div class="ttc" id="aState_8h_html_af3e497f7d313a0ad768f4df0dc630b0e"><div class="ttname"><a href="State_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a></div><div class="ttdeci">String configuredSsid</div><div class="ttdoc">Spremljeni ili trenutno uneseni WiFi SSID.</div></div>
+<div class="ttc" id="astructLevel_html_a52f84e7189dd4ce6a85de42187d10f89"><div class="ttname"><a href="structLevel.html#a52f84e7189dd4ce6a85de42187d10f89">Level::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">Naziv levela prikazan u meniju i poslan na leaderboard.</div><div class="ttdef"><b>Definition</b> <a href="Level_8h_source.html#l00018">Level.h:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a class="el" href="Rendering_8h.html">Rendering.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

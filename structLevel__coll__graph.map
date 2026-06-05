@@ -1,0 +1,5 @@
+<map id="Level" name="Level">
+<area shape="rect" id="Node000001" title="Konfiguracija jednog levela igre." alt="" coords="25,93,83,119"/>
+<area shape="rect" id="Node000002" href="$structLevelTarget.html" title="Jedan cilj koji igrac mora pogoditi na traci okretanja." alt="" coords="5,5,103,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,45,57,93,51,93,51,45"/>
+</map>

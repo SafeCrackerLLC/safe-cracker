@@ -1,0 +1,1811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Opis datoteke Config.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Traži');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Config_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicije</a> &#124;
+<a href="#var-members">Varijable</a>  </div>
+  <div class="headertitle"><div class="title">Opis datoteke Config.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Centralne hardverske pin definicije i konstante igre.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><div class="dynheader">
+Ovaj graf pokazuje koje datoteke izravno ili neizravno uključuju ovu datoteku:</div>
+<div class="dyncontent">
+<div class="center"><img src="Config_8h__dep__incl.png" border="0" usemap="#aConfig_8hdep" alt=""/></div>
+<map name="aConfig_8hdep" id="aConfig_8hdep">
+<area shape="rect" title="Centralne hardverske pin definicije i konstante igre." alt="" coords="145,5,219,31"/>
+<area shape="rect" href="Feedback_8h.html" title="Zajednicki zvucni i vibracijski feedback za igru." alt="" coords="177,79,273,104"/>
+<area shape="poly" title=" " alt="" coords="198,41,220,77,215,80,194,44"/>
+<area shape="rect" href="GameLogic_8h.html" title="Pravila levela, pogodak ciljeva, score, replay i napredak igre." alt="" coords="118,152,225,177"/>
+<area shape="poly" title=" " alt="" coords="176,44,167,79,167,119,171,151,166,152,162,119,162,78,171,43"/>
+<area shape="rect" href="Input_8h.html" title="Obrada tipke i joysticka za navigaciju kroz ekrane." alt="" coords="85,225,151,251"/>
+<area shape="poly" title=" " alt="" coords="131,25,101,31,69,41,40,57,18,80,9,100,10,120,18,140,31,160,67,196,102,223,98,227,63,200,27,164,13,143,5,121,4,99,13,77,37,53,67,36,99,26,130,20"/>
+<area shape="rect" href="Rendering_8h.html" title="OLED renderiranje svih ekrana igre." alt="" coords="307,225,407,251"/>
+<area shape="poly" title=" " alt="" coords="234,22,347,40,398,56,418,66,431,77,441,97,442,118,437,140,427,161,399,199,372,227,368,223,395,195,422,158,432,138,437,118,436,98,427,80,415,70,396,61,346,46,233,27"/>
+<area shape="rect" href="Power_8h.html" title="Upravljanje neaktivnoscu i ESP32 deep sleep nacinom rada." alt="" coords="28,79,101,104"/>
+<area shape="poly" title=" " alt="" coords="153,40,85,81,82,76,150,35"/>
+<area shape="rect" href="SafeNetwork_8h.html" title="WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook." alt="" coords="297,79,416,104"/>
+<area shape="poly" title=" " alt="" coords="224,33,329,76,327,81,222,38"/>
+<area shape="poly" title=" " alt="" coords="210,117,182,153,178,150,206,113"/>
+<area shape="poly" title=" " alt="" coords="157,190,129,227,125,224,152,187"/>
+<area shape="poly" title=" " alt="" coords="215,180,327,223,325,228,213,185"/>
+<area shape="poly" title=" " alt="" coords="94,109,155,150,152,154,92,114"/>
+<area shape="poly" title=" " alt="" coords="76,116,116,224,111,226,71,118"/>
+<area shape="poly" title=" " alt="" coords="315,111,203,154,201,149,313,106"/>
+<area shape="poly" title=" " alt="" coords="332,115,238,180,145,228,142,223,235,175,329,110"/>
+<area shape="poly" title=" " alt="" coords="359,118,359,225,354,225,354,118"/>
+</map>
+</div>
+</div>
+<p><a href="Config_8h_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definicije</h2></td></tr>
+<tr class="memitem:ab61d0981ed42df9e18211b273d22cfcd" id="r_ab61d0981ed42df9e18211b273d22cfcd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ab61d0981ed42df9e18211b273d22cfcd">BUZZER_PIN</a>&#160;&#160;&#160;13</td></tr>
+<tr class="memdesc:ab61d0981ed42df9e18211b273d22cfcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO pin pasivne zujalice.  <br /></td></tr>
+<tr class="separator:ab61d0981ed42df9e18211b273d22cfcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b73bba3bf1b089d7f57fc0fb55c84ea" id="r_a5b73bba3bf1b089d7f57fc0fb55c84ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a5b73bba3bf1b089d7f57fc0fb55c84ea">VIBRATION_PIN</a>&#160;&#160;&#160;26</td></tr>
+<tr class="memdesc:a5b73bba3bf1b089d7f57fc0fb55c84ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO pin vibracijskog motora.  <br /></td></tr>
+<tr class="separator:a5b73bba3bf1b089d7f57fc0fb55c84ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae89f73e4cdcb650ae5c585818d3a861" id="r_aae89f73e4cdcb650ae5c585818d3a861"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aae89f73e4cdcb650ae5c585818d3a861">POT_PIN</a>&#160;&#160;&#160;34</td></tr>
+<tr class="memdesc:aae89f73e4cdcb650ae5c585818d3a861"><td class="mdescLeft">&#160;</td><td class="mdescRight">ADC pin potenciometra koji simulira okretanje brave.  <br /></td></tr>
+<tr class="separator:aae89f73e4cdcb650ae5c585818d3a861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab59f1cf74b9d7f04225d99a1089f16b5" id="r_ab59f1cf74b9d7f04225d99a1089f16b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ab59f1cf74b9d7f04225d99a1089f16b5">JOYSTICK_Y_PIN</a>&#160;&#160;&#160;33</td></tr>
+<tr class="memdesc:ab59f1cf74b9d7f04225d99a1089f16b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Joystick Y mora koristiti ADC1 jer ADC2 nije pouzdan dok je WiFi aktivan.  <br /></td></tr>
+<tr class="separator:ab59f1cf74b9d7f04225d99a1089f16b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc2ad14f0789907024ac765711ffd3da" id="r_abc2ad14f0789907024ac765711ffd3da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#abc2ad14f0789907024ac765711ffd3da">BUTTON_PIN</a>&#160;&#160;&#160;12</td></tr>
+<tr class="memdesc:abc2ad14f0789907024ac765711ffd3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIO pin tipke, konfiguriran kao INPUT_PULLUP.  <br /></td></tr>
+<tr class="separator:abc2ad14f0789907024ac765711ffd3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94e87296a6396162a7a5484d4a10f2c0" id="r_a94e87296a6396162a7a5484d4a10f2c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a94e87296a6396162a7a5484d4a10f2c0">OLED_SDA_PIN</a>&#160;&#160;&#160;21</td></tr>
+<tr class="memdesc:a94e87296a6396162a7a5484d4a10f2c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C SDA pin OLED ekrana.  <br /></td></tr>
+<tr class="separator:a94e87296a6396162a7a5484d4a10f2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74829e54cd94aed62953f254e7dba9b9" id="r_a74829e54cd94aed62953f254e7dba9b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a74829e54cd94aed62953f254e7dba9b9">OLED_SCL_PIN</a>&#160;&#160;&#160;22</td></tr>
+<tr class="memdesc:a74829e54cd94aed62953f254e7dba9b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C SCL pin OLED ekrana.  <br /></td></tr>
+<tr class="separator:a74829e54cd94aed62953f254e7dba9b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd109632a6dcccaa80b43561b1ab700" id="r_a2cd109632a6dcccaa80b43561b1ab700"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a2cd109632a6dcccaa80b43561b1ab700">SCREEN_WIDTH</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:a2cd109632a6dcccaa80b43561b1ab700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sirina OLED ekrana u pikselima.  <br /></td></tr>
+<tr class="separator:a2cd109632a6dcccaa80b43561b1ab700"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6974d08a74da681b3957b2fead2608b8" id="r_a6974d08a74da681b3957b2fead2608b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a6974d08a74da681b3957b2fead2608b8">SCREEN_HEIGHT</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:a6974d08a74da681b3957b2fead2608b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visina OLED ekrana u pikselima.  <br /></td></tr>
+<tr class="separator:a6974d08a74da681b3957b2fead2608b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Varijable</h2></td></tr>
+<tr class="memitem:ae7b1513fdb2fe295824f6e7bca0575db" id="r_ae7b1513fdb2fe295824f6e7bca0575db"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ae7b1513fdb2fe295824f6e7bca0575db">VAULT_CENTER_X</a> = 58</td></tr>
+<tr class="memdesc:ae7b1513fdb2fe295824f6e7bca0575db"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata sredista nacrtane brave.  <br /></td></tr>
+<tr class="separator:ae7b1513fdb2fe295824f6e7bca0575db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ec625905c145e8508567083f2b40bc9" id="r_a4ec625905c145e8508567083f2b40bc9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a> = 42</td></tr>
+<tr class="memdesc:a4ec625905c145e8508567083f2b40bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y koordinata sredista nacrtane brave.  <br /></td></tr>
+<tr class="separator:a4ec625905c145e8508567083f2b40bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2a1116be28be79803ed8f7c794ffe48" id="r_aa2a1116be28be79803ed8f7c794ffe48"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aa2a1116be28be79803ed8f7c794ffe48">VAULT_OUTER_RADIUS</a> = 20</td></tr>
+<tr class="memdesc:aa2a1116be28be79803ed8f7c794ffe48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vanjski radijus brave na OLED-u.  <br /></td></tr>
+<tr class="separator:aa2a1116be28be79803ed8f7c794ffe48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01cff2cefba2af554f9ef8dd69e14a8" id="r_ac01cff2cefba2af554f9ef8dd69e14a8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ac01cff2cefba2af554f9ef8dd69e14a8">VAULT_INNER_RADIUS</a> = 5</td></tr>
+<tr class="memdesc:ac01cff2cefba2af554f9ef8dd69e14a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unutarnji radijus sredista brave.  <br /></td></tr>
+<tr class="separator:ac01cff2cefba2af554f9ef8dd69e14a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64814c17e16b62eb70e1af3fd522cd54" id="r_a64814c17e16b62eb70e1af3fd522cd54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a64814c17e16b62eb70e1af3fd522cd54">VAULT_HANDLE_LENGTH</a> = 15</td></tr>
+<tr class="memdesc:a64814c17e16b62eb70e1af3fd522cd54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duljina jedne rucke/kazaljke brave.  <br /></td></tr>
+<tr class="separator:a64814c17e16b62eb70e1af3fd522cd54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3489fd7d81a981e8caf7f51574b28395" id="r_a3489fd7d81a981e8caf7f51574b28395"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a3489fd7d81a981e8caf7f51574b28395">VAULT_HANDLE_RADIUS</a> = 3</td></tr>
+<tr class="memdesc:a3489fd7d81a981e8caf7f51574b28395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radijus kruzica na kraju rucke brave.  <br /></td></tr>
+<tr class="separator:a3489fd7d81a981e8caf7f51574b28395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afe7840c966ecea463d80d51c16feed" id="r_a4afe7840c966ecea463d80d51c16feed"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a4afe7840c966ecea463d80d51c16feed">VAULT_HANDLE_COUNT</a> = 3</td></tr>
+<tr class="memdesc:a4afe7840c966ecea463d80d51c16feed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj rucki koje se crtaju na bravi.  <br /></td></tr>
+<tr class="separator:a4afe7840c966ecea463d80d51c16feed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f9840573841dd75587ae8a05b2496ff" id="r_a5f9840573841dd75587ae8a05b2496ff"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a5f9840573841dd75587ae8a05b2496ff">FULL_ROTATION</a> = 6.2831853</td></tr>
+<tr class="memdesc:a5f9840573841dd75587ae8a05b2496ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Jedan puni krug u radijanima.  <br /></td></tr>
+<tr class="separator:a5f9840573841dd75587ae8a05b2496ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4097264b481e61fce1fd5f4d1f698919" id="r_a4097264b481e61fce1fd5f4d1f698919"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a4097264b481e61fce1fd5f4d1f698919">BAR_X</a> = 8</td></tr>
+<tr class="memdesc:a4097264b481e61fce1fd5f4d1f698919"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata lijevog ruba horizontalne trake okretanja.  <br /></td></tr>
+<tr class="separator:a4097264b481e61fce1fd5f4d1f698919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab840ebf86a6074b9db8d8b43aaf0f039" id="r_ab840ebf86a6074b9db8d8b43aaf0f039"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> = 2</td></tr>
+<tr class="memdesc:ab840ebf86a6074b9db8d8b43aaf0f039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y koordinata gornjeg ruba horizontalne trake okretanja.  <br /></td></tr>
+<tr class="separator:ab840ebf86a6074b9db8d8b43aaf0f039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74c0aab6b42576716415a4ae62282acf" id="r_a74c0aab6b42576716415a4ae62282acf"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a74c0aab6b42576716415a4ae62282acf">BAR_WIDTH</a> = 112</td></tr>
+<tr class="memdesc:a74c0aab6b42576716415a4ae62282acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sirina horizontalne trake okretanja.  <br /></td></tr>
+<tr class="separator:a74c0aab6b42576716415a4ae62282acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc34e9f02552732321a45df5fbc42f98" id="r_acc34e9f02552732321a45df5fbc42f98"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> = 12</td></tr>
+<tr class="memdesc:acc34e9f02552732321a45df5fbc42f98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visina horizontalne trake okretanja.  <br /></td></tr>
+<tr class="separator:acc34e9f02552732321a45df5fbc42f98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7979dfab2712debd00104df908030ba6" id="r_a7979dfab2712debd00104df908030ba6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a7979dfab2712debd00104df908030ba6">BAR_CENTER_X</a> = <a class="el" href="Config_8h.html#a4097264b481e61fce1fd5f4d1f698919">BAR_X</a> + <a class="el" href="Config_8h.html#a74c0aab6b42576716415a4ae62282acf">BAR_WIDTH</a> / 2</td></tr>
+<tr class="memdesc:a7979dfab2712debd00104df908030ba6"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata sredine trake okretanja.  <br /></td></tr>
+<tr class="separator:a7979dfab2712debd00104df908030ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6123391cca1be96bee9a94b7e4a1cb7" id="r_af6123391cca1be96bee9a94b7e4a1cb7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#af6123391cca1be96bee9a94b7e4a1cb7">TARGET_ARROW_Y</a> = <a class="el" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + <a class="el" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> + 6</td></tr>
+<tr class="memdesc:af6123391cca1be96bee9a94b7e4a1cb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Osnovna Y koordinata strelice trenutnog cilja.  <br /></td></tr>
+<tr class="separator:af6123391cca1be96bee9a94b7e4a1cb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d5106050888257344c8c02dee4a4ab" id="r_ae5d5106050888257344c8c02dee4a4ab"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a> = 4</td></tr>
+<tr class="memdesc:ae5d5106050888257344c8c02dee4a4ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velicina trokuta strelice trenutnog cilja.  <br /></td></tr>
+<tr class="separator:ae5d5106050888257344c8c02dee4a4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5329451b528ed261d94f8613709736db" id="r_a5329451b528ed261d94f8613709736db"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a5329451b528ed261d94f8613709736db">TARGET_ARROW_TOUCH_Y</a> = <a class="el" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + <a class="el" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> + <a class="el" href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a></td></tr>
+<tr class="memdesc:a5329451b528ed261d94f8613709736db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y koordinata strelice dok animacijski dodiruje traku.  <br /></td></tr>
+<tr class="separator:a5329451b528ed261d94f8613709736db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712e2de20cd2b2003b96334001a11793" id="r_a712e2de20cd2b2003b96334001a11793"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a712e2de20cd2b2003b96334001a11793">TARGET_ARROW_CYCLE_MS</a> = 1800</td></tr>
+<tr class="memdesc:a712e2de20cd2b2003b96334001a11793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajanje jednog ciklusa animacije strelice u milisekundama.  <br /></td></tr>
+<tr class="separator:a712e2de20cd2b2003b96334001a11793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff04d22d671af1994c75b39c49a7d3b" id="r_acff04d22d671af1994c75b39c49a7d3b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#acff04d22d671af1994c75b39c49a7d3b">TARGET_ARROW_HOLD_MS</a> = 120</td></tr>
+<tr class="memdesc:acff04d22d671af1994c75b39c49a7d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajanje faze u kojoj je strelica spustena do trake.  <br /></td></tr>
+<tr class="separator:acff04d22d671af1994c75b39c49a7d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2149513fcb52fd54a1c9524352fdea54" id="r_a2149513fcb52fd54a1c9524352fdea54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a2149513fcb52fd54a1c9524352fdea54">PROGRESS_BAR_X</a> = 0</td></tr>
+<tr class="memdesc:a2149513fcb52fd54a1c9524352fdea54"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata vertikalne trake napretka kroz level.  <br /></td></tr>
+<tr class="separator:a2149513fcb52fd54a1c9524352fdea54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af28bf82a0437f0ae8d28e0ed17eac662" id="r_af28bf82a0437f0ae8d28e0ed17eac662"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#af28bf82a0437f0ae8d28e0ed17eac662">PROGRESS_BAR_Y</a> = 18</td></tr>
+<tr class="memdesc:af28bf82a0437f0ae8d28e0ed17eac662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y koordinata vertikalne trake napretka kroz level.  <br /></td></tr>
+<tr class="separator:af28bf82a0437f0ae8d28e0ed17eac662"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03d7a6dd59674b569f84f77fc3613fec" id="r_a03d7a6dd59674b569f84f77fc3613fec"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a03d7a6dd59674b569f84f77fc3613fec">PROGRESS_BAR_WIDTH</a> = 5</td></tr>
+<tr class="memdesc:a03d7a6dd59674b569f84f77fc3613fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sirina vertikalne trake napretka kroz level.  <br /></td></tr>
+<tr class="separator:a03d7a6dd59674b569f84f77fc3613fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612a3e1fceb630ab86b76241dda5fde0" id="r_a612a3e1fceb630ab86b76241dda5fde0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a612a3e1fceb630ab86b76241dda5fde0">PROGRESS_BAR_HEIGHT</a> = 44</td></tr>
+<tr class="memdesc:a612a3e1fceb630ab86b76241dda5fde0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visina vertikalne trake napretka kroz level.  <br /></td></tr>
+<tr class="separator:a612a3e1fceb630ab86b76241dda5fde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a425ac2a2fb413d1317d58451914ee729" id="r_a425ac2a2fb413d1317d58451914ee729"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a425ac2a2fb413d1317d58451914ee729">TIMER_X</a> = 9</td></tr>
+<tr class="memdesc:a425ac2a2fb413d1317d58451914ee729"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata teksta timera.  <br /></td></tr>
+<tr class="separator:a425ac2a2fb413d1317d58451914ee729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991d3c6274414a3f61c4b010c7c84a45" id="r_a991d3c6274414a3f61c4b010c7c84a45"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a991d3c6274414a3f61c4b010c7c84a45">BREATH_TEXT_X</a> = 91</td></tr>
+<tr class="memdesc:a991d3c6274414a3f61c4b010c7c84a45"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata poruke disanja.  <br /></td></tr>
+<tr class="separator:a991d3c6274414a3f61c4b010c7c84a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a69455db0abd4f695a18090b8b81a7" id="r_a61a69455db0abd4f695a18090b8b81a7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a61a69455db0abd4f695a18090b8b81a7">BREATH_TEXT_BOX_X</a> = 89</td></tr>
+<tr class="memdesc:a61a69455db0abd4f695a18090b8b81a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">X koordinata okvira poruke disanja.  <br /></td></tr>
+<tr class="separator:a61a69455db0abd4f695a18090b8b81a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bf95a08985eb63d08b57d9da184861" id="r_ac0bf95a08985eb63d08b57d9da184861"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ac0bf95a08985eb63d08b57d9da184861">BREATH_TEXT_BOX_Y</a> = <a class="el" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a> - 7</td></tr>
+<tr class="memdesc:ac0bf95a08985eb63d08b57d9da184861"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y koordinata okvira poruke disanja.  <br /></td></tr>
+<tr class="separator:ac0bf95a08985eb63d08b57d9da184861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b9820528668ce2e1025272232227062" id="r_a1b9820528668ce2e1025272232227062"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1b9820528668ce2e1025272232227062">BREATH_TEXT_BOX_WIDTH</a> = 39</td></tr>
+<tr class="memdesc:a1b9820528668ce2e1025272232227062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sirina okvira poruke disanja.  <br /></td></tr>
+<tr class="separator:a1b9820528668ce2e1025272232227062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc449c7653e2bbc59621afb5e7f789ec" id="r_acc449c7653e2bbc59621afb5e7f789ec"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#acc449c7653e2bbc59621afb5e7f789ec">BREATH_TEXT_BOX_HEIGHT</a> = 13</td></tr>
+<tr class="memdesc:acc449c7653e2bbc59621afb5e7f789ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Visina okvira poruke disanja.  <br /></td></tr>
+<tr class="separator:acc449c7653e2bbc59621afb5e7f789ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78e0ae0021d7a038baa686297fc13e1" id="r_ab78e0ae0021d7a038baa686297fc13e1"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ab78e0ae0021d7a038baa686297fc13e1">TARGET_MESSAGE_Y</a> = <a class="el" href="Config_8h.html#ac0bf95a08985eb63d08b57d9da184861">BREATH_TEXT_BOX_Y</a> + <a class="el" href="Config_8h.html#acc449c7653e2bbc59621afb5e7f789ec">BREATH_TEXT_BOX_HEIGHT</a> + 2</td></tr>
+<tr class="memdesc:ab78e0ae0021d7a038baa686297fc13e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y koordinata kratke poruke za trenutni cilj.  <br /></td></tr>
+<tr class="separator:ab78e0ae0021d7a038baa686297fc13e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad819ccff597f4438a705de6c3a1bbe5c" id="r_ad819ccff597f4438a705de6c3a1bbe5c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ad819ccff597f4438a705de6c3a1bbe5c">POT_MIN_VALUE</a> = 0</td></tr>
+<tr class="memdesc:ad819ccff597f4438a705de6c3a1bbe5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najmanja ADC vrijednost potenciometra.  <br /></td></tr>
+<tr class="separator:ad819ccff597f4438a705de6c3a1bbe5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0410f3d154e7342fe777d061a3c9da4a" id="r_a0410f3d154e7342fe777d061a3c9da4a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a0410f3d154e7342fe777d061a3c9da4a">POT_MAX_VALUE</a> = 4095</td></tr>
+<tr class="memdesc:a0410f3d154e7342fe777d061a3c9da4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najveca ADC vrijednost potenciometra.  <br /></td></tr>
+<tr class="separator:a0410f3d154e7342fe777d061a3c9da4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8d2860504c49c1014aeb5e599bd260" id="r_a9d8d2860504c49c1014aeb5e599bd260"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a9d8d2860504c49c1014aeb5e599bd260">POT_DEADZONE</a> = 50</td></tr>
+<tr class="memdesc:a9d8d2860504c49c1014aeb5e599bd260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalna promjena ADC vrijednosti koja se smatra stvarnim okretanjem.  <br /></td></tr>
+<tr class="separator:a9d8d2860504c49c1014aeb5e599bd260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f57aad55fe7b38eac1206375fdf7330" id="r_a1f57aad55fe7b38eac1206375fdf7330"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1f57aad55fe7b38eac1206375fdf7330">CLICK_VIBRATION_MS</a> = 15</td></tr>
+<tr class="memdesc:a1f57aad55fe7b38eac1206375fdf7330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajanje kratkog klik feedbacka u milisekundama.  <br /></td></tr>
+<tr class="separator:a1f57aad55fe7b38eac1206375fdf7330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac29105b5960659112c662b4842ddcef" id="r_aac29105b5960659112c662b4842ddcef"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aac29105b5960659112c662b4842ddcef">MIN_VIBRATION_PULSE_MS</a> = 60</td></tr>
+<tr class="memdesc:aac29105b5960659112c662b4842ddcef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalno trajanje vibracijskog impulsa u milisekundama.  <br /></td></tr>
+<tr class="separator:aac29105b5960659112c662b4842ddcef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8287576d87f2d43ebd14aa8035a3bddb" id="r_a8287576d87f2d43ebd14aa8035a3bddb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a8287576d87f2d43ebd14aa8035a3bddb">JOYSTICK_MIN_VALUE</a> = 0</td></tr>
+<tr class="memdesc:a8287576d87f2d43ebd14aa8035a3bddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najmanja ADC vrijednost joystick Y osi.  <br /></td></tr>
+<tr class="separator:a8287576d87f2d43ebd14aa8035a3bddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a762c03232f579c4c7d3e69abb767fe3f" id="r_a762c03232f579c4c7d3e69abb767fe3f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a762c03232f579c4c7d3e69abb767fe3f">JOYSTICK_MAX_VALUE</a> = 4095</td></tr>
+<tr class="memdesc:a762c03232f579c4c7d3e69abb767fe3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najveca ADC vrijednost joystick Y osi.  <br /></td></tr>
+<tr class="separator:a762c03232f579c4c7d3e69abb767fe3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056c08ff1132a8ce5c9cf7543df1d7df" id="r_a056c08ff1132a8ce5c9cf7543df1d7df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a056c08ff1132a8ce5c9cf7543df1d7df">JOYSTICK_CENTER_VALUE</a> = 2048</td></tr>
+<tr class="memdesc:a056c08ff1132a8ce5c9cf7543df1d7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zadana neutralna vrijednost joysticka prije kalibracije.  <br /></td></tr>
+<tr class="separator:a056c08ff1132a8ce5c9cf7543df1d7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0e2eca9025033ca4786de46d1e9341" id="r_a6f0e2eca9025033ca4786de46d1e9341"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a6f0e2eca9025033ca4786de46d1e9341">JOYSTICK_CENTER_SAMPLE_COUNT</a> = 16</td></tr>
+<tr class="memdesc:a6f0e2eca9025033ca4786de46d1e9341"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj uzoraka za kalibraciju neutralne vrijednosti joysticka.  <br /></td></tr>
+<tr class="separator:a6f0e2eca9025033ca4786de46d1e9341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01f8e3b004e028e445efbb334d0fd610" id="r_a01f8e3b004e028e445efbb334d0fd610"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a01f8e3b004e028e445efbb334d0fd610">JOYSTICK_DEADZONE</a> = 1000</td></tr>
+<tr class="memdesc:a01f8e3b004e028e445efbb334d0fd610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Udaljenost od centra koju joystick mora prijeci za pomak menija.  <br /></td></tr>
+<tr class="separator:a01f8e3b004e028e445efbb334d0fd610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7faa54737775922ab27ebe365a1c2a" id="r_aeb7faa54737775922ab27ebe365a1c2a"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aeb7faa54737775922ab27ebe365a1c2a">JOYSTICK_MENU_REPEAT_MS</a> = 250</td></tr>
+<tr class="memdesc:aeb7faa54737775922ab27ebe365a1c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalni razmak izmedju ponovljenih pomaka menija joystickom.  <br /></td></tr>
+<tr class="separator:aeb7faa54737775922ab27ebe365a1c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafdc8dcab294f37bef891a8e0a3813b8" id="r_aafdc8dcab294f37bef891a8e0a3813b8"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aafdc8dcab294f37bef891a8e0a3813b8">ROTATION_SPEED</a> = 0.01</td></tr>
+<tr class="memdesc:aafdc8dcab294f37bef891a8e0a3813b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Faktor kojim se ADC promjena pretvara u kut rotacije brave.  <br /></td></tr>
+<tr class="separator:aafdc8dcab294f37bef891a8e0a3813b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aca1447d47d62216f5040574572c3e9" id="r_a0aca1447d47d62216f5040574572c3e9"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a0aca1447d47d62216f5040574572c3e9">TARGET_HIT_TOLERANCE</a> = 0.08</td></tr>
+<tr class="memdesc:a0aca1447d47d62216f5040574572c3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tolerancija unutar koje se cilj smatra pogodjenim.  <br /></td></tr>
+<tr class="separator:a0aca1447d47d62216f5040574572c3e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0545a78d760ec0d1afffb88f8f15e1f" id="r_ab0545a78d760ec0d1afffb88f8f15e1f"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ab0545a78d760ec0d1afffb88f8f15e1f">TARGET_OVERSHOOT_ALLOWANCE</a> = 0.05</td></tr>
+<tr class="memdesc:ab0545a78d760ec0d1afffb88f8f15e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dopusteno prebacivanje preko cilja prije kazne za stabilnost.  <br /></td></tr>
+<tr class="separator:ab0545a78d760ec0d1afffb88f8f15e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98adbf9bb6534df2f18bd9a65f486785" id="r_a98adbf9bb6534df2f18bd9a65f486785"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a98adbf9bb6534df2f18bd9a65f486785">TARGET_HIT_HOLD_MS</a> = 250</td></tr>
+<tr class="memdesc:a98adbf9bb6534df2f18bd9a65f486785"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme koje igrac mora zadrzati cilj unutar tolerancije.  <br /></td></tr>
+<tr class="separator:a98adbf9bb6534df2f18bd9a65f486785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4be5195a9b2e14eb535121efa677055" id="r_ae4be5195a9b2e14eb535121efa677055"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ae4be5195a9b2e14eb535121efa677055">BREATH_BOB_CYCLE_MS</a> = 2400</td></tr>
+<tr class="memdesc:ae4be5195a9b2e14eb535121efa677055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajanje ciklusa animacije poruke disanja.  <br /></td></tr>
+<tr class="separator:ae4be5195a9b2e14eb535121efa677055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53cbfc8b3709e5fb523d7c89ba03765f" id="r_a53cbfc8b3709e5fb523d7c89ba03765f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a53cbfc8b3709e5fb523d7c89ba03765f">BREATH_BOB_STEP_MS</a> = 120</td></tr>
+<tr class="memdesc:a53cbfc8b3709e5fb523d7c89ba03765f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trajanje pomaknute faze animacije poruke disanja.  <br /></td></tr>
+<tr class="separator:a53cbfc8b3709e5fb523d7c89ba03765f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3482e66c84fa3a005d96b8ed5bea379b" id="r_a3482e66c84fa3a005d96b8ed5bea379b"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a3482e66c84fa3a005d96b8ed5bea379b">SCORE_WEBHOOK_URL</a> = &quot;https://ruc-esp.nerizz.com/api/scores&quot;</td></tr>
+<tr class="memdesc:a3482e66c84fa3a005d96b8ed5bea379b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zadani webhook na koji se salju scoreovi.  <br /></td></tr>
+<tr class="separator:a3482e66c84fa3a005d96b8ed5bea379b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272acef23e95be3918b2a41e39d4e5c8" id="r_a272acef23e95be3918b2a41e39d4e5c8"><td class="memItemLeft" align="right" valign="top">const char *const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a272acef23e95be3918b2a41e39d4e5c8">WIFI_PORTAL_PASSWORD</a> = &quot;safe1234&quot;</td></tr>
+<tr class="memdesc:a272acef23e95be3918b2a41e39d4e5c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lozinka lokalnog WiFi konfiguracijskog portala.  <br /></td></tr>
+<tr class="separator:a272acef23e95be3918b2a41e39d4e5c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b7578cbf8a2ac9a8a2ccb3fc5431791" id="r_a9b7578cbf8a2ac9a8a2ccb3fc5431791"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a9b7578cbf8a2ac9a8a2ccb3fc5431791">WIFI_CONNECT_TIMEOUT_MS</a> = 12000</td></tr>
+<tr class="memdesc:a9b7578cbf8a2ac9a8a2ccb3fc5431791"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maksimalno cekanje WiFi spajanja prije povratka u setup portal.  <br /></td></tr>
+<tr class="separator:a9b7578cbf8a2ac9a8a2ccb3fc5431791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae985d612f316285766bce5cb4cac80da" id="r_ae985d612f316285766bce5cb4cac80da"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ae985d612f316285766bce5cb4cac80da">SCORE_POST_TIMEOUT_MS</a> = 4000</td></tr>
+<tr class="memdesc:ae985d612f316285766bce5cb4cac80da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timeout HTTP POST zahtjeva za score u milisekundama.  <br /></td></tr>
+<tr class="separator:ae985d612f316285766bce5cb4cac80da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa78ee57ac2e625e5d1d78d369c69ab" id="r_a1fa78ee57ac2e625e5d1d78d369c69ab"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a> = 12</td></tr>
+<tr class="memdesc:a1fa78ee57ac2e625e5d1d78d369c69ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najveci broj ciljeva koji se sprema u score statistiku.  <br /></td></tr>
+<tr class="separator:a1fa78ee57ac2e625e5d1d78d369c69ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07057828941e1243c6fc1bcb9f7dba2d" id="r_a07057828941e1243c6fc1bcb9f7dba2d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a> = 180</td></tr>
+<tr class="memdesc:a07057828941e1243c6fc1bcb9f7dba2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Najveci broj replay dogadjaja koji se cuva u memoriji.  <br /></td></tr>
+<tr class="separator:a07057828941e1243c6fc1bcb9f7dba2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76fb44a198d29d2526faedd75bdae581" id="r_a76fb44a198d29d2526faedd75bdae581"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a76fb44a198d29d2526faedd75bdae581">REPLAY_SAMPLE_INTERVAL_MS</a> = 120</td></tr>
+<tr class="memdesc:a76fb44a198d29d2526faedd75bdae581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalni vremenski razmak automatskih replay uzoraka.  <br /></td></tr>
+<tr class="separator:a76fb44a198d29d2526faedd75bdae581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef596a7b929accb007992972aa436c0" id="r_abef596a7b929accb007992972aa436c0"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#abef596a7b929accb007992972aa436c0">REPLAY_MIN_FILL_DELTA</a> = 0.03</td></tr>
+<tr class="memdesc:abef596a7b929accb007992972aa436c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimalna promjena fill vrijednosti za automatski replay uzorak.  <br /></td></tr>
+<tr class="separator:abef596a7b929accb007992972aa436c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c52f6a5b4a3794a07c179cddfcbfa4b" id="r_a6c52f6a5b4a3794a07c179cddfcbfa4b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a6c52f6a5b4a3794a07c179cddfcbfa4b">REPLAY_EVENT_START</a> = 0</td></tr>
+<tr class="memdesc:a6c52f6a5b4a3794a07c179cddfcbfa4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replay dogadjaj koji oznacava pocetak levela.  <br /></td></tr>
+<tr class="separator:a6c52f6a5b4a3794a07c179cddfcbfa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246eab5c35c30219a0d2813c2b0bf93e" id="r_a246eab5c35c30219a0d2813c2b0bf93e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a246eab5c35c30219a0d2813c2b0bf93e">REPLAY_EVENT_MOVE</a> = 1</td></tr>
+<tr class="memdesc:a246eab5c35c30219a0d2813c2b0bf93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replay dogadjaj koji oznacava pomak trake.  <br /></td></tr>
+<tr class="separator:a246eab5c35c30219a0d2813c2b0bf93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c9433eabd1262a14ae13d9195d6cb54" id="r_a8c9433eabd1262a14ae13d9195d6cb54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a8c9433eabd1262a14ae13d9195d6cb54">REPLAY_EVENT_TARGET_HIT</a> = 2</td></tr>
+<tr class="memdesc:a8c9433eabd1262a14ae13d9195d6cb54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replay dogadjaj koji oznacava pogodjen cilj.  <br /></td></tr>
+<tr class="separator:a8c9433eabd1262a14ae13d9195d6cb54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab946ecb93d2c22e241b15793e0d1e1df" id="r_ab946ecb93d2c22e241b15793e0d1e1df"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#ab946ecb93d2c22e241b15793e0d1e1df">REPLAY_EVENT_FINISH</a> = 3</td></tr>
+<tr class="memdesc:ab946ecb93d2c22e241b15793e0d1e1df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Replay dogadjaj koji oznacava kraj levela.  <br /></td></tr>
+<tr class="separator:ab946ecb93d2c22e241b15793e0d1e1df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db67170c771142abd37dcf787c2fbc4" id="r_a7db67170c771142abd37dcf787c2fbc4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a7db67170c771142abd37dcf787c2fbc4">GAME_SCREEN_LEVEL_SELECT</a> = 0</td></tr>
+<tr class="memdesc:a7db67170c771142abd37dcf787c2fbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pocetni meni za izbor levela i mreznih opcija.  <br /></td></tr>
+<tr class="separator:a7db67170c771142abd37dcf787c2fbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37b462b2807896a44c84627906bee423" id="r_a37b462b2807896a44c84627906bee423"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a37b462b2807896a44c84627906bee423">GAME_SCREEN_PLAYING</a> = 1</td></tr>
+<tr class="memdesc:a37b462b2807896a44c84627906bee423"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktivna igra.  <br /></td></tr>
+<tr class="separator:a37b462b2807896a44c84627906bee423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421ce23d2866c9e6217e2bff1845de83" id="r_a421ce23d2866c9e6217e2bff1845de83"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a421ce23d2866c9e6217e2bff1845de83">GAME_SCREEN_FINISHED</a> = 2</td></tr>
+<tr class="memdesc:a421ce23d2866c9e6217e2bff1845de83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ekran s rezultatom nakon zavrsetka levela.  <br /></td></tr>
+<tr class="separator:a421ce23d2866c9e6217e2bff1845de83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09b9de13ddc8243b81082b4544153e8f" id="r_a09b9de13ddc8243b81082b4544153e8f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a09b9de13ddc8243b81082b4544153e8f">GAME_SCREEN_WIFI_CONFIG</a> = 3</td></tr>
+<tr class="memdesc:a09b9de13ddc8243b81082b4544153e8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ekran koji prikazuje WiFi AP podatke za konfiguraciju.  <br /></td></tr>
+<tr class="separator:a09b9de13ddc8243b81082b4544153e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5888c7b9894fc3cc4d2f0dbbd87183" id="r_aad5888c7b9894fc3cc4d2f0dbbd87183"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#aad5888c7b9894fc3cc4d2f0dbbd87183">GAME_SCREEN_NETWORK_INFO</a> = 4</td></tr>
+<tr class="memdesc:aad5888c7b9894fc3cc4d2f0dbbd87183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ekran s trenutnim mreznim statusom i setup akcijama.  <br /></td></tr>
+<tr class="separator:aad5888c7b9894fc3cc4d2f0dbbd87183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1099eee964c88a07cddca4979a5a8eca" id="r_a1099eee964c88a07cddca4979a5a8eca"><td class="memItemLeft" align="right" valign="top">const unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Config_8h.html#a1099eee964c88a07cddca4979a5a8eca">SLEEP_TIMEOUT_MS</a> = 30000</td></tr>
+<tr class="memdesc:a1099eee964c88a07cddca4979a5a8eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme neaktivnosti nakon kojeg ESP32 ulazi u deep sleep.  <br /></td></tr>
+<tr class="separator:a1099eee964c88a07cddca4979a5a8eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>Centralne hardverske pin definicije i konstante igre. </p>
+<p>Vrijednosti u ovoj datoteci koriste svi moduli firmwarea: prikaz, logika levela, mreza, ulazni uredjaji i upravljanje potrosnjom. </p>
+
+<p class="definition">Definirano u datoteci <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacija definicija</h2>
+<a id="abc2ad14f0789907024ac765711ffd3da" name="abc2ad14f0789907024ac765711ffd3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc2ad14f0789907024ac765711ffd3da">&#9670;&#160;</a></span>BUTTON_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUTTON_PIN&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO pin tipke, konfiguriran kao INPUT_PULLUP. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00024">24</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="ab61d0981ed42df9e18211b273d22cfcd" name="ab61d0981ed42df9e18211b273d22cfcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab61d0981ed42df9e18211b273d22cfcd">&#9670;&#160;</a></span>BUZZER_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUZZER_PIN&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO pin pasivne zujalice. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00016">16</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="ab59f1cf74b9d7f04225d99a1089f16b5" name="ab59f1cf74b9d7f04225d99a1089f16b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab59f1cf74b9d7f04225d99a1089f16b5">&#9670;&#160;</a></span>JOYSTICK_Y_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JOYSTICK_Y_PIN&#160;&#160;&#160;33</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Joystick Y mora koristiti ADC1 jer ADC2 nije pouzdan dok je WiFi aktivan. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00022">22</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a74829e54cd94aed62953f254e7dba9b9" name="a74829e54cd94aed62953f254e7dba9b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74829e54cd94aed62953f254e7dba9b9">&#9670;&#160;</a></span>OLED_SCL_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OLED_SCL_PIN&#160;&#160;&#160;22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C SCL pin OLED ekrana. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00028">28</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a94e87296a6396162a7a5484d4a10f2c0" name="a94e87296a6396162a7a5484d4a10f2c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94e87296a6396162a7a5484d4a10f2c0">&#9670;&#160;</a></span>OLED_SDA_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OLED_SDA_PIN&#160;&#160;&#160;21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C SDA pin OLED ekrana. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00026">26</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="aae89f73e4cdcb650ae5c585818d3a861" name="aae89f73e4cdcb650ae5c585818d3a861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae89f73e4cdcb650ae5c585818d3a861">&#9670;&#160;</a></span>POT_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POT_PIN&#160;&#160;&#160;34</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ADC pin potenciometra koji simulira okretanje brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00020">20</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a6974d08a74da681b3957b2fead2608b8" name="a6974d08a74da681b3957b2fead2608b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6974d08a74da681b3957b2fead2608b8">&#9670;&#160;</a></span>SCREEN_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCREEN_HEIGHT&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visina OLED ekrana u pikselima. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00036">36</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a2cd109632a6dcccaa80b43561b1ab700" name="a2cd109632a6dcccaa80b43561b1ab700"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd109632a6dcccaa80b43561b1ab700">&#9670;&#160;</a></span>SCREEN_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCREEN_WIDTH&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sirina OLED ekrana u pikselima. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00034">34</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a5b73bba3bf1b089d7f57fc0fb55c84ea" name="a5b73bba3bf1b089d7f57fc0fb55c84ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b73bba3bf1b089d7f57fc0fb55c84ea">&#9670;&#160;</a></span>VIBRATION_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VIBRATION_PIN&#160;&#160;&#160;26</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GPIO pin vibracijskog motora. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00018">18</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacija varijable</h2>
+<a id="a7979dfab2712debd00104df908030ba6" name="a7979dfab2712debd00104df908030ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7979dfab2712debd00104df908030ba6">&#9670;&#160;</a></span>BAR_CENTER_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BAR_CENTER_X = <a class="el" href="Config_8h.html#a4097264b481e61fce1fd5f4d1f698919">BAR_X</a> + <a class="el" href="Config_8h.html#a74c0aab6b42576716415a4ae62282acf">BAR_WIDTH</a> / 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata sredine trake okretanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00066">66</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00100">drawTurnBar()</a><a class="el" href="GameLogic_8h_source.html#l00314">getTargetX()</a>.</p>
+
+</div>
+</div>
+<a id="acc34e9f02552732321a45df5fbc42f98" name="acc34e9f02552732321a45df5fbc42f98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc34e9f02552732321a45df5fbc42f98">&#9670;&#160;</a></span>BAR_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BAR_HEIGHT = 12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visina horizontalne trake okretanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00064">64</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00100">drawTurnBar()</a>.</p>
+
+</div>
+</div>
+<a id="a74c0aab6b42576716415a4ae62282acf" name="a74c0aab6b42576716415a4ae62282acf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c0aab6b42576716415a4ae62282acf">&#9670;&#160;</a></span>BAR_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BAR_WIDTH = 112</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sirina horizontalne trake okretanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00062">62</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00100">drawTurnBar()</a><a class="el" href="GameLogic_8h_source.html#l00314">getTargetX()</a>.</p>
+
+</div>
+</div>
+<a id="a4097264b481e61fce1fd5f4d1f698919" name="a4097264b481e61fce1fd5f4d1f698919"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4097264b481e61fce1fd5f4d1f698919">&#9670;&#160;</a></span>BAR_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BAR_X = 8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata lijevog ruba horizontalne trake okretanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00058">58</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00100">drawTurnBar()</a>.</p>
+
+</div>
+</div>
+<a id="ab840ebf86a6074b9db8d8b43aaf0f039" name="ab840ebf86a6074b9db8d8b43aaf0f039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab840ebf86a6074b9db8d8b43aaf0f039">&#9670;&#160;</a></span>BAR_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BAR_Y = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y koordinata gornjeg ruba horizontalne trake okretanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00060">60</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00100">drawTurnBar()</a>.</p>
+
+</div>
+</div>
+<a id="ae4be5195a9b2e14eb535121efa677055" name="ae4be5195a9b2e14eb535121efa677055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4be5195a9b2e14eb535121efa677055">&#9670;&#160;</a></span>BREATH_BOB_CYCLE_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_BOB_CYCLE_MS = 2400</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trajanje ciklusa animacije poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00130">130</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00294">getBreathTextMoveOffset()</a>.</p>
+
+</div>
+</div>
+<a id="a53cbfc8b3709e5fb523d7c89ba03765f" name="a53cbfc8b3709e5fb523d7c89ba03765f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53cbfc8b3709e5fb523d7c89ba03765f">&#9670;&#160;</a></span>BREATH_BOB_STEP_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_BOB_STEP_MS = 120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trajanje pomaknute faze animacije poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00132">132</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00294">getBreathTextMoveOffset()</a>.</p>
+
+</div>
+</div>
+<a id="acc449c7653e2bbc59621afb5e7f789ec" name="acc449c7653e2bbc59621afb5e7f789ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc449c7653e2bbc59621afb5e7f789ec">&#9670;&#160;</a></span>BREATH_TEXT_BOX_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_TEXT_BOX_HEIGHT = 13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visina okvira poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00096">96</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a1b9820528668ce2e1025272232227062" name="a1b9820528668ce2e1025272232227062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b9820528668ce2e1025272232227062">&#9670;&#160;</a></span>BREATH_TEXT_BOX_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_TEXT_BOX_WIDTH = 39</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sirina okvira poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00094">94</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a61a69455db0abd4f695a18090b8b81a7" name="a61a69455db0abd4f695a18090b8b81a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a69455db0abd4f695a18090b8b81a7">&#9670;&#160;</a></span>BREATH_TEXT_BOX_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_TEXT_BOX_X = 89</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata okvira poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00090">90</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="ac0bf95a08985eb63d08b57d9da184861" name="ac0bf95a08985eb63d08b57d9da184861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0bf95a08985eb63d08b57d9da184861">&#9670;&#160;</a></span>BREATH_TEXT_BOX_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_TEXT_BOX_Y = <a class="el" href="Config_8h.html#a4ec625905c145e8508567083f2b40bc9">VAULT_CENTER_Y</a> - 7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y koordinata okvira poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00092">92</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a991d3c6274414a3f61c4b010c7c84a45" name="a991d3c6274414a3f61c4b010c7c84a45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991d3c6274414a3f61c4b010c7c84a45">&#9670;&#160;</a></span>BREATH_TEXT_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int BREATH_TEXT_X = 91</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata poruke disanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00088">88</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a1f57aad55fe7b38eac1206375fdf7330" name="a1f57aad55fe7b38eac1206375fdf7330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f57aad55fe7b38eac1206375fdf7330">&#9670;&#160;</a></span>CLICK_VIBRATION_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int CLICK_VIBRATION_MS = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trajanje kratkog klik feedbacka u milisekundama. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00106">106</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Feedback_8h_source.html#l00045">clickLeft()</a><a class="el" href="Feedback_8h_source.html#l00041">clickRight()</a>.</p>
+
+</div>
+</div>
+<a id="a5f9840573841dd75587ae8a05b2496ff" name="a5f9840573841dd75587ae8a05b2496ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f9840573841dd75587ae8a05b2496ff">&#9670;&#160;</a></span>FULL_ROTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FULL_ROTATION = 6.2831853</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Jedan puni krug u radijanima. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00056">56</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a><a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a421ce23d2866c9e6217e2bff1845de83" name="a421ce23d2866c9e6217e2bff1845de83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421ce23d2866c9e6217e2bff1845de83">&#9670;&#160;</a></span>GAME_SCREEN_FINISHED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int GAME_SCREEN_FINISHED = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ekran s rezultatom nakon zavrsetka levela. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00166">166</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00278">drawGame()</a>, <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a><a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a>.</p>
+
+</div>
+</div>
+<a id="a7db67170c771142abd37dcf787c2fbc4" name="a7db67170c771142abd37dcf787c2fbc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db67170c771142abd37dcf787c2fbc4">&#9670;&#160;</a></span>GAME_SCREEN_LEVEL_SELECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int GAME_SCREEN_LEVEL_SELECT = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pocetni meni za izbor levela i mreznih opcija. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00162">162</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00278">drawGame()</a>, <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a>, <a class="el" href="Input_8h_source.html#l00044">handleJoystickLevelSelect()</a>, <a class="el" href="SafeNetwork_8h_source.html#l00193">handleWifiOffline()</a>, <a class="el" href="SafeNetwork_8h_source.html#l00151">handleWifiSave()</a><a class="el" href="GameLogic_8h_source.html#l00129">showLevelSelect()</a>.</p>
+
+</div>
+</div>
+<a id="aad5888c7b9894fc3cc4d2f0dbbd87183" name="aad5888c7b9894fc3cc4d2f0dbbd87183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5888c7b9894fc3cc4d2f0dbbd87183">&#9670;&#160;</a></span>GAME_SCREEN_NETWORK_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int GAME_SCREEN_NETWORK_INFO = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ekran s trenutnim mreznim statusom i setup akcijama. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00170">170</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00278">drawGame()</a>, <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a><a class="el" href="Input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a37b462b2807896a44c84627906bee423" name="a37b462b2807896a44c84627906bee423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37b462b2807896a44c84627906bee423">&#9670;&#160;</a></span>GAME_SCREEN_PLAYING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int GAME_SCREEN_PLAYING = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktivna igra. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00164">164</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a>, <a class="el" href="GameLogic_8h_source.html#l00108">startLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00504">updateLevelTimer()</a><a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a09b9de13ddc8243b81082b4544153e8f" name="a09b9de13ddc8243b81082b4544153e8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09b9de13ddc8243b81082b4544153e8f">&#9670;&#160;</a></span>GAME_SCREEN_WIFI_CONFIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int GAME_SCREEN_WIFI_CONFIG = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ekran koji prikazuje WiFi AP podatke za konfiguraciju. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00168">168</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00278">drawGame()</a>, <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a><a class="el" href="SafeNetwork_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+<a id="a6f0e2eca9025033ca4786de46d1e9341" name="a6f0e2eca9025033ca4786de46d1e9341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0e2eca9025033ca4786de46d1e9341">&#9670;&#160;</a></span>JOYSTICK_CENTER_SAMPLE_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_CENTER_SAMPLE_COUNT = 16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Broj uzoraka za kalibraciju neutralne vrijednosti joysticka. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00116">116</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00032">calibrateJoystickCenter()</a>.</p>
+
+</div>
+</div>
+<a id="a056c08ff1132a8ce5c9cf7543df1d7df" name="a056c08ff1132a8ce5c9cf7543df1d7df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a056c08ff1132a8ce5c9cf7543df1d7df">&#9670;&#160;</a></span>JOYSTICK_CENTER_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_CENTER_VALUE = 2048</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zadana neutralna vrijednost joysticka prije kalibracije. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00114">114</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a01f8e3b004e028e445efbb334d0fd610" name="a01f8e3b004e028e445efbb334d0fd610"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f8e3b004e028e445efbb334d0fd610">&#9670;&#160;</a></span>JOYSTICK_DEADZONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_DEADZONE = 1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Udaljenost od centra koju joystick mora prijeci za pomak menija. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00118">118</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00044">handleJoystickLevelSelect()</a><a class="el" href="Input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a762c03232f579c4c7d3e69abb767fe3f" name="a762c03232f579c4c7d3e69abb767fe3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a762c03232f579c4c7d3e69abb767fe3f">&#9670;&#160;</a></span>JOYSTICK_MAX_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_MAX_VALUE = 4095</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Najveca ADC vrijednost joystick Y osi. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00112">112</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb7faa54737775922ab27ebe365a1c2a" name="aeb7faa54737775922ab27ebe365a1c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7faa54737775922ab27ebe365a1c2a">&#9670;&#160;</a></span>JOYSTICK_MENU_REPEAT_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long JOYSTICK_MENU_REPEAT_MS = 250</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimalni razmak izmedju ponovljenih pomaka menija joystickom. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00120">120</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00044">handleJoystickLevelSelect()</a><a class="el" href="Input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a8287576d87f2d43ebd14aa8035a3bddb" name="a8287576d87f2d43ebd14aa8035a3bddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8287576d87f2d43ebd14aa8035a3bddb">&#9670;&#160;</a></span>JOYSTICK_MIN_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int JOYSTICK_MIN_VALUE = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Najmanja ADC vrijednost joystick Y osi. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00110">110</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+</div>
+</div>
+<a id="a1fa78ee57ac2e625e5d1d78d369c69ab" name="a1fa78ee57ac2e625e5d1d78d369c69ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa78ee57ac2e625e5d1d78d369c69ab">&#9670;&#160;</a></span>MAX_LEVEL_TARGETS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX_LEVEL_TARGETS = 12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Najveci broj ciljeva koji se sprema u score statistiku. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00142">142</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00485">calculateTargetStability()</a>, <a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="GameLogic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a07057828941e1243c6fc1bcb9f7dba2d" name="a07057828941e1243c6fc1bcb9f7dba2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07057828941e1243c6fc1bcb9f7dba2d">&#9670;&#160;</a></span>MAX_REPLAY_EVENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX_REPLAY_EVENTS = 180</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Najveci broj replay dogadjaja koji se cuva u memoriji. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00144">144</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="aac29105b5960659112c662b4842ddcef" name="aac29105b5960659112c662b4842ddcef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac29105b5960659112c662b4842ddcef">&#9670;&#160;</a></span>MIN_VIBRATION_PULSE_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MIN_VIBRATION_PULSE_MS = 60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimalno trajanje vibracijskog impulsa u milisekundama. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00108">108</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Feedback_8h_source.html#l00028">beepWithVibration()</a>.</p>
+
+</div>
+</div>
+<a id="a9d8d2860504c49c1014aeb5e599bd260" name="a9d8d2860504c49c1014aeb5e599bd260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8d2860504c49c1014aeb5e599bd260">&#9670;&#160;</a></span>POT_DEADZONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int POT_DEADZONE = 50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimalna promjena ADC vrijednosti koja se smatra stvarnim okretanjem. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00104">104</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a0410f3d154e7342fe777d061a3c9da4a" name="a0410f3d154e7342fe777d061a3c9da4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0410f3d154e7342fe777d061a3c9da4a">&#9670;&#160;</a></span>POT_MAX_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int POT_MAX_VALUE = 4095</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Najveca ADC vrijednost potenciometra. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00102">102</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00532">updateTurnBarFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="ad819ccff597f4438a705de6c3a1bbe5c" name="ad819ccff597f4438a705de6c3a1bbe5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad819ccff597f4438a705de6c3a1bbe5c">&#9670;&#160;</a></span>POT_MIN_VALUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int POT_MIN_VALUE = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Najmanja ADC vrijednost potenciometra. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00100">100</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00532">updateTurnBarFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a612a3e1fceb630ab86b76241dda5fde0" name="a612a3e1fceb630ab86b76241dda5fde0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612a3e1fceb630ab86b76241dda5fde0">&#9670;&#160;</a></span>PROGRESS_BAR_HEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PROGRESS_BAR_HEIGHT = 44</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Visina vertikalne trake napretka kroz level. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00084">84</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00041">drawProgressBar()</a>.</p>
+
+</div>
+</div>
+<a id="a03d7a6dd59674b569f84f77fc3613fec" name="a03d7a6dd59674b569f84f77fc3613fec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03d7a6dd59674b569f84f77fc3613fec">&#9670;&#160;</a></span>PROGRESS_BAR_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PROGRESS_BAR_WIDTH = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sirina vertikalne trake napretka kroz level. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00082">82</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00041">drawProgressBar()</a>.</p>
+
+</div>
+</div>
+<a id="a2149513fcb52fd54a1c9524352fdea54" name="a2149513fcb52fd54a1c9524352fdea54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2149513fcb52fd54a1c9524352fdea54">&#9670;&#160;</a></span>PROGRESS_BAR_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PROGRESS_BAR_X = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata vertikalne trake napretka kroz level. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00078">78</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00041">drawProgressBar()</a>.</p>
+
+</div>
+</div>
+<a id="af28bf82a0437f0ae8d28e0ed17eac662" name="af28bf82a0437f0ae8d28e0ed17eac662"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af28bf82a0437f0ae8d28e0ed17eac662">&#9670;&#160;</a></span>PROGRESS_BAR_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int PROGRESS_BAR_Y = 18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y koordinata vertikalne trake napretka kroz level. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00080">80</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00041">drawProgressBar()</a>.</p>
+
+</div>
+</div>
+<a id="ab946ecb93d2c22e241b15793e0d1e1df" name="ab946ecb93d2c22e241b15793e0d1e1df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab946ecb93d2c22e241b15793e0d1e1df">&#9670;&#160;</a></span>REPLAY_EVENT_FINISH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int REPLAY_EVENT_FINISH = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replay dogadjaj koji oznacava kraj levela. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00156">156</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a><a class="el" href="SafeNetwork_8h_source.html#l00111">getReplayEventName()</a>.</p>
+
+</div>
+</div>
+<a id="a246eab5c35c30219a0d2813c2b0bf93e" name="a246eab5c35c30219a0d2813c2b0bf93e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a246eab5c35c30219a0d2813c2b0bf93e">&#9670;&#160;</a></span>REPLAY_EVENT_MOVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int REPLAY_EVENT_MOVE = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replay dogadjaj koji oznacava pomak trake. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00152">152</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a6c52f6a5b4a3794a07c179cddfcbfa4b" name="a6c52f6a5b4a3794a07c179cddfcbfa4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c52f6a5b4a3794a07c179cddfcbfa4b">&#9670;&#160;</a></span>REPLAY_EVENT_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int REPLAY_EVENT_START = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replay dogadjaj koji oznacava pocetak levela. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00150">150</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="SafeNetwork_8h_source.html#l00111">getReplayEventName()</a><a class="el" href="GameLogic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a8c9433eabd1262a14ae13d9195d6cb54" name="a8c9433eabd1262a14ae13d9195d6cb54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c9433eabd1262a14ae13d9195d6cb54">&#9670;&#160;</a></span>REPLAY_EVENT_TARGET_HIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int REPLAY_EVENT_TARGET_HIT = 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Replay dogadjaj koji oznacava pogodjen cilj. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00154">154</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="SafeNetwork_8h_source.html#l00111">getReplayEventName()</a><a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="abef596a7b929accb007992972aa436c0" name="abef596a7b929accb007992972aa436c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abef596a7b929accb007992972aa436c0">&#9670;&#160;</a></span>REPLAY_MIN_FILL_DELTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float REPLAY_MIN_FILL_DELTA = 0.03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimalna promjena fill vrijednosti za automatski replay uzorak. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00148">148</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a76fb44a198d29d2526faedd75bdae581" name="a76fb44a198d29d2526faedd75bdae581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76fb44a198d29d2526faedd75bdae581">&#9670;&#160;</a></span>REPLAY_SAMPLE_INTERVAL_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long REPLAY_SAMPLE_INTERVAL_MS = 120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Minimalni vremenski razmak automatskih replay uzoraka. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00146">146</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="aafdc8dcab294f37bef891a8e0a3813b8" name="aafdc8dcab294f37bef891a8e0a3813b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafdc8dcab294f37bef891a8e0a3813b8">&#9670;&#160;</a></span>ROTATION_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float ROTATION_SPEED = 0.01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Faktor kojim se ADC promjena pretvara u kut rotacije brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00122">122</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="ae985d612f316285766bce5cb4cac80da" name="ae985d612f316285766bce5cb4cac80da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae985d612f316285766bce5cb4cac80da">&#9670;&#160;</a></span>SCORE_POST_TIMEOUT_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long SCORE_POST_TIMEOUT_MS = 4000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Timeout HTTP POST zahtjeva za score u milisekundama. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00140">140</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="SafeNetwork_8h_source.html#l00348">postScoreWebhook()</a>.</p>
+
+</div>
+</div>
+<a id="a3482e66c84fa3a005d96b8ed5bea379b" name="a3482e66c84fa3a005d96b8ed5bea379b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3482e66c84fa3a005d96b8ed5bea379b">&#9670;&#160;</a></span>SCORE_WEBHOOK_URL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const SCORE_WEBHOOK_URL = &quot;https://ruc-esp.nerizz.com/api/scores&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zadani webhook na koji se salju scoreovi. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00134">134</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="SafeNetwork_8h_source.html#l00084">getConfiguredWebhookUrl()</a>, <a class="el" href="SafeNetwork_8h_source.html#l00151">handleWifiSave()</a><a class="el" href="SafeNetwork_8h_source.html#l00199">initializeNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a1099eee964c88a07cddca4979a5a8eca" name="a1099eee964c88a07cddca4979a5a8eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1099eee964c88a07cddca4979a5a8eca">&#9670;&#160;</a></span>SLEEP_TIMEOUT_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long SLEEP_TIMEOUT_MS = 30000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vrijeme neaktivnosti nakon kojeg ESP32 ulazi u deep sleep. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00176">176</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Power_8h_source.html#l00045">resetSleepTimer()</a>.</p>
+
+</div>
+</div>
+<a id="a712e2de20cd2b2003b96334001a11793" name="a712e2de20cd2b2003b96334001a11793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712e2de20cd2b2003b96334001a11793">&#9670;&#160;</a></span>TARGET_ARROW_CYCLE_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TARGET_ARROW_CYCLE_MS = 1800</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trajanje jednog ciklusa animacije strelice u milisekundama. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00074">74</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00304">getTargetArrowY()</a>.</p>
+
+</div>
+</div>
+<a id="acff04d22d671af1994c75b39c49a7d3b" name="acff04d22d671af1994c75b39c49a7d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff04d22d671af1994c75b39c49a7d3b">&#9670;&#160;</a></span>TARGET_ARROW_HOLD_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TARGET_ARROW_HOLD_MS = 120</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Trajanje faze u kojoj je strelica spustena do trake. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00076">76</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00304">getTargetArrowY()</a>.</p>
+
+</div>
+</div>
+<a id="ae5d5106050888257344c8c02dee4a4ab" name="ae5d5106050888257344c8c02dee4a4ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d5106050888257344c8c02dee4a4ab">&#9670;&#160;</a></span>TARGET_ARROW_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TARGET_ARROW_SIZE = 4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Velicina trokuta strelice trenutnog cilja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00070">70</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00115">drawTargetArrow()</a>.</p>
+
+</div>
+</div>
+<a id="a5329451b528ed261d94f8613709736db" name="a5329451b528ed261d94f8613709736db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5329451b528ed261d94f8613709736db">&#9670;&#160;</a></span>TARGET_ARROW_TOUCH_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TARGET_ARROW_TOUCH_Y = <a class="el" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + <a class="el" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> + <a class="el" href="Config_8h.html#ae5d5106050888257344c8c02dee4a4ab">TARGET_ARROW_SIZE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y koordinata strelice dok animacijski dodiruje traku. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00072">72</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00304">getTargetArrowY()</a>.</p>
+
+</div>
+</div>
+<a id="af6123391cca1be96bee9a94b7e4a1cb7" name="af6123391cca1be96bee9a94b7e4a1cb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6123391cca1be96bee9a94b7e4a1cb7">&#9670;&#160;</a></span>TARGET_ARROW_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TARGET_ARROW_Y = <a class="el" href="Config_8h.html#ab840ebf86a6074b9db8d8b43aaf0f039">BAR_Y</a> + <a class="el" href="Config_8h.html#acc34e9f02552732321a45df5fbc42f98">BAR_HEIGHT</a> + 6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Osnovna Y koordinata strelice trenutnog cilja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00068">68</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00304">getTargetArrowY()</a>.</p>
+
+</div>
+</div>
+<a id="a98adbf9bb6534df2f18bd9a65f486785" name="a98adbf9bb6534df2f18bd9a65f486785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98adbf9bb6534df2f18bd9a65f486785">&#9670;&#160;</a></span>TARGET_HIT_HOLD_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long TARGET_HIT_HOLD_MS = 250</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vrijeme koje igrac mora zadrzati cilj unutar tolerancije. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00128">128</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="a0aca1447d47d62216f5040574572c3e9" name="a0aca1447d47d62216f5040574572c3e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aca1447d47d62216f5040574572c3e9">&#9670;&#160;</a></span>TARGET_HIT_TOLERANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float TARGET_HIT_TOLERANCE = 0.08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tolerancija unutar koje se cilj smatra pogodjenim. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00124">124</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a>.</p>
+
+</div>
+</div>
+<a id="ab78e0ae0021d7a038baa686297fc13e1" name="ab78e0ae0021d7a038baa686297fc13e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78e0ae0021d7a038baa686297fc13e1">&#9670;&#160;</a></span>TARGET_MESSAGE_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TARGET_MESSAGE_Y = <a class="el" href="Config_8h.html#ac0bf95a08985eb63d08b57d9da184861">BREATH_TEXT_BOX_Y</a> + <a class="el" href="Config_8h.html#acc449c7653e2bbc59621afb5e7f789ec">BREATH_TEXT_BOX_HEIGHT</a> + 2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y koordinata kratke poruke za trenutni cilj. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00098">98</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00081">drawTargetMessage()</a>.</p>
+
+</div>
+</div>
+<a id="ab0545a78d760ec0d1afffb88f8f15e1f" name="ab0545a78d760ec0d1afffb88f8f15e1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0545a78d760ec0d1afffb88f8f15e1f">&#9670;&#160;</a></span>TARGET_OVERSHOOT_ALLOWANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float TARGET_OVERSHOOT_ALLOWANCE = 0.05</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dopusteno prebacivanje preko cilja prije kazne za stabilnost. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00126">126</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a><a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a>.</p>
+
+</div>
+</div>
+<a id="a425ac2a2fb413d1317d58451914ee729" name="a425ac2a2fb413d1317d58451914ee729"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a425ac2a2fb413d1317d58451914ee729">&#9670;&#160;</a></span>TIMER_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TIMER_X = 9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata teksta timera. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00086">86</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00056">drawTimer()</a>.</p>
+
+</div>
+</div>
+<a id="ae7b1513fdb2fe295824f6e7bca0575db" name="ae7b1513fdb2fe295824f6e7bca0575db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b1513fdb2fe295824f6e7bca0575db">&#9670;&#160;</a></span>VAULT_CENTER_X</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_CENTER_X = 58</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>X koordinata sredista nacrtane brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00042">42</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="a4ec625905c145e8508567083f2b40bc9" name="a4ec625905c145e8508567083f2b40bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ec625905c145e8508567083f2b40bc9">&#9670;&#160;</a></span>VAULT_CENTER_Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_CENTER_Y = 42</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Y koordinata sredista nacrtane brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00044">44</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>, <a class="el" href="Rendering_8h_source.html#l00056">drawTimer()</a><a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="a4afe7840c966ecea463d80d51c16feed" name="a4afe7840c966ecea463d80d51c16feed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4afe7840c966ecea463d80d51c16feed">&#9670;&#160;</a></span>VAULT_HANDLE_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_HANDLE_COUNT = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Broj rucki koje se crtaju na bravi. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00054">54</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="a64814c17e16b62eb70e1af3fd522cd54" name="a64814c17e16b62eb70e1af3fd522cd54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64814c17e16b62eb70e1af3fd522cd54">&#9670;&#160;</a></span>VAULT_HANDLE_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_HANDLE_LENGTH = 15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Duljina jedne rucke/kazaljke brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00050">50</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="a3489fd7d81a981e8caf7f51574b28395" name="a3489fd7d81a981e8caf7f51574b28395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3489fd7d81a981e8caf7f51574b28395">&#9670;&#160;</a></span>VAULT_HANDLE_RADIUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_HANDLE_RADIUS = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Radijus kruzica na kraju rucke brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00052">52</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="ac01cff2cefba2af554f9ef8dd69e14a8" name="ac01cff2cefba2af554f9ef8dd69e14a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01cff2cefba2af554f9ef8dd69e14a8">&#9670;&#160;</a></span>VAULT_INNER_RADIUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_INNER_RADIUS = 5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unutarnji radijus sredista brave. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00048">48</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="aa2a1116be28be79803ed8f7c794ffe48" name="aa2a1116be28be79803ed8f7c794ffe48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2a1116be28be79803ed8f7c794ffe48">&#9670;&#160;</a></span>VAULT_OUTER_RADIUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VAULT_OUTER_RADIUS = 20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vanjski radijus brave na OLED-u. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00046">46</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00130">drawVaultWheel()</a>.</p>
+
+</div>
+</div>
+<a id="a9b7578cbf8a2ac9a8a2ccb3fc5431791" name="a9b7578cbf8a2ac9a8a2ccb3fc5431791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b7578cbf8a2ac9a8a2ccb3fc5431791">&#9670;&#160;</a></span>WIFI_CONNECT_TIMEOUT_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned long WIFI_CONNECT_TIMEOUT_MS = 12000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maksimalno cekanje WiFi spajanja prije povratka u setup portal. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00138">138</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="SafeNetwork_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a272acef23e95be3918b2a41e39d4e5c8" name="a272acef23e95be3918b2a41e39d4e5c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272acef23e95be3918b2a41e39d4e5c8">&#9670;&#160;</a></span>WIFI_PORTAL_PASSWORD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* const WIFI_PORTAL_PASSWORD = &quot;safe1234&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lozinka lokalnog WiFi konfiguracijskog portala. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="Config_8h_source.html#l00136">136</a> datoteke <a class="el" href="Config_8h_source.html">Config.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00214">drawWifiConfigScreen()</a><a class="el" href="SafeNetwork_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a class="el" href="Config_8h.html">Config.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Opis datoteke GameLogic.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Traži');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('GameLogic_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcije</a> &#124;
+<a href="#var-members">Varijable</a>  </div>
+  <div class="headertitle"><div class="title">Opis datoteke GameLogic.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Pravila levela, pogodak ciljeva, score, replay i napredak igre.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="Config_8h_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Feedback_8h_source.html">Feedback.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Level_8h_source.html">Level.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SafeNetwork_8h_source.html">SafeNetwork.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Power_8h_source.html">Power.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="State_8h_source.html">State.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graf include međuovisnosti za GameLogic.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="GameLogic_8h__incl.png" border="0" usemap="#aGameLogic_8h" alt=""/></div>
+<map name="aGameLogic_8h" id="aGameLogic_8h">
+<area shape="rect" title="Pravila levela, pogodak ciljeva, score, replay i napredak igre." alt="" coords="779,5,886,31"/>
+<area shape="rect" title=" " alt="" coords="693,225,777,251"/>
+<area shape="poly" title=" " alt="" coords="779,22,602,27,489,34,370,45,254,62,150,85,105,99,67,115,36,133,13,154,8,165,13,176,25,184,47,191,112,204,200,214,302,222,513,231,680,234,680,239,513,236,301,227,199,220,111,210,45,196,23,188,9,179,3,165,9,150,33,129,65,110,104,94,149,80,253,56,369,40,488,28,602,22,778,17"/>
+<area shape="rect" href="Config_8h.html" title="Centralne hardverske pin definicije i konstante igre." alt="" coords="772,152,847,177"/>
+<area shape="poly" title=" " alt="" coords="833,32,816,139,811,138,828,31"/>
+<area shape="rect" href="Feedback_8h.html" title="Zajednicki zvucni i vibracijski feedback za igru." alt="" coords="699,79,795,104"/>
+<area shape="poly" title=" " alt="" coords="820,33,773,72,770,68,817,29"/>
+<area shape="rect" href="Level_8h.html" title="Definicije levela i ciljnih polozaja trake." alt="" coords="1032,79,1102,104"/>
+<area shape="poly" title=" " alt="" coords="871,28,1020,73,1018,78,869,33"/>
+<area shape="rect" href="SafeNetwork_8h.html" title="WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook." alt="" coords="536,79,654,104"/>
+<area shape="poly" title=" " alt="" coords="795,33,647,77,646,72,793,28"/>
+<area shape="rect" href="State_8h.html" title="Globalno stanje firmwarea dijeljeno izmedju modula." alt="" coords="1045,152,1113,177"/>
+<area shape="poly" title=" " alt="" coords="866,28,916,49,971,76,1018,109,1057,140,1054,145,1015,113,968,81,914,54,864,33"/>
+<area shape="rect" href="Power_8h.html" title="Upravljanje neaktivnoscu i ESP32 deep sleep nacinom rada." alt="" coords="884,79,957,104"/>
+<area shape="poly" title=" " alt="" coords="848,29,897,68,894,72,845,33"/>
+<area shape="poly" title=" " alt="" coords="749,105,740,212,734,211,743,104"/>
+<area shape="poly" title=" " alt="" coords="759,103,792,140,788,143,755,106"/>
+<area shape="poly" title=" " alt="" coords="610,102,661,150,718,213,714,216,657,154,606,106"/>
+<area shape="poly" title=" " alt="" coords="630,101,763,145,761,150,629,107"/>
+<area shape="rect" title=" " alt="" coords="191,152,298,177"/>
+<area shape="poly" title=" " alt="" coords="539,107,312,152,311,147,538,101"/>
+<area shape="rect" title=" " alt="" coords="322,152,433,177"/>
+<area shape="poly" title=" " alt="" coords="561,107,427,150,425,145,559,101"/>
+<area shape="rect" title=" " alt="" coords="457,152,520,177"/>
+<area shape="poly" title=" " alt="" coords="579,106,518,147,516,142,576,102"/>
+<area shape="rect" title=" " alt="" coords="544,152,646,177"/>
+<area shape="poly" title=" " alt="" coords="598,104,598,138,592,138,592,104"/>
+<area shape="rect" title=" " alt="" coords="23,152,167,177"/>
+<area shape="poly" title=" " alt="" coords="536,104,181,154,180,149,535,98"/>
+<area shape="poly" title=" " alt="" coords="655,99,1031,154,1031,159,654,104"/>
+<area shape="poly" title=" " alt="" coords="1045,176,1026,180,791,228,790,223,1025,175,1044,171"/>
+<area shape="rect" title=" " alt="" coords="926,225,1077,251"/>
+<area shape="poly" title=" " alt="" coords="1068,179,1026,218,1023,214,1065,175"/>
+<area shape="rect" title=" " alt="" coords="1102,225,1200,251"/>
+<area shape="poly" title=" " alt="" coords="1093,176,1131,214,1128,218,1089,180"/>
+<area shape="poly" title=" " alt="" coords="941,102,961,117,979,136,990,157,989,168,984,179,971,190,952,200,902,215,791,234,790,229,901,210,950,195,968,186,980,176,984,167,984,158,975,139,957,121,937,106"/>
+<area shape="poly" title=" " alt="" coords="904,106,841,147,838,142,901,102"/>
+<area shape="poly" title=" " alt="" coords="947,102,1042,144,1040,149,945,106"/>
+<area shape="poly" title=" " alt="" coords="958,96,1053,118,1098,133,1127,150,1138,164,1145,180,1152,211,1147,212,1140,181,1133,167,1124,154,1096,138,1051,123,957,102"/>
+<area shape="rect" title=" " alt="" coords="871,152,970,177"/>
+<area shape="poly" title=" " alt="" coords="923,104,923,138,918,138,918,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ovaj graf pokazuje koje datoteke izravno ili neizravno uključuju ovu datoteku:</div>
+<div class="dyncontent">
+<div class="center"><img src="GameLogic_8h__dep__incl.png" border="0" usemap="#aGameLogic_8hdep" alt=""/></div>
+<map name="aGameLogic_8hdep" id="aGameLogic_8hdep">
+<area shape="rect" title="Pravila levela, pogodak ciljeva, score, replay i napredak igre." alt="" coords="39,5,145,31"/>
+<area shape="rect" href="Input_8h.html" title="Obrada tipke i joysticka za navigaciju kroz ekrane." alt="" coords="5,79,72,104"/>
+<area shape="poly" title=" " alt="" coords="77,43,49,80,45,77,73,40"/>
+<area shape="rect" href="Rendering_8h.html" title="OLED renderiranje svih ekrana igre." alt="" coords="97,79,197,104"/>
+<area shape="poly" title=" " alt="" coords="111,40,140,77,136,80,107,43"/>
+</map>
+</div>
+</div>
+<p><a href="GameLogic_8h_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcije</h2></td></tr>
+<tr class="memitem:ab558df00c91f65c274295e5714046359" id="r_ab558df00c91f65c274295e5714046359"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#ab558df00c91f65c274295e5714046359">startLevel</a> (const <a class="el" href="structLevel.html">Level</a> &amp;level)</td></tr>
+<tr class="memdesc:ab558df00c91f65c274295e5714046359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pokrece zadani level i resetira stanje trenutne partije.  <br /></td></tr>
+<tr class="separator:ab558df00c91f65c274295e5714046359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d3072065bb85206a201e267326c7b27" id="r_a5d3072065bb85206a201e267326c7b27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a5d3072065bb85206a201e267326c7b27">startSelectedLevel</a> ()</td></tr>
+<tr class="memdesc:a5d3072065bb85206a201e267326c7b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pokrece trenutno odabrani level iz glavnog menija.  <br /></td></tr>
+<tr class="separator:a5d3072065bb85206a201e267326c7b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400b34fe7ac8595b3a56febc279e2857" id="r_a400b34fe7ac8595b3a56febc279e2857"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a400b34fe7ac8595b3a56febc279e2857">showLevelSelect</a> ()</td></tr>
+<tr class="memdesc:a400b34fe7ac8595b3a56febc279e2857"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vraca igru na ekran za izbor levela.  <br /></td></tr>
+<tr class="separator:a400b34fe7ac8595b3a56febc279e2857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f201b143b10a32f4baf72df644c45c8" id="r_a4f201b143b10a32f4baf72df644c45c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a4f201b143b10a32f4baf72df644c45c8">finishLevel</a> (bool wasWon)</td></tr>
+<tr class="memdesc:a4f201b143b10a32f4baf72df644c45c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zavrsava aktivni level, racuna score i po potrebi salje rezultat.  <br /></td></tr>
+<tr class="separator:a4f201b143b10a32f4baf72df644c45c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd1ef95f9b71d1512bc5e2b4544075c" id="r_adcd1ef95f9b71d1512bc5e2b4544075c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLevel.html">Level</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#adcd1ef95f9b71d1512bc5e2b4544075c">getCurrentLevel</a> ()</td></tr>
+<tr class="separator:adcd1ef95f9b71d1512bc5e2b4544075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3558536c88b28a5bfbca66b85b4a87" id="r_adf3558536c88b28a5bfbca66b85b4a87"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLevel.html">Level</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#adf3558536c88b28a5bfbca66b85b4a87">getSelectedLevel</a> ()</td></tr>
+<tr class="separator:adf3558536c88b28a5bfbca66b85b4a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237aa1aa7c6a543db2d4c420efa02500" id="r_a237aa1aa7c6a543db2d4c420efa02500"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLevelTarget.html">LevelTarget</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a237aa1aa7c6a543db2d4c420efa02500">getCurrentTarget</a> ()</td></tr>
+<tr class="separator:a237aa1aa7c6a543db2d4c420efa02500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab337ff1dfcbb8063042a4bc3e4bf8020" id="r_ab337ff1dfcbb8063042a4bc3e4bf8020"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#ab337ff1dfcbb8063042a4bc3e4bf8020">isLevelComplete</a> ()</td></tr>
+<tr class="separator:ab337ff1dfcbb8063042a4bc3e4bf8020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ea3f893c7d7a38137ecef9d4316439" id="r_a00ea3f893c7d7a38137ecef9d4316439"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a00ea3f893c7d7a38137ecef9d4316439">isLevelOutOfTime</a> ()</td></tr>
+<tr class="separator:a00ea3f893c7d7a38137ecef9d4316439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb71596ba8d373f6e1a63c0db461e5a" id="r_aecb71596ba8d373f6e1a63c0db461e5a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#aecb71596ba8d373f6e1a63c0db461e5a">getTargetsHit</a> ()</td></tr>
+<tr class="separator:aecb71596ba8d373f6e1a63c0db461e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab60dffd57f0f57742201875c6a00f18f" id="r_ab60dffd57f0f57742201875c6a00f18f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#ab60dffd57f0f57742201875c6a00f18f">getTotalTargets</a> ()</td></tr>
+<tr class="separator:ab60dffd57f0f57742201875c6a00f18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaee43aa4695451a3184a1b0447eca67d" id="r_aaee43aa4695451a3184a1b0447eca67d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#aaee43aa4695451a3184a1b0447eca67d">getRemainingSeconds</a> ()</td></tr>
+<tr class="separator:aaee43aa4695451a3184a1b0447eca67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a93fa744094216f64caff4744d62b65" id="r_a0a93fa744094216f64caff4744d62b65"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a0a93fa744094216f64caff4744d62b65">getBreathMessage</a> ()</td></tr>
+<tr class="separator:a0a93fa744094216f64caff4744d62b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0b7770cde3e3ec0c77eff98a0853e2" id="r_a7e0b7770cde3e3ec0c77eff98a0853e2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a7e0b7770cde3e3ec0c77eff98a0853e2">getGameProgress</a> ()</td></tr>
+<tr class="separator:a7e0b7770cde3e3ec0c77eff98a0853e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4e0d9a167a1dd4352dc3e715ca9558" id="r_acd4e0d9a167a1dd4352dc3e715ca9558"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#acd4e0d9a167a1dd4352dc3e715ca9558">getLevelProgress</a> ()</td></tr>
+<tr class="separator:acd4e0d9a167a1dd4352dc3e715ca9558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2ce494a31b8f692551452060a5627a5" id="r_ad2ce494a31b8f692551452060a5627a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#ad2ce494a31b8f692551452060a5627a5">getTargetFillAmount</a> ()</td></tr>
+<tr class="separator:ad2ce494a31b8f692551452060a5627a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed239079ed3e94029303897ce5813653" id="r_aed239079ed3e94029303897ce5813653"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#aed239079ed3e94029303897ce5813653">getTargetProgress</a> ()</td></tr>
+<tr class="separator:aed239079ed3e94029303897ce5813653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a02590cea83db37539a9dd69a2372ea" id="r_a0a02590cea83db37539a9dd69a2372ea"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a0a02590cea83db37539a9dd69a2372ea">getTargetMessage</a> ()</td></tr>
+<tr class="separator:a0a02590cea83db37539a9dd69a2372ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14b8e0a0bd17818b7bf6cd18a5094edc" id="r_a14b8e0a0bd17818b7bf6cd18a5094edc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a14b8e0a0bd17818b7bf6cd18a5094edc">getBreathTextMoveOffset</a> ()</td></tr>
+<tr class="separator:a14b8e0a0bd17818b7bf6cd18a5094edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cec561367eb7e61a40651ebd91b3f9a" id="r_a6cec561367eb7e61a40651ebd91b3f9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a6cec561367eb7e61a40651ebd91b3f9a">getTargetArrowY</a> ()</td></tr>
+<tr class="separator:a6cec561367eb7e61a40651ebd91b3f9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae04e1e3c18aa687e7d46b5637b77ca6" id="r_aae04e1e3c18aa687e7d46b5637b77ca6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#aae04e1e3c18aa687e7d46b5637b77ca6">getTargetX</a> ()</td></tr>
+<tr class="separator:aae04e1e3c18aa687e7d46b5637b77ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae65350a8454e26e7ddf9c939463f05c8" id="r_ae65350a8454e26e7ddf9c939463f05c8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#ae65350a8454e26e7ddf9c939463f05c8">isCurrentTargetHit</a> ()</td></tr>
+<tr class="separator:ae65350a8454e26e7ddf9c939463f05c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5192df628cd18a60299cb3400576c7" id="r_a8a5192df628cd18a60299cb3400576c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a8a5192df628cd18a60299cb3400576c7">moveSelectedLevel</a> (int direction)</td></tr>
+<tr class="memdesc:a8a5192df628cd18a60299cb3400576c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pomice selekciju levela/menu stavke za zadani smjer.  <br /></td></tr>
+<tr class="separator:a8a5192df628cd18a60299cb3400576c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1fbf4f9bb704d9db1a1398b116526c7" id="r_af1fbf4f9bb704d9db1a1398b116526c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#af1fbf4f9bb704d9db1a1398b116526c7">updateLevelTimer</a> ()</td></tr>
+<tr class="memdesc:af1fbf4f9bb704d9db1a1398b116526c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provjerava istek vremena levela.  <br /></td></tr>
+<tr class="separator:af1fbf4f9bb704d9db1a1398b116526c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad62d586a897277d967f2e9f089569901" id="r_ad62d586a897277d967f2e9f089569901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#ad62d586a897277d967f2e9f089569901">updateTargetProgress</a> ()</td></tr>
+<tr class="memdesc:ad62d586a897277d967f2e9f089569901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obradjuje zadrzavanje na cilju i prelazak na iduci cilj.  <br /></td></tr>
+<tr class="separator:ad62d586a897277d967f2e9f089569901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54b736cc761c67b0cab8ef23e9a3af91" id="r_a54b736cc761c67b0cab8ef23e9a3af91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a54b736cc761c67b0cab8ef23e9a3af91">resetLevelStats</a> ()</td></tr>
+<tr class="memdesc:a54b736cc761c67b0cab8ef23e9a3af91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resetira statistiku stabilnosti i replay podatke.  <br /></td></tr>
+<tr class="separator:a54b736cc761c67b0cab8ef23e9a3af91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0ddda3f6acf0cac232ea8c289e76cc5" id="r_af0ddda3f6acf0cac232ea8c289e76cc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#af0ddda3f6acf0cac232ea8c289e76cc5">recordLevelStability</a> (int potDiff)</td></tr>
+<tr class="memdesc:af0ddda3f6acf0cac232ea8c289e76cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uzorkuje odstupanje od cilja za izracun stabilnosti.  <br /></td></tr>
+<tr class="separator:af0ddda3f6acf0cac232ea8c289e76cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c914b4d8cff5e5d65b0c0df9fa8b81e" id="r_a7c914b4d8cff5e5d65b0c0df9fa8b81e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a7c914b4d8cff5e5d65b0c0df9fa8b81e">recordReplayEvent</a> (int eventType, bool force)</td></tr>
+<tr class="memdesc:a7c914b4d8cff5e5d65b0c0df9fa8b81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprema replay dogadjaj ako je dovoljno bitan ili forsiran.  <br /></td></tr>
+<tr class="separator:a7c914b4d8cff5e5d65b0c0df9fa8b81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79cbc59c215f465bbda8de02b8d48af3" id="r_a79cbc59c215f465bbda8de02b8d48af3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a79cbc59c215f465bbda8de02b8d48af3">calculateLevelStability</a> ()</td></tr>
+<tr class="separator:a79cbc59c215f465bbda8de02b8d48af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e6eb358b23e97911d75369302f8af55" id="r_a7e6eb358b23e97911d75369302f8af55"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a7e6eb358b23e97911d75369302f8af55">calculateTargetStability</a> (int targetIndex)</td></tr>
+<tr class="memdesc:a7e6eb358b23e97911d75369302f8af55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Racuna stabilnost jednog cilja.  <br /></td></tr>
+<tr class="separator:a7e6eb358b23e97911d75369302f8af55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82bb1b47c5b457d8e2b709a9f4dfd490" id="r_a82bb1b47c5b457d8e2b709a9f4dfd490"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a82bb1b47c5b457d8e2b709a9f4dfd490">calculateAllTargetStabilityScores</a> ()</td></tr>
+<tr class="memdesc:a82bb1b47c5b457d8e2b709a9f4dfd490"><td class="mdescLeft">&#160;</td><td class="mdescRight">Racuna stabilnost za sve ciljeve trenutnog pokusaja.  <br /></td></tr>
+<tr class="separator:a82bb1b47c5b457d8e2b709a9f4dfd490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3fa71eb2beeba1f5802034624cbda1" id="r_add3fa71eb2beeba1f5802034624cbda1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#add3fa71eb2beeba1f5802034624cbda1">updateTurnBarFromPot</a> (int potValue)</td></tr>
+<tr class="memdesc:add3fa71eb2beeba1f5802034624cbda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretvara ADC vrijednost potenciometra u popunjenost trake.  <br /></td></tr>
+<tr class="separator:add3fa71eb2beeba1f5802034624cbda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefacdd452ff2ac310bfa6c0494aee25f" id="r_aefacdd452ff2ac310bfa6c0494aee25f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#aefacdd452ff2ac310bfa6c0494aee25f">updateVaultRotationFromPot</a> ()</td></tr>
+<tr class="memdesc:aefacdd452ff2ac310bfa6c0494aee25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cita potenciometar, rotira bravu, biljezi replay i azurira cilj.  <br /></td></tr>
+<tr class="separator:aefacdd452ff2ac310bfa6c0494aee25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Varijable</h2></td></tr>
+<tr class="memitem:a8ebb5316650ca43f8074b23c33b5d61c" id="r_a8ebb5316650ca43f8074b23c33b5d61c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structLevel.html">Level</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="GameLogic_8h.html#a8ebb5316650ca43f8074b23c33b5d61c">currentLevel</a> = &amp;<a class="el" href="Level_8h.html#a3df09124b854fbd672acb588c177b1f3">LEVELS</a>[0]</td></tr>
+<tr class="memdesc:a8ebb5316650ca43f8074b23c33b5d61c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pokazivac na level koji se trenutno igra.  <br /></td></tr>
+<tr class="separator:a8ebb5316650ca43f8074b23c33b5d61c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>Pravila levela, pogodak ciljeva, score, replay i napredak igre. </p>
+
+<p class="definition">Definirano u datoteci <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacije funkcija</h2>
+<a id="a82bb1b47c5b457d8e2b709a9f4dfd490" name="a82bb1b47c5b457d8e2b709a9f4dfd490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82bb1b47c5b457d8e2b709a9f4dfd490">&#9670;&#160;</a></span>calculateAllTargetStabilityScores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void calculateAllTargetStabilityScores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Racuna stabilnost za sve ciljeve trenutnog pokusaja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00498">498</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00485">calculateTargetStability()</a>, <a class="el" href="State_8h.html#abd78630e561ad9bde243a7b0c1179887">currentRunTargetCount</a><a class="el" href="State_8h.html#afa403de54a199f1f51b0565c7ac9ade4">targetStabilityScore</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a79cbc59c215f465bbda8de02b8d48af3" name="a79cbc59c215f465bbda8de02b8d48af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79cbc59c215f465bbda8de02b8d48af3">&#9670;&#160;</a></span>calculateLevelStability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calculateLevelStability </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Stabilnost cijelog levela od 0 do 100. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00472">472</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a4ecf2491fd0838d97170e950b9473516">stabilityDirectionChanges</a>, <a class="el" href="State_8h.html#a2d72b49a7e36221374a3634b87dbda96">stabilityErrorSum</a>, <a class="el" href="State_8h.html#a68800ba2194a159a73fc5dabbbf313ac">stabilityOvershootCount</a><a class="el" href="State_8h.html#a934d97484c86a5fc3bd5e78a535aa6bc">stabilitySampleCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a7e6eb358b23e97911d75369302f8af55" name="a7e6eb358b23e97911d75369302f8af55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e6eb358b23e97911d75369302f8af55">&#9670;&#160;</a></span>calculateTargetStability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int calculateTargetStability </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>targetIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Racuna stabilnost jednog cilja. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">targetIndex</td><td>Indeks cilja za koji se racuna stabilnost. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Stabilnost jednog cilja od 0 do 100. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00485">485</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00142">MAX_LEVEL_TARGETS</a>, <a class="el" href="State_8h.html#a206b3c4ba17030a562cb21d5abd8750a">targetStabilityDirectionChanges</a>, <a class="el" href="State_8h.html#a4462483b8abe2774c3df55fdd264be2a">targetStabilityErrorSum</a>, <a class="el" href="State_8h.html#aec347ef48815f73b069532dddb5e6763">targetStabilityOvershootCount</a><a class="el" href="State_8h.html#aab195d62dd6d0c29223f8f04059b0f3c">targetStabilitySampleCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00498">calculateAllTargetStabilityScores()</a>.</p>
+
+</div>
+</div>
+<a id="a4f201b143b10a32f4baf72df644c45c8" name="a4f201b143b10a32f4baf72df644c45c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f201b143b10a32f4baf72df644c45c8">&#9670;&#160;</a></span>finishLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finishLevel </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wasWon</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zavrsava aktivni level, racuna score i po potrebi salje rezultat. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wasWon</td><td>true ako su svi ciljevi pogodjeni prije isteka vremena. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00136">136</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00498">calculateAllTargetStabilityScores()</a>, <a class="el" href="GameLogic_8h_source.html#l00472">calculateLevelStability()</a>, <a class="el" href="Config_8h_source.html#l00166">GAME_SCREEN_FINISHED</a>, <a class="el" href="Config_8h_source.html#l00164">GAME_SCREEN_PLAYING</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="State_8h.html#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00185">getTargetsHit()</a>, <a class="el" href="GameLogic_8h_source.html#l00193">getTotalTargets()</a>, <a class="el" href="State_8h.html#a325d1c78bc84fe70a0a5dd771f10d444">levelFinishedTime</a>, <a class="el" href="State_8h.html#ac7e0e01a3dfcfa54df59e93b9395c309">levelSolvedTimeMs</a>, <a class="el" href="State_8h.html#aea1bcb681cd3a43565f1b8e6655f877a">levelStabilityScore</a>, <a class="el" href="State_8h.html#a4ab1e53ce890129bc067a3594cddf591">levelWasWon</a>, <a class="el" href="Feedback_8h_source.html#l00057">playLoseSound()</a>, <a class="el" href="Feedback_8h_source.html#l00049">playVictorySound()</a>, <a class="el" href="SafeNetwork_8h_source.html#l00348">postScoreWebhook()</a>, <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>, <a class="el" href="Config_8h_source.html#l00156">REPLAY_EVENT_FINISH</a><a class="el" href="State_8h.html#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00504">updateLevelTimer()</a><a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="a0a93fa744094216f64caff4744d62b65" name="a0a93fa744094216f64caff4744d62b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a93fa744094216f64caff4744d62b65">&#9670;&#160;</a></span>getBreathMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * getBreathMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Kratka poruka za smjer disanja/okretanja. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00209">209</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>, <a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a><a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="a14b8e0a0bd17818b7bf6cd18a5094edc" name="a14b8e0a0bd17818b7bf6cd18a5094edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14b8e0a0bd17818b7bf6cd18a5094edc">&#9670;&#160;</a></span>getBreathTextMoveOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getBreathTextMoveOffset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Mali animacijski pomak teksta disanja. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00294">294</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00130">BREATH_BOB_CYCLE_MS</a><a class="el" href="Config_8h_source.html#l00132">BREATH_BOB_STEP_MS</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00064">drawBreathMessage()</a>.</p>
+
+</div>
+</div>
+<a id="adcd1ef95f9b71d1512bc5e2b4544075c" name="adcd1ef95f9b71d1512bc5e2b4544075c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd1ef95f9b71d1512bc5e2b4544075c">&#9670;&#160;</a></span>getCurrentLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structLevel.html">Level</a> &amp; getCurrentLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd><a class="el" href="structLevel.html" title="Konfiguracija jednog levela igre.">Level</a> koji se trenutno igra. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00164">164</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00106">currentLevel</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00172">getCurrentTarget()</a>, <a class="el" href="GameLogic_8h_source.html#l00225">getGameProgress()</a>, <a class="el" href="GameLogic_8h_source.html#l00236">getLevelProgress()</a>, <a class="el" href="GameLogic_8h_source.html#l00197">getRemainingSeconds()</a>, <a class="el" href="GameLogic_8h_source.html#l00185">getTargetsHit()</a>, <a class="el" href="GameLogic_8h_source.html#l00193">getTotalTargets()</a>, <a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a>, <a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a><a class="el" href="GameLogic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a237aa1aa7c6a543db2d4c420efa02500" name="a237aa1aa7c6a543db2d4c420efa02500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237aa1aa7c6a543db2d4c420efa02500">&#9670;&#160;</a></span>getCurrentTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structLevelTarget.html">LevelTarget</a> &amp; getCurrentTarget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Cilj koji igrac trenutno treba pogoditi. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00172">172</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="Level_8h_source.html#l00020">Level::targets</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>.</p>
+
+</div>
+</div>
+<a id="a7e0b7770cde3e3ec0c77eff98a0853e2" name="a7e0b7770cde3e3ec0c77eff98a0853e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0b7770cde3e3ec0c77eff98a0853e2">&#9670;&#160;</a></span>getGameProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getGameProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Napredak vremena levela od 0.0 do 1.0. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00225">225</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Level_8h_source.html#l00024">Level::durationMs</a>, <a class="el" href="State_8h.html#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a><a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a>.</p>
+
+</div>
+</div>
+<a id="acd4e0d9a167a1dd4352dc3e715ca9558" name="acd4e0d9a167a1dd4352dc3e715ca9558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4e0d9a167a1dd4352dc3e715ca9558">&#9670;&#160;</a></span>getLevelProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getLevelProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Napredak kroz ciljeve levela od 0.0 do 1.0. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00236">236</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="Level_8h_source.html#l00022">Level::targetCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00041">drawProgressBar()</a>.</p>
+
+</div>
+</div>
+<a id="aaee43aa4695451a3184a1b0447eca67d" name="aaee43aa4695451a3184a1b0447eca67d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaee43aa4695451a3184a1b0447eca67d">&#9670;&#160;</a></span>getRemainingSeconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getRemainingSeconds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Preostale sekunde levela. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00197">197</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Level_8h_source.html#l00024">Level::durationMs</a>, <a class="el" href="State_8h.html#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="State_8h.html#a325d1c78bc84fe70a0a5dd771f10d444">levelFinishedTime</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00056">drawTimer()</a>.</p>
+
+</div>
+</div>
+<a id="adf3558536c88b28a5bfbca66b85b4a87" name="adf3558536c88b28a5bfbca66b85b4a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3558536c88b28a5bfbca66b85b4a87">&#9670;&#160;</a></span>getSelectedLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structLevel.html">Level</a> &amp; getSelectedLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd><a class="el" href="structLevel.html" title="Konfiguracija jednog levela igre.">Level</a> koji je trenutno odabran u meniju. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00168">168</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Level_8h_source.html#l00063">LEVELS</a><a class="el" href="State_8h.html#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00125">startSelectedLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a6cec561367eb7e61a40651ebd91b3f9a" name="a6cec561367eb7e61a40651ebd91b3f9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cec561367eb7e61a40651ebd91b3f9a">&#9670;&#160;</a></span>getTargetArrowY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTargetArrowY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Y koordinata animirane strelice cilja. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00304">304</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00074">TARGET_ARROW_CYCLE_MS</a>, <a class="el" href="Config_8h_source.html#l00076">TARGET_ARROW_HOLD_MS</a>, <a class="el" href="Config_8h_source.html#l00072">TARGET_ARROW_TOUCH_Y</a><a class="el" href="Config_8h_source.html#l00068">TARGET_ARROW_Y</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00115">drawTargetArrow()</a>.</p>
+
+</div>
+</div>
+<a id="ad2ce494a31b8f692551452060a5627a5" name="ad2ce494a31b8f692551452060a5627a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2ce494a31b8f692551452060a5627a5">&#9670;&#160;</a></span>getTargetFillAmount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getTargetFillAmount </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Ciljana popunjenost trake za trenutni cilj. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00246">246</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00172">getCurrentTarget()</a><a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00209">getBreathMessage()</a>, <a class="el" href="GameLogic_8h_source.html#l00254">getTargetProgress()</a>, <a class="el" href="GameLogic_8h_source.html#l00314">getTargetX()</a>, <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a><a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a>.</p>
+
+</div>
+</div>
+<a id="a0a02590cea83db37539a9dd69a2372ea" name="a0a02590cea83db37539a9dd69a2372ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a02590cea83db37539a9dd69a2372ea">&#9670;&#160;</a></span>getTargetMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * getTargetMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Poruka koja pomaze igracu pogoditi ili zadrzati cilj. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00268">268</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00254">getTargetProgress()</a>, <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a>, <a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a><a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00081">drawTargetMessage()</a>.</p>
+
+</div>
+</div>
+<a id="aed239079ed3e94029303897ce5813653" name="aed239079ed3e94029303897ce5813653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed239079ed3e94029303897ce5813653">&#9670;&#160;</a></span>getTargetProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getTargetProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Relativni napredak prema trenutnom cilju. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00254">254</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a><a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00268">getTargetMessage()</a>.</p>
+
+</div>
+</div>
+<a id="aecb71596ba8d373f6e1a63c0db461e5a" name="aecb71596ba8d373f6e1a63c0db461e5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb71596ba8d373f6e1a63c0db461e5a">&#9670;&#160;</a></span>getTargetsHit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTargetsHit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Broj pogodjenih ciljeva. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00185">185</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="Level_8h_source.html#l00022">Level::targetCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00185">drawFinishedScreen()</a><a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>.</p>
+
+</div>
+</div>
+<a id="aae04e1e3c18aa687e7d46b5637b77ca6" name="aae04e1e3c18aa687e7d46b5637b77ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae04e1e3c18aa687e7d46b5637b77ca6">&#9670;&#160;</a></span>getTargetX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTargetX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>X koordinata trenutnog cilja na traci. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00314">314</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00066">BAR_CENTER_X</a>, <a class="el" href="Config_8h_source.html#l00062">BAR_WIDTH</a><a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00115">drawTargetArrow()</a><a class="el" href="Rendering_8h_source.html#l00100">drawTurnBar()</a>.</p>
+
+</div>
+</div>
+<a id="ab60dffd57f0f57742201875c6a00f18f" name="ab60dffd57f0f57742201875c6a00f18f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab60dffd57f0f57742201875c6a00f18f">&#9670;&#160;</a></span>getTotalTargets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getTotalTargets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Ukupan broj ciljeva u levelu. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00193">193</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="Level_8h_source.html#l00022">Level::targetCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Rendering_8h_source.html#l00185">drawFinishedScreen()</a><a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>.</p>
+
+</div>
+</div>
+<a id="ae65350a8454e26e7ddf9c939463f05c8" name="ae65350a8454e26e7ddf9c939463f05c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae65350a8454e26e7ddf9c939463f05c8">&#9670;&#160;</a></span>isCurrentTargetHit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isCurrentTargetHit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>true ako je trenutna popunjenost trake unutar tolerancije cilja. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00319">319</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>, <a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>, <a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a>, <a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a>, <a class="el" href="Config_8h_source.html#l00124">TARGET_HIT_TOLERANCE</a><a class="el" href="Config_8h_source.html#l00126">TARGET_OVERSHOOT_ALLOWANCE</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00268">getTargetMessage()</a><a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="ab337ff1dfcbb8063042a4bc3e4bf8020" name="ab337ff1dfcbb8063042a4bc3e4bf8020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab337ff1dfcbb8063042a4bc3e4bf8020">&#9670;&#160;</a></span>isLevelComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLevelComplete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>true ako su pogodjeni svi ciljevi trenutnog levela. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00176">176</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="Level_8h_source.html#l00022">Level::targetCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00209">getBreathMessage()</a>, <a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>, <a class="el" href="GameLogic_8h_source.html#l00268">getTargetMessage()</a>, <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a>, <a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="a00ea3f893c7d7a38137ecef9d4316439" name="a00ea3f893c7d7a38137ecef9d4316439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00ea3f893c7d7a38137ecef9d4316439">&#9670;&#160;</a></span>isLevelOutOfTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isLevelOutOfTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>true ako je isteklo vrijeme trenutnog levela. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00180">180</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Level_8h_source.html#l00024">Level::durationMs</a>, <a class="el" href="State_8h.html#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a><a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00209">getBreathMessage()</a>, <a class="el" href="GameLogic_8h_source.html#l00268">getTargetMessage()</a>, <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a>, <a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a>, <a class="el" href="GameLogic_8h_source.html#l00504">updateLevelTimer()</a><a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="a8a5192df628cd18a60299cb3400576c7" name="a8a5192df628cd18a60299cb3400576c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5192df628cd18a60299cb3400576c7">&#9670;&#160;</a></span>moveSelectedLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void moveSelectedLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pomice selekciju levela/menu stavke za zadani smjer. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direction</td><td>Smjer pomaka, tipicno -1 za gore ili 1 za dolje. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00514">514</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Feedback_8h_source.html#l00041">clickRight()</a>, <a class="el" href="Level_8h_source.html#l00069">LEVEL_COUNT</a><a class="el" href="State_8h.html#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00044">handleJoystickLevelSelect()</a>.</p>
+
+</div>
+</div>
+<a id="af0ddda3f6acf0cac232ea8c289e76cc5" name="af0ddda3f6acf0cac232ea8c289e76cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ddda3f6acf0cac232ea8c289e76cc5">&#9670;&#160;</a></span>recordLevelStability()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void recordLevelStability </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>potDiff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uzorkuje odstupanje od cilja za izracun stabilnosti. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">potDiff</td><td>Promjena ADC vrijednosti potenciometra od zadnjeg citanja. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00395">395</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>, <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="Config_8h_source.html#l00164">GAME_SCREEN_PLAYING</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="GameLogic_8h_source.html#l00246">getTargetFillAmount()</a>, <a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a>, <a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a>, <a class="el" href="State_8h.html#ac3445237e37153abfcf55cff3cd0b365">lastPotDirection</a>, <a class="el" href="Config_8h_source.html#l00142">MAX_LEVEL_TARGETS</a>, <a class="el" href="Config_8h_source.html#l00104">POT_DEADZONE</a>, <a class="el" href="State_8h.html#a4ecf2491fd0838d97170e950b9473516">stabilityDirectionChanges</a>, <a class="el" href="State_8h.html#a2d72b49a7e36221374a3634b87dbda96">stabilityErrorSum</a>, <a class="el" href="State_8h.html#a68800ba2194a159a73fc5dabbbf313ac">stabilityOvershootCount</a>, <a class="el" href="State_8h.html#a934d97484c86a5fc3bd5e78a535aa6bc">stabilitySampleCount</a>, <a class="el" href="Config_8h_source.html#l00126">TARGET_OVERSHOOT_ALLOWANCE</a>, <a class="el" href="State_8h.html#a2433fe4659ae32e5baac26a81f48ea10">targetLastPotDirection</a>, <a class="el" href="State_8h.html#a206b3c4ba17030a562cb21d5abd8750a">targetStabilityDirectionChanges</a>, <a class="el" href="State_8h.html#a4462483b8abe2774c3df55fdd264be2a">targetStabilityErrorSum</a>, <a class="el" href="State_8h.html#aec347ef48815f73b069532dddb5e6763">targetStabilityOvershootCount</a><a class="el" href="State_8h.html#aab195d62dd6d0c29223f8f04059b0f3c">targetStabilitySampleCount</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a7c914b4d8cff5e5d65b0c0df9fa8b81e" name="a7c914b4d8cff5e5d65b0c0df9fa8b81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c914b4d8cff5e5d65b0c0df9fa8b81e">&#9670;&#160;</a></span>recordReplayEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void recordReplayEvent </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>eventType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>force</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprema replay dogadjaj ako je dovoljno bitan ili forsiran. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eventType</td><td>Tip dogadjaja, jedna od REPLAY_EVENT_* konstanti. </td></tr>
+    <tr><td class="paramname">force</td><td>true ako se dogadjaj sprema bez interval/delta filtriranja. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00445">445</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>, <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="State_8h.html#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a>, <a class="el" href="State_8h.html#ae39d7c953fa7556fdabe7faad29af93b">lastReplayEventFill</a>, <a class="el" href="State_8h.html#ae04eb02255eeb641711a35a0530318ce">lastReplayEventTime</a>, <a class="el" href="Config_8h_source.html#l00144">MAX_REPLAY_EVENTS</a>, <a class="el" href="Config_8h_source.html#l00148">REPLAY_MIN_FILL_DELTA</a>, <a class="el" href="Config_8h_source.html#l00146">REPLAY_SAMPLE_INTERVAL_MS</a>, <a class="el" href="State_8h.html#a0c954a6466504da079206dfc86711860">replayEventCount</a>, <a class="el" href="State_8h.html#a32ba21d95d795c2e7228de7a4b8ec69d">replayEventFill</a>, <a class="el" href="State_8h.html#a287598f8a68be4005373d031e1c5f161">replayEventTargetIndex</a>, <a class="el" href="State_8h.html#ab1c2ab1ecb4c6ab8a4092178521f9d9d">replayEventTimeMs</a><a class="el" href="State_8h.html#a38b31c1acc5a2cc00afeb7e77892fd3b">replayEventType</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00108">startLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a><a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a54b736cc761c67b0cab8ef23e9a3af91" name="a54b736cc761c67b0cab8ef23e9a3af91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b736cc761c67b0cab8ef23e9a3af91">&#9670;&#160;</a></span>resetLevelStats()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void resetLevelStats </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resetira statistiku stabilnosti i replay podatke. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00369">369</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>, <a class="el" href="State_8h.html#abd78630e561ad9bde243a7b0c1179887">currentRunTargetCount</a>, <a class="el" href="State_8h.html#ada73b8fd5ee79a292ec81c06355955d5">currentRunTargets</a>, <a class="el" href="Level_8h_source.html#l00012">LevelTarget::fillAmount</a>, <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a>, <a class="el" href="State_8h.html#ac3445237e37153abfcf55cff3cd0b365">lastPotDirection</a>, <a class="el" href="State_8h.html#ae39d7c953fa7556fdabe7faad29af93b">lastReplayEventFill</a>, <a class="el" href="State_8h.html#ae04eb02255eeb641711a35a0530318ce">lastReplayEventTime</a>, <a class="el" href="Config_8h_source.html#l00142">MAX_LEVEL_TARGETS</a>, <a class="el" href="State_8h.html#a0c954a6466504da079206dfc86711860">replayEventCount</a>, <a class="el" href="State_8h.html#a4ecf2491fd0838d97170e950b9473516">stabilityDirectionChanges</a>, <a class="el" href="State_8h.html#a2d72b49a7e36221374a3634b87dbda96">stabilityErrorSum</a>, <a class="el" href="State_8h.html#a68800ba2194a159a73fc5dabbbf313ac">stabilityOvershootCount</a>, <a class="el" href="State_8h.html#a934d97484c86a5fc3bd5e78a535aa6bc">stabilitySampleCount</a>, <a class="el" href="State_8h.html#a2433fe4659ae32e5baac26a81f48ea10">targetLastPotDirection</a>, <a class="el" href="Level_8h_source.html#l00020">Level::targets</a>, <a class="el" href="State_8h.html#a206b3c4ba17030a562cb21d5abd8750a">targetStabilityDirectionChanges</a>, <a class="el" href="State_8h.html#a4462483b8abe2774c3df55fdd264be2a">targetStabilityErrorSum</a>, <a class="el" href="State_8h.html#aec347ef48815f73b069532dddb5e6763">targetStabilityOvershootCount</a>, <a class="el" href="State_8h.html#aab195d62dd6d0c29223f8f04059b0f3c">targetStabilitySampleCount</a><a class="el" href="State_8h.html#afa403de54a199f1f51b0565c7ac9ade4">targetStabilityScore</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a400b34fe7ac8595b3a56febc279e2857" name="a400b34fe7ac8595b3a56febc279e2857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a400b34fe7ac8595b3a56febc279e2857">&#9670;&#160;</a></span>showLevelSelect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void showLevelSelect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vraca igru na ekran za izbor levela. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00129">129</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Config_8h_source.html#l00162">GAME_SCREEN_LEVEL_SELECT</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="State_8h.html#a325d1c78bc84fe70a0a5dd771f10d444">levelFinishedTime</a>, <a class="el" href="State_8h.html#a4ab1e53ce890129bc067a3594cddf591">levelWasWon</a><a class="el" href="State_8h.html#ab967a0a6ada16581e979b2a4d83a2ac0">targetHitStartTime</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a>.</p>
+
+</div>
+</div>
+<a id="ab558df00c91f65c274295e5714046359" name="ab558df00c91f65c274295e5714046359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab558df00c91f65c274295e5714046359">&#9670;&#160;</a></span>startLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startLevel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structLevel.html">Level</a> &amp;&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pokrece zadani level i resetira stanje trenutne partije. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00108">108</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>, <a class="el" href="GameLogic_8h_source.html#l00106">currentLevel</a>, <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="Config_8h_source.html#l00164">GAME_SCREEN_PLAYING</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="State_8h.html#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a>, <a class="el" href="State_8h.html#ae421326684dec7af95f315d95b9d90ec">lastValue</a>, <a class="el" href="State_8h.html#a325d1c78bc84fe70a0a5dd771f10d444">levelFinishedTime</a>, <a class="el" href="State_8h.html#ac7e0e01a3dfcfa54df59e93b9395c309">levelSolvedTimeMs</a>, <a class="el" href="State_8h.html#aea1bcb681cd3a43565f1b8e6655f877a">levelStabilityScore</a>, <a class="el" href="State_8h.html#a4ab1e53ce890129bc067a3594cddf591">levelWasWon</a>, <a class="el" href="Config_8h_source.html#l00020">POT_PIN</a>, <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>, <a class="el" href="Config_8h_source.html#l00150">REPLAY_EVENT_START</a>, <a class="el" href="GameLogic_8h_source.html#l00369">resetLevelStats()</a>, <a class="el" href="State_8h.html#ab967a0a6ada16581e979b2a4d83a2ac0">targetHitStartTime</a><a class="el" href="State_8h.html#ac948bc97d4abc9834a5736534fb75c71">vaultAngle</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00125">startSelectedLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a5d3072065bb85206a201e267326c7b27" name="a5d3072065bb85206a201e267326c7b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3072065bb85206a201e267326c7b27">&#9670;&#160;</a></span>startSelectedLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startSelectedLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pokrece trenutno odabrani level iz glavnog menija. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00125">125</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00168">getSelectedLevel()</a><a class="el" href="GameLogic_8h_source.html#l00108">startLevel()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="Input_8h_source.html#l00104">handleButtonActivity()</a>.</p>
+
+</div>
+</div>
+<a id="af1fbf4f9bb704d9db1a1398b116526c7" name="af1fbf4f9bb704d9db1a1398b116526c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1fbf4f9bb704d9db1a1398b116526c7">&#9670;&#160;</a></span>updateLevelTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateLevelTimer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provjerava istek vremena levela. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00504">504</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="Config_8h_source.html#l00164">GAME_SCREEN_PLAYING</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a><a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a>.</p>
+
+</div>
+</div>
+<a id="ad62d586a897277d967f2e9f089569901" name="ad62d586a897277d967f2e9f089569901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad62d586a897277d967f2e9f089569901">&#9670;&#160;</a></span>updateTargetProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateTargetProgress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obradjuje zadrzavanje na cilju i prelazak na iduci cilj. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00339">339</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Feedback_8h_source.html#l00041">clickRight()</a>, <a class="el" href="State_8h.html#a41fa5f8180f242644514539058456813">currentTargetIndex</a>, <a class="el" href="GameLogic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="GameLogic_8h_source.html#l00319">isCurrentTargetHit()</a>, <a class="el" href="GameLogic_8h_source.html#l00176">isLevelComplete()</a>, <a class="el" href="GameLogic_8h_source.html#l00180">isLevelOutOfTime()</a>, <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>, <a class="el" href="Config_8h_source.html#l00154">REPLAY_EVENT_TARGET_HIT</a>, <a class="el" href="Config_8h_source.html#l00128">TARGET_HIT_HOLD_MS</a><a class="el" href="State_8h.html#ab967a0a6ada16581e979b2a4d83a2ac0">targetHitStartTime</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="add3fa71eb2beeba1f5802034624cbda1" name="add3fa71eb2beeba1f5802034624cbda1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3fa71eb2beeba1f5802034624cbda1">&#9670;&#160;</a></span>updateTurnBarFromPot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateTurnBarFromPot </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>potValue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pretvara ADC vrijednost potenciometra u popunjenost trake. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">potValue</td><td>ADC vrijednost potenciometra. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00532">532</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="State_8h.html#a69115c35be6c18f2e6413033e28c09d4">barFill</a>, <a class="el" href="Config_8h_source.html#l00102">POT_MAX_VALUE</a><a class="el" href="Config_8h_source.html#l00100">POT_MIN_VALUE</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="aefacdd452ff2ac310bfa6c0494aee25f" name="aefacdd452ff2ac310bfa6c0494aee25f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefacdd452ff2ac310bfa6c0494aee25f">&#9670;&#160;</a></span>updateVaultRotationFromPot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateVaultRotationFromPot </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cita potenciometar, rotira bravu, biljezi replay i azurira cilj. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00537">537</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="Feedback_8h_source.html#l00045">clickLeft()</a>, <a class="el" href="Feedback_8h_source.html#l00041">clickRight()</a>, <a class="el" href="Config_8h_source.html#l00056">FULL_ROTATION</a>, <a class="el" href="Config_8h_source.html#l00164">GAME_SCREEN_PLAYING</a>, <a class="el" href="State_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="State_8h.html#ae421326684dec7af95f315d95b9d90ec">lastValue</a>, <a class="el" href="Config_8h_source.html#l00104">POT_DEADZONE</a>, <a class="el" href="Config_8h_source.html#l00020">POT_PIN</a>, <a class="el" href="GameLogic_8h_source.html#l00395">recordLevelStability()</a>, <a class="el" href="GameLogic_8h_source.html#l00445">recordReplayEvent()</a>, <a class="el" href="Config_8h_source.html#l00152">REPLAY_EVENT_MOVE</a>, <a class="el" href="Power_8h_source.html#l00045">resetSleepTimer()</a>, <a class="el" href="Config_8h_source.html#l00122">ROTATION_SPEED</a>, <a class="el" href="GameLogic_8h_source.html#l00339">updateTargetProgress()</a>, <a class="el" href="GameLogic_8h_source.html#l00532">updateTurnBarFromPot()</a><a class="el" href="State_8h.html#ac948bc97d4abc9834a5736534fb75c71">vaultAngle</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacija varijable</h2>
+<a id="a8ebb5316650ca43f8074b23c33b5d61c" name="a8ebb5316650ca43f8074b23c33b5d61c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ebb5316650ca43f8074b23c33b5d61c">&#9670;&#160;</a></span>currentLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="structLevel.html">Level</a>* currentLevel = &amp;<a class="el" href="Level_8h.html#a3df09124b854fbd672acb588c177b1f3">LEVELS</a>[0]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pokazivac na level koji se trenutno igra. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="GameLogic_8h_source.html#l00106">106</a> datoteke <a class="el" href="GameLogic_8h_source.html">GameLogic.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="GameLogic_8h_source.html#l00164">getCurrentLevel()</a><a class="el" href="GameLogic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a class="el" href="GameLogic_8h.html">GameLogic.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

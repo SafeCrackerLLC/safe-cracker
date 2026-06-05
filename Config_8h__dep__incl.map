@@ -1,0 +1,23 @@
+<map id="Config.h" name="Config.h">
+<area shape="rect" id="Node000001" title="Centralne hardverske pin definicije i konstante igre." alt="" coords="145,5,219,31"/>
+<area shape="rect" id="Node000002" href="$Feedback_8h.html" title="Zajednicki zvucni i vibracijski feedback za igru." alt="" coords="177,79,273,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,41,220,77,215,80,194,44"/>
+<area shape="rect" id="Node000003" href="$GameLogic_8h.html" title="Pravila levela, pogodak ciljeva, score, replay i napredak igre." alt="" coords="118,152,225,177"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="176,44,167,79,167,119,171,151,166,152,162,119,162,78,171,43"/>
+<area shape="rect" id="Node000004" href="$Input_8h.html" title="Obrada tipke i joysticka za navigaciju kroz ekrane." alt="" coords="85,225,151,251"/>
+<area shape="poly" id="edge6_Node000001_Node000004" title=" " alt="" coords="131,25,101,31,69,41,40,57,18,80,9,100,10,120,18,140,31,160,67,196,102,223,98,227,63,200,27,164,13,143,5,121,4,99,13,77,37,53,67,36,99,26,130,20"/>
+<area shape="rect" id="Node000005" href="$Rendering_8h.html" title="OLED renderiranje svih ekrana igre." alt="" coords="307,225,407,251"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="234,22,347,40,398,56,418,66,431,77,441,97,442,118,437,140,427,161,399,199,372,227,368,223,395,195,422,158,432,138,437,118,436,98,427,80,415,70,396,61,346,46,233,27"/>
+<area shape="rect" id="Node000006" href="$Power_8h.html" title="Upravljanje neaktivnoscu i ESP32 deep sleep nacinom rada." alt="" coords="28,79,101,104"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="153,40,85,81,82,76,150,35"/>
+<area shape="rect" id="Node000007" href="$SafeNetwork_8h.html" title="WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook." alt="" coords="297,79,416,104"/>
+<area shape="poly" id="edge11_Node000001_Node000007" title=" " alt="" coords="224,33,329,76,327,81,222,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="210,117,182,153,178,150,206,113"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="157,190,129,227,125,224,152,187"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="215,180,327,223,325,228,213,185"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="94,109,155,150,152,154,92,114"/>
+<area shape="poly" id="edge9_Node000006_Node000004" title=" " alt="" coords="76,116,116,224,111,226,71,118"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="315,111,203,154,201,149,313,106"/>
+<area shape="poly" id="edge13_Node000007_Node000004" title=" " alt="" coords="332,115,238,180,145,228,142,223,235,175,329,110"/>
+<area shape="poly" id="edge14_Node000007_Node000005" title=" " alt="" coords="359,118,359,225,354,225,354,118"/>
+</map>

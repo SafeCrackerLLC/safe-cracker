@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Izvorni kod datoteke Power.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Traži');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Power_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Power.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Power_8h.html">Dokumenacija za ovu datoteku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef POWER_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define POWER_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Arduino.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;esp_timer.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;esp_sleep.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="Config_8h.html">Config.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="State_8h.html">State.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#a434a613186c41a0223351e793231c9f0">handleSleepTimerExpired</a>(<span class="keywordtype">void</span>* arg);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#affdf5fd029245fdcc036b8a6e90ecd3e">initializeSleepTimer</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#a92dd19e3af2ec86b8e5c9641765c2ffd">resetSleepTimer</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#ae2da94e03570cd696d5e1ef31169b6f3">goToSleep</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#a4af1869bdb080b5e22419dc5a205c1cb">sleepIfInactive</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="Power_8h.html#a434a613186c41a0223351e793231c9f0">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#a434a613186c41a0223351e793231c9f0">handleSleepTimerExpired</a>(<span class="keywordtype">void</span>* arg) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_variable" href="State_8h.html#ac46c84ccf708cfbace5861163e8df18b">sleepRequested</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="Power_8h.html#affdf5fd029245fdcc036b8a6e90ecd3e">   34</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#affdf5fd029245fdcc036b8a6e90ecd3e">initializeSleepTimer</a>() {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  esp_timer_create_args_t sleepTimerArgs = {};</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  sleepTimerArgs.callback = &amp;<a class="code hl_function" href="Power_8h.html#a434a613186c41a0223351e793231c9f0">handleSleepTimerExpired</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  sleepTimerArgs.arg = NULL;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  sleepTimerArgs.dispatch_method = ESP_TIMER_TASK;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  sleepTimerArgs.name = <span class="stringliteral">&quot;sleep_timer&quot;</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  esp_timer_create(&amp;sleepTimerArgs, &amp;<a class="code hl_variable" href="State_8h.html#a9d1d9baf7e4b82c52435ce86a725a269">sleepTimer</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_function" href="Power_8h.html#a92dd19e3af2ec86b8e5c9641765c2ffd">resetSleepTimer</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="Power_8h.html#a92dd19e3af2ec86b8e5c9641765c2ffd">   45</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#a92dd19e3af2ec86b8e5c9641765c2ffd">resetSleepTimer</a>() {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_variable" href="State_8h.html#a94f69c5109e8c3076144a0ab061802fb">lastActivityTime</a> = millis();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_variable" href="State_8h.html#ac46c84ccf708cfbace5861163e8df18b">sleepRequested</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#a9d1d9baf7e4b82c52435ce86a725a269">sleepTimer</a> == NULL) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  esp_timer_stop(<a class="code hl_variable" href="State_8h.html#a9d1d9baf7e4b82c52435ce86a725a269">sleepTimer</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  esp_timer_start_once(<a class="code hl_variable" href="State_8h.html#a9d1d9baf7e4b82c52435ce86a725a269">sleepTimer</a>, <a class="code hl_variable" href="Config_8h.html#a1099eee964c88a07cddca4979a5a8eca">SLEEP_TIMEOUT_MS</a> * 1000ULL);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="Power_8h.html#ae2da94e03570cd696d5e1ef31169b6f3">   57</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#ae2da94e03570cd696d5e1ef31169b6f3">goToSleep</a>() {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  Serial.println(<span class="stringliteral">&quot;Going to sleep...&quot;</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.clearDisplay();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_variable" href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a>.display();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  esp_sleep_enable_ext0_wakeup(GPIO_NUM_12, LOW);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  esp_deep_sleep_start();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}</div>
+</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="Power_8h.html#a4af1869bdb080b5e22419dc5a205c1cb">   65</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="Power_8h.html#a4af1869bdb080b5e22419dc5a205c1cb">sleepIfInactive</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a>) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_function" href="Power_8h.html#a92dd19e3af2ec86b8e5c9641765c2ffd">resetSleepTimer</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="State_8h.html#ac46c84ccf708cfbace5861163e8df18b">sleepRequested</a>) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="Power_8h.html#ae2da94e03570cd696d5e1ef31169b6f3">goToSleep</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aConfig_8h_html"><div class="ttname"><a href="Config_8h.html">Config.h</a></div><div class="ttdoc">Centralne hardverske pin definicije i konstante igre.</div></div>
+<div class="ttc" id="aConfig_8h_html_a1099eee964c88a07cddca4979a5a8eca"><div class="ttname"><a href="Config_8h.html#a1099eee964c88a07cddca4979a5a8eca">SLEEP_TIMEOUT_MS</a></div><div class="ttdeci">const unsigned long SLEEP_TIMEOUT_MS</div><div class="ttdoc">Vrijeme neaktivnosti nakon kojeg ESP32 ulazi u deep sleep.</div><div class="ttdef"><b>Definition</b> <a href="Config_8h_source.html#l00176">Config.h:176</a></div></div>
+<div class="ttc" id="aPower_8h_html_a434a613186c41a0223351e793231c9f0"><div class="ttname"><a href="Power_8h.html#a434a613186c41a0223351e793231c9f0">handleSleepTimerExpired</a></div><div class="ttdeci">void handleSleepTimerExpired(void *arg)</div><div class="ttdoc">Callback ESP timera koji oznacava da je sleep zatrazen.</div><div class="ttdef"><b>Definition</b> <a href="Power_8h_source.html#l00030">Power.h:30</a></div></div>
+<div class="ttc" id="aPower_8h_html_a4af1869bdb080b5e22419dc5a205c1cb"><div class="ttname"><a href="Power_8h.html#a4af1869bdb080b5e22419dc5a205c1cb">sleepIfInactive</a></div><div class="ttdeci">void sleepIfInactive()</div><div class="ttdoc">Provjerava treba li uredjaj uspavati.</div><div class="ttdef"><b>Definition</b> <a href="Power_8h_source.html#l00065">Power.h:65</a></div></div>
+<div class="ttc" id="aPower_8h_html_a92dd19e3af2ec86b8e5c9641765c2ffd"><div class="ttname"><a href="Power_8h.html#a92dd19e3af2ec86b8e5c9641765c2ffd">resetSleepTimer</a></div><div class="ttdeci">void resetSleepTimer()</div><div class="ttdoc">Resetira vrijeme zadnje aktivnosti i ponovno armira sleep timer.</div><div class="ttdef"><b>Definition</b> <a href="Power_8h_source.html#l00045">Power.h:45</a></div></div>
+<div class="ttc" id="aPower_8h_html_ae2da94e03570cd696d5e1ef31169b6f3"><div class="ttname"><a href="Power_8h.html#ae2da94e03570cd696d5e1ef31169b6f3">goToSleep</a></div><div class="ttdeci">void goToSleep()</div><div class="ttdoc">Gasi OLED i prebacuje ESP32 u deep sleep do pritiska tipke.</div><div class="ttdef"><b>Definition</b> <a href="Power_8h_source.html#l00057">Power.h:57</a></div></div>
+<div class="ttc" id="aPower_8h_html_affdf5fd029245fdcc036b8a6e90ecd3e"><div class="ttname"><a href="Power_8h.html#affdf5fd029245fdcc036b8a6e90ecd3e">initializeSleepTimer</a></div><div class="ttdeci">void initializeSleepTimer()</div><div class="ttdoc">Kreira i pokrece timer za neaktivnost.</div><div class="ttdef"><b>Definition</b> <a href="Power_8h_source.html#l00034">Power.h:34</a></div></div>
+<div class="ttc" id="aState_8h_html"><div class="ttname"><a href="State_8h.html">State.h</a></div><div class="ttdoc">Globalno stanje firmwarea dijeljeno izmedju modula.</div></div>
+<div class="ttc" id="aState_8h_html_a5e66d0eae2fd3b4672530cb0419a7f68"><div class="ttname"><a href="State_8h.html#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a></div><div class="ttdeci">bool wifiConfigPortalActive</div><div class="ttdoc">Oznacava radi li konfiguracijski WiFi portal.</div></div>
+<div class="ttc" id="aState_8h_html_a94f69c5109e8c3076144a0ab061802fb"><div class="ttname"><a href="State_8h.html#a94f69c5109e8c3076144a0ab061802fb">lastActivityTime</a></div><div class="ttdeci">unsigned long lastActivityTime</div><div class="ttdoc">Zadnje vrijeme korisnicke aktivnosti iz millis().</div></div>
+<div class="ttc" id="aState_8h_html_a9d1d9baf7e4b82c52435ce86a725a269"><div class="ttname"><a href="State_8h.html#a9d1d9baf7e4b82c52435ce86a725a269">sleepTimer</a></div><div class="ttdeci">esp_timer_handle_t sleepTimer</div><div class="ttdoc">ESP timer koji prati neaktivnost uredjaja.</div></div>
+<div class="ttc" id="aState_8h_html_ab90955ee2e481997c47040f24594f6a7"><div class="ttname"><a href="State_8h.html#ab90955ee2e481997c47040f24594f6a7">display</a></div><div class="ttdeci">Adafruit_SSD1306 display</div><div class="ttdoc">OLED driver instanca.</div></div>
+<div class="ttc" id="aState_8h_html_ac46c84ccf708cfbace5861163e8df18b"><div class="ttname"><a href="State_8h.html#ac46c84ccf708cfbace5861163e8df18b">sleepRequested</a></div><div class="ttdeci">volatile bool sleepRequested</div><div class="ttdoc">Flag koji timer postavlja kada uredjaj treba u deep sleep.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a class="el" href="Power_8h.html">Power.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
