@@ -1,6 +1,11 @@
 #ifndef POWER_H
 #define POWER_H
 
+/**
+ * @file Power.h
+ * @brief Upravljanje neaktivnoscu i ESP32 deep sleep nacinom rada.
+ */
+
 #include <Arduino.h>
 #include <esp_timer.h>
 #include <esp_sleep.h>
@@ -8,10 +13,18 @@
 #include "Config.h"
 #include "State.h"
 
+/**
+ * @brief Callback ESP timera koji oznacava da je sleep zatrazen.
+ * @param arg Ne koristi se.
+ */
 void handleSleepTimerExpired(void* arg);
+/** @brief Kreira i pokrece timer za neaktivnost. */
 void initializeSleepTimer();
+/** @brief Resetira vrijeme zadnje aktivnosti i ponovno armira sleep timer. */
 void resetSleepTimer();
+/** @brief Gasi OLED i prebacuje ESP32 u deep sleep do pritiska tipke. */
 void goToSleep();
+/** @brief Provjerava treba li uredjaj uspavati. */
 void sleepIfInactive();
 
 void handleSleepTimerExpired(void* arg) {

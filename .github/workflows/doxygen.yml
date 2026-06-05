@@ -1,0 +1,45 @@
+name: Doxygen Documentation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  doxygen:
+    name: Generate Doxygen Documentation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Doxygen
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+          doxygen -v
+
+      - name: Generate Documentation
+        run: |
+          doxygen Doxyfile
+          if [ ! -d "docs/html" ]; then echo "Error: docs/html not found!"; exit 1; fi
+
+      - name: Prepare Documentation for Deployment
+        run: |
+          mkdir -p public
+          cp -r docs/html/. public/
+          touch public/.nojekyll
+
+      - name: Deploy Documentation to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.event_name == 'push'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public

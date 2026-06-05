@@ -1,0 +1,665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Opis datoteke SafeNetwork.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Traži',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_safe_network_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Opis datoteke SafeNetwork.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;HTTPClient.h&gt;</code><br />
+<code>#include &lt;Preferences.h&gt;</code><br />
+<code>#include &lt;WiFi.h&gt;</code><br />
+<code>#include &lt;WebServer.h&gt;</code><br />
+<code>#include &lt;WiFiClientSecure.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_config_8h_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_state_8h_source.html">State.h</a>&quot;</code><br />
+</div>
+<p><a href="_safe_network_8h_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcije</h2></td></tr>
+<tr class="memitem:a521bd52223d979b3e1e27d5785286967" id="r_a521bd52223d979b3e1e27d5785286967"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a521bd52223d979b3e1e27d5785286967">initializeNetwork</a> ()</td></tr>
+<tr class="memdesc:a521bd52223d979b3e1e27d5785286967"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ucitava spremljene WiFi postavke i pokrece konekciju ili setup portal.  <br /></td></tr>
+<tr class="memitem:a07453db4d31d30c124a637b402390f5e" id="r_a07453db4d31d30c124a637b402390f5e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07453db4d31d30c124a637b402390f5e">updateNetwork</a> ()</td></tr>
+<tr class="memdesc:a07453db4d31d30c124a637b402390f5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obradjuje WiFi portal i timeout spajanja.  <br /></td></tr>
+<tr class="memitem:aa98904837678aa5e9f03f7e481bafa65" id="r_aa98904837678aa5e9f03f7e481bafa65"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa98904837678aa5e9f03f7e481bafa65">startWifiConfigPortal</a> (bool clearCredentials)</td></tr>
+<tr class="memdesc:aa98904837678aa5e9f03f7e481bafa65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pokrece lokalni AP i web formu za unos WiFi podataka.  <br /></td></tr>
+<tr class="memitem:ac30f89cff8ea016c4274081f67976c0b" id="r_ac30f89cff8ea016c4274081f67976c0b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac30f89cff8ea016c4274081f67976c0b">stopWifiConfigPortal</a> ()</td></tr>
+<tr class="memdesc:ac30f89cff8ea016c4274081f67976c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zaustavlja konfiguracijski web server i AP.  <br /></td></tr>
+<tr class="memitem:aa6b5d3eb8e37f212c98dda92a9929c10" id="r_aa6b5d3eb8e37f212c98dda92a9929c10"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa6b5d3eb8e37f212c98dda92a9929c10">setWifiOfflineMode</a> (bool offline)</td></tr>
+<tr class="memdesc:aa6b5d3eb8e37f212c98dda92a9929c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ukljucuje ili iskljucuje offline nacin rada.  <br /></td></tr>
+<tr class="memitem:a2cdd318d40fdd0ea0182f64e69e00de1" id="r_a2cdd318d40fdd0ea0182f64e69e00de1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2cdd318d40fdd0ea0182f64e69e00de1">startWifiConnection</a> ()</td></tr>
+<tr class="memdesc:a2cdd318d40fdd0ea0182f64e69e00de1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pokrece spajanje na spremljeni WiFi SSID.  <br /></td></tr>
+<tr class="memitem:aecaef34a5b4c910faf41faad214950fd" id="r_aecaef34a5b4c910faf41faad214950fd"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aecaef34a5b4c910faf41faad214950fd">isWifiConnected</a> ()</td></tr>
+<tr class="memitem:a704f9fc20fc6288159dc16183e1f04d1" id="r_a704f9fc20fc6288159dc16183e1f04d1"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a704f9fc20fc6288159dc16183e1f04d1">getWifiStatusLabel</a> ()</td></tr>
+<tr class="memitem:aa1f35b9688dbf1109436ad91c42901aa" id="r_aa1f35b9688dbf1109436ad91c42901aa"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aa1f35b9688dbf1109436ad91c42901aa">getDeviceId</a> ()</td></tr>
+<tr class="memitem:a89c112a8050702fe26f21cf4930474fe" id="r_a89c112a8050702fe26f21cf4930474fe"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a89c112a8050702fe26f21cf4930474fe">getConfiguredWebhookUrl</a> ()</td></tr>
+<tr class="memitem:aebee6f522cae70b4da8a2599abec92ab" id="r_aebee6f522cae70b4da8a2599abec92ab"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#aebee6f522cae70b4da8a2599abec92ab">htmlEscape</a> (const String &amp;value)</td></tr>
+<tr class="memitem:a5cf3e030795a9e192e3460d3527ab9e6" id="r_a5cf3e030795a9e192e3460d3527ab9e6"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a5cf3e030795a9e192e3460d3527ab9e6">jsonEscape</a> (const String &amp;value)</td></tr>
+<tr class="memitem:a011d31ca7016ac147be42118cbd5b0f9" id="r_a011d31ca7016ac147be42118cbd5b0f9"><td class="memItemLeft">const char *&#160;</td><td class="memItemRight"><a class="el" href="#a011d31ca7016ac147be42118cbd5b0f9">getReplayEventName</a> (int eventType)</td></tr>
+<tr class="memitem:a06c9742185196f21c08ff01f329362ee" id="r_a06c9742185196f21c08ff01f329362ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a06c9742185196f21c08ff01f329362ee">postScoreWebhook</a> (int levelNumber, const char *levelName, unsigned long timeMs, int stability, int targetsHit, int targetCount)</td></tr>
+<tr class="memdesc:a06c9742185196f21c08ff01f329362ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salje rezultat levela na konfigurirani webhook.  <br /></td></tr>
+<tr class="memitem:a959bd19734f755c44d6c50c37781ecba" id="r_a959bd19734f755c44d6c50c37781ecba"><td class="memItemLeft">WebServer&#160;</td><td class="memItemRight"><a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer</a> (80)</td></tr>
+<tr class="memdesc:a959bd19734f755c44d6c50c37781ecba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lokalni HTTP server za WiFi konfiguracijski portal.  <br /></td></tr>
+<tr class="memitem:a35bc85af95d0c8224f8ba8072480fe3f" id="r_a35bc85af95d0c8224f8ba8072480fe3f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a35bc85af95d0c8224f8ba8072480fe3f">sendWifiConfigPage</a> ()</td></tr>
+<tr class="memdesc:a35bc85af95d0c8224f8ba8072480fe3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salje HTML formu konfiguracijskog WiFi portala.  <br /></td></tr>
+<tr class="memitem:a89c6c9cc36c47a868796b450c273dcac" id="r_a89c6c9cc36c47a868796b450c273dcac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89c6c9cc36c47a868796b450c273dcac">handleWifiSave</a> ()</td></tr>
+<tr class="memdesc:a89c6c9cc36c47a868796b450c273dcac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprema WiFi/webhook podatke poslane s konfiguracijske forme.  <br /></td></tr>
+<tr class="memitem:a6b3090667354189bd6ff23ba1aa3ef26" id="r_a6b3090667354189bd6ff23ba1aa3ef26"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6b3090667354189bd6ff23ba1aa3ef26">handleWifiOffline</a> ()</td></tr>
+<tr class="memdesc:a6b3090667354189bd6ff23ba1aa3ef26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obradjuje odabir offline nacina rada iz konfiguracijskog portala.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Varijable</h2></td></tr>
+<tr class="memitem:a8e4e337c61895be221bd0b238c50f1bd" id="r_a8e4e337c61895be221bd0b238c50f1bd"><td class="memItemLeft">Preferences&#160;</td><td class="memItemRight"><a class="el" href="#a8e4e337c61895be221bd0b238c50f1bd">wifiPreferences</a></td></tr>
+<tr class="memdesc:a8e4e337c61895be221bd0b238c50f1bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP32 Preferences storage za WiFi i webhook postavke.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook. </p>
+
+<p class="definition">Definirano u datoteci <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentacije funkcija</h2>
+<a id="a89c112a8050702fe26f21cf4930474fe" name="a89c112a8050702fe26f21cf4930474fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c112a8050702fe26f21cf4930474fe">&#9670;&#160;</a></span>getConfiguredWebhookUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getConfiguredWebhookUrl </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Spremljeni webhook URL ili zadani SCORE_WEBHOOK_URL. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00084">84</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5082bfaa1fd7d8aa2b412a417b2aa057">configuredWebhookUrl</a><a class="el" href="_config_8h_source.html#l00134">SCORE_WEBHOOK_URL</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00235">drawNetworkInfoScreen()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_safe_network_8h_source.html#l00128">sendWifiConfigPage()</a>.</p>
+
+</div>
+</div>
+<a id="aa1f35b9688dbf1109436ad91c42901aa" name="aa1f35b9688dbf1109436ad91c42901aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1f35b9688dbf1109436ad91c42901aa">&#9670;&#160;</a></span>getDeviceId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String getDeviceId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Stabilni kratki ID uredjaja izveden iz ESP32 MAC-a. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00077">77</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>.</p>
+
+</div>
+</div>
+<a id="a011d31ca7016ac147be42118cbd5b0f9" name="a011d31ca7016ac147be42118cbd5b0f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011d31ca7016ac147be42118cbd5b0f9">&#9670;&#160;</a></span>getReplayEventName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * getReplayEventName </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>eventType</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Tekstualni naziv replay dogadjaja. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00111">111</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_config_8h_source.html#l00156">REPLAY_EVENT_FINISH</a>, <a class="el" href="_config_8h_source.html#l00150">REPLAY_EVENT_START</a><a class="el" href="_config_8h_source.html#l00154">REPLAY_EVENT_TARGET_HIT</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>.</p>
+
+</div>
+</div>
+<a id="a704f9fc20fc6288159dc16183e1f04d1" name="a704f9fc20fc6288159dc16183e1f04d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704f9fc20fc6288159dc16183e1f04d1">&#9670;&#160;</a></span>getWifiStatusLabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * getWifiStatusLabel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>Kratka oznaka WiFi statusa za OLED. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00328">328</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_safe_network_8h_source.html#l00324">isWifiConnected()</a>, <a class="el" href="_state_8h.html#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a>, <a class="el" href="_state_8h.html#a23d9b97ae74e417e64f6eecbae5654d8">wifiConnectInProgress</a><a class="el" href="_state_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00145">drawLevelSelectScreen()</a><a class="el" href="_rendering_8h_source.html#l00235">drawNetworkInfoScreen()</a>.</p>
+
+</div>
+</div>
+<a id="a6b3090667354189bd6ff23ba1aa3ef26" name="a6b3090667354189bd6ff23ba1aa3ef26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3090667354189bd6ff23ba1aa3ef26">&#9670;&#160;</a></span>handleWifiOffline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleWifiOffline </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obradjuje odabir offline nacina rada iz konfiguracijskog portala. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00193">193</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_config_8h_source.html#l00162">GAME_SCREEN_LEVEL_SELECT</a>, <a class="el" href="_state_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a><a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+<a id="a89c6c9cc36c47a868796b450c273dcac" name="a89c6c9cc36c47a868796b450c273dcac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c6c9cc36c47a868796b450c273dcac">&#9670;&#160;</a></span>handleWifiSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleWifiSave </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprema WiFi/webhook podatke poslane s konfiguracijske forme. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00151">151</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5f4ed5fa581a078b862f1777f02e9396">configuredPassword</a>, <a class="el" href="_state_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>, <a class="el" href="_state_8h.html#a5082bfaa1fd7d8aa2b412a417b2aa057">configuredWebhookUrl</a>, <a class="el" href="_config_8h_source.html#l00162">GAME_SCREEN_LEVEL_SELECT</a>, <a class="el" href="_state_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="_config_8h_source.html#l00134">SCORE_WEBHOOK_URL</a>, <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a>, <a class="el" href="_safe_network_8h_source.html#l00270">stopWifiConfigPortal()</a>, <a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer()</a>, <a class="el" href="_state_8h.html#a0e0450c722705de916982c67323c2928">wifiHasCredentials</a>, <a class="el" href="_state_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a><a class="el" href="_safe_network_8h_source.html#l00075">wifiPreferences</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+<a id="aebee6f522cae70b4da8a2599abec92ab" name="aebee6f522cae70b4da8a2599abec92ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebee6f522cae70b4da8a2599abec92ab">&#9670;&#160;</a></span>htmlEscape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String htmlEscape </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>HTML-escaped kopija proslijedjene vrijednosti. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00092">92</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00128">sendWifiConfigPage()</a>.</p>
+
+</div>
+</div>
+<a id="a521bd52223d979b3e1e27d5785286967" name="a521bd52223d979b3e1e27d5785286967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a521bd52223d979b3e1e27d5785286967">&#9670;&#160;</a></span>initializeNetwork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initializeNetwork </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ucitava spremljene WiFi postavke i pokrece konekciju ili setup portal. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00199">199</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5f4ed5fa581a078b862f1777f02e9396">configuredPassword</a>, <a class="el" href="_state_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>, <a class="el" href="_state_8h.html#a5082bfaa1fd7d8aa2b412a417b2aa057">configuredWebhookUrl</a>, <a class="el" href="_state_8h.html#a910bf3740bca72522ea6ea72baa8a8b0">networkStatusMessage</a>, <a class="el" href="_config_8h_source.html#l00134">SCORE_WEBHOOK_URL</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a>, <a class="el" href="_state_8h.html#a0e0450c722705de916982c67323c2928">wifiHasCredentials</a>, <a class="el" href="_state_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a><a class="el" href="_safe_network_8h_source.html#l00075">wifiPreferences</a>.</p>
+
+</div>
+</div>
+<a id="aecaef34a5b4c910faf41faad214950fd" name="aecaef34a5b4c910faf41faad214950fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecaef34a5b4c910faf41faad214950fd">&#9670;&#160;</a></span>isWifiConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isWifiConnected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>true ako je ESP32 trenutno spojen na WiFi. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00324">324</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00328">getWifiStatusLabel()</a><a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>.</p>
+
+</div>
+</div>
+<a id="a5cf3e030795a9e192e3460d3527ab9e6" name="a5cf3e030795a9e192e3460d3527ab9e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf3e030795a9e192e3460d3527ab9e6">&#9670;&#160;</a></span>jsonEscape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String jsonEscape </td>
+          <td>(</td>
+          <td class="paramtype">const String &amp;</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Povratne vrijednosti</dt><dd>JSON-escaped kopija proslijedjene vrijednosti. </dd></dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00102">102</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>.</p>
+
+</div>
+</div>
+<a id="a06c9742185196f21c08ff01f329362ee" name="a06c9742185196f21c08ff01f329362ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c9742185196f21c08ff01f329362ee">&#9670;&#160;</a></span>postScoreWebhook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void postScoreWebhook </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>levelNumber</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>levelName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long</td>          <td class="paramname"><span class="paramname"><em>timeMs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>stability</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetsHit</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>targetCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salje rezultat levela na konfigurirani webhook. </p>
+<p>Payload ukljucuje osnovni score, ciljeve, statistiku po cilju i replay uzorke.</p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">levelNumber</td><td>Redni broj levela koji se salje backendu. </td></tr>
+    <tr><td class="paramname">levelName</td><td>Naziv levela koji se salje backendu. </td></tr>
+    <tr><td class="paramname">timeMs</td><td>Vrijeme rjesavanja levela u milisekundama. </td></tr>
+    <tr><td class="paramname">stability</td><td>Stabilnost pokusaja od 0 do 100. </td></tr>
+    <tr><td class="paramname">targetsHit</td><td>Broj pogodjenih ciljeva. </td></tr>
+    <tr><td class="paramname">targetCount</td><td>Ukupan broj ciljeva u levelu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00348">348</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#abd78630e561ad9bde243a7b0c1179887">currentRunTargetCount</a>, <a class="el" href="_state_8h.html#ada73b8fd5ee79a292ec81c06355955d5">currentRunTargets</a>, <a class="el" href="_safe_network_8h_source.html#l00084">getConfiguredWebhookUrl()</a>, <a class="el" href="_safe_network_8h_source.html#l00077">getDeviceId()</a>, <a class="el" href="_safe_network_8h_source.html#l00111">getReplayEventName()</a>, <a class="el" href="_safe_network_8h_source.html#l00324">isWifiConnected()</a>, <a class="el" href="_safe_network_8h_source.html#l00102">jsonEscape()</a>, <a class="el" href="_state_8h.html#a0c954a6466504da079206dfc86711860">replayEventCount</a>, <a class="el" href="_state_8h.html#a32ba21d95d795c2e7228de7a4b8ec69d">replayEventFill</a>, <a class="el" href="_state_8h.html#a287598f8a68be4005373d031e1c5f161">replayEventTargetIndex</a>, <a class="el" href="_state_8h.html#ab1c2ab1ecb4c6ab8a4092178521f9d9d">replayEventTimeMs</a>, <a class="el" href="_state_8h.html#a38b31c1acc5a2cc00afeb7e77892fd3b">replayEventType</a>, <a class="el" href="_config_8h_source.html#l00140">SCORE_POST_TIMEOUT_MS</a>, <a class="el" href="_state_8h.html#a206b3c4ba17030a562cb21d5abd8750a">targetStabilityDirectionChanges</a>, <a class="el" href="_state_8h.html#aec347ef48815f73b069532dddb5e6763">targetStabilityOvershootCount</a>, <a class="el" href="_state_8h.html#aab195d62dd6d0c29223f8f04059b0f3c">targetStabilitySampleCount</a>, <a class="el" href="_state_8h.html#afa403de54a199f1f51b0565c7ac9ade4">targetStabilityScore</a><a class="el" href="_state_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a35bc85af95d0c8224f8ba8072480fe3f" name="a35bc85af95d0c8224f8ba8072480fe3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35bc85af95d0c8224f8ba8072480fe3f">&#9670;&#160;</a></span>sendWifiConfigPage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sendWifiConfigPage </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salje HTML formu konfiguracijskog WiFi portala. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00128">128</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5f4ed5fa581a078b862f1777f02e9396">configuredPassword</a>, <a class="el" href="_state_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>, <a class="el" href="_safe_network_8h_source.html#l00084">getConfiguredWebhookUrl()</a>, <a class="el" href="_safe_network_8h_source.html#l00092">htmlEscape()</a><a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+<a id="aa6b5d3eb8e37f212c98dda92a9929c10" name="aa6b5d3eb8e37f212c98dda92a9929c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b5d3eb8e37f212c98dda92a9929c10">&#9670;&#160;</a></span>setWifiOfflineMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setWifiOfflineMode </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>offline</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ukljucuje ili iskljucuje offline nacin rada. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">offline</td><td>true za offline mode, false za povratak na WiFi. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00280">280</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a910bf3740bca72522ea6ea72baa8a8b0">networkStatusMessage</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a>, <a class="el" href="_safe_network_8h_source.html#l00270">stopWifiConfigPortal()</a>, <a class="el" href="_state_8h.html#a23d9b97ae74e417e64f6eecbae5654d8">wifiConnectInProgress</a>, <a class="el" href="_state_8h.html#a0e0450c722705de916982c67323c2928">wifiHasCredentials</a>, <a class="el" href="_state_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a><a class="el" href="_safe_network_8h_source.html#l00075">wifiPreferences</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_input_8h_source.html#l00104">handleButtonActivity()</a><a class="el" href="_safe_network_8h_source.html#l00193">handleWifiOffline()</a>.</p>
+
+</div>
+</div>
+<a id="aa98904837678aa5e9f03f7e481bafa65" name="aa98904837678aa5e9f03f7e481bafa65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa98904837678aa5e9f03f7e481bafa65">&#9670;&#160;</a></span>startWifiConfigPortal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startWifiConfigPortal </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>clearCredentials</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pokrece lokalni AP i web formu za unos WiFi podataka. </p>
+<dl class="params"><dt>Parametri</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clearCredentials</td><td>true ako prije setupa treba obrisati spremljeni SSID i lozinku. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00238">238</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5f4ed5fa581a078b862f1777f02e9396">configuredPassword</a>, <a class="el" href="_state_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>, <a class="el" href="_config_8h_source.html#l00168">GAME_SCREEN_WIFI_CONFIG</a>, <a class="el" href="_state_8h.html#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a>, <a class="el" href="_safe_network_8h_source.html#l00193">handleWifiOffline()</a>, <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_state_8h.html#a910bf3740bca72522ea6ea72baa8a8b0">networkStatusMessage</a>, <a class="el" href="_safe_network_8h_source.html#l00128">sendWifiConfigPage()</a>, <a class="el" href="_config_8h_source.html#l00136">WIFI_PORTAL_PASSWORD</a>, <a class="el" href="_state_8h.html#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a>, <a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer()</a>, <a class="el" href="_state_8h.html#a23d9b97ae74e417e64f6eecbae5654d8">wifiConnectInProgress</a>, <a class="el" href="_state_8h.html#a0e0450c722705de916982c67323c2928">wifiHasCredentials</a>, <a class="el" href="_state_8h.html#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a>, <a class="el" href="_state_8h.html#a59f5d414ddd8ae744696f1ddc496d9ee">wifiPortalSsid</a><a class="el" href="_safe_network_8h_source.html#l00075">wifiPreferences</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_input_8h_source.html#l00104">handleButtonActivity()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a>, <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a><a class="el" href="_safe_network_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a2cdd318d40fdd0ea0182f64e69e00de1" name="a2cdd318d40fdd0ea0182f64e69e00de1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cdd318d40fdd0ea0182f64e69e00de1">&#9670;&#160;</a></span>startWifiConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void startWifiConnection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pokrece spajanje na spremljeni WiFi SSID. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00224">224</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5f4ed5fa581a078b862f1777f02e9396">configuredPassword</a>, <a class="el" href="_state_8h.html#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a>, <a class="el" href="_state_8h.html#a910bf3740bca72522ea6ea72baa8a8b0">networkStatusMessage</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00270">stopWifiConfigPortal()</a>, <a class="el" href="_state_8h.html#a23d9b97ae74e417e64f6eecbae5654d8">wifiConnectInProgress</a><a class="el" href="_state_8h.html#a7d0b2c1dd70a2b44881435c6108444d0">wifiConnectStartedAt</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a><a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a>.</p>
+
+</div>
+</div>
+<a id="ac30f89cff8ea016c4274081f67976c0b" name="ac30f89cff8ea016c4274081f67976c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac30f89cff8ea016c4274081f67976c0b">&#9670;&#160;</a></span>stopWifiConfigPortal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stopWifiConfigPortal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Zaustavlja konfiguracijski web server i AP. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00270">270</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a><a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer()</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a><a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a>.</p>
+
+</div>
+</div>
+<a id="a07453db4d31d30c124a637b402390f5e" name="a07453db4d31d30c124a637b402390f5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07453db4d31d30c124a637b402390f5e">&#9670;&#160;</a></span>updateNetwork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void updateNetwork </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obradjuje WiFi portal i timeout spajanja. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00300">300</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Reference <a class="el" href="_state_8h.html#a910bf3740bca72522ea6ea72baa8a8b0">networkStatusMessage</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_config_8h_source.html#l00138">WIFI_CONNECT_TIMEOUT_MS</a>, <a class="el" href="_state_8h.html#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a>, <a class="el" href="#a959bd19734f755c44d6c50c37781ecba">wifiConfigServer()</a>, <a class="el" href="_state_8h.html#a23d9b97ae74e417e64f6eecbae5654d8">wifiConnectInProgress</a><a class="el" href="_state_8h.html#a7d0b2c1dd70a2b44881435c6108444d0">wifiConnectStartedAt</a>.</p>
+
+</div>
+</div>
+<a id="a959bd19734f755c44d6c50c37781ecba" name="a959bd19734f755c44d6c50c37781ecba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959bd19734f755c44d6c50c37781ecba">&#9670;&#160;</a></span>wifiConfigServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServer wifiConfigServer </td>
+          <td>(</td>
+          <td class="paramtype">80</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lokalni HTTP server za WiFi konfiguracijski portal. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00193">handleWifiOffline()</a>, <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00128">sendWifiConfigPage()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00270">stopWifiConfigPortal()</a><a class="el" href="_safe_network_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Dokumentacija varijable</h2>
+<a id="a8e4e337c61895be221bd0b238c50f1bd" name="a8e4e337c61895be221bd0b238c50f1bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4e337c61895be221bd0b238c50f1bd">&#9670;&#160;</a></span>wifiPreferences</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Preferences wifiPreferences</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ESP32 Preferences storage za WiFi i webhook postavke. </p>
+
+<p class="definition">Definirano u liniji <a class="el" href="_safe_network_8h_source.html#l00075">75</a> datoteke <a class="el" href="_safe_network_8h_source.html">SafeNetwork.h</a>.</p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a><a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a href="_safe_network_8h.html">SafeNetwork.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

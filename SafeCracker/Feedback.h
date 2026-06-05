@@ -1,14 +1,28 @@
 #ifndef FEEDBACK_H
 #define FEEDBACK_H
 
+/**
+ * @file Feedback.h
+ * @brief Zajednicki zvucni i vibracijski feedback za igru.
+ */
+
 #include <Arduino.h>
 
 #include "Config.h"
 
+/**
+ * @brief Pusti ton i istovremeno aktivira vibracijski motor.
+ * @param frequency Frekvencija tona u Hz.
+ * @param durationMs Trajanje tona u milisekundama.
+ */
 void beepWithVibration(int frequency, int durationMs);
+/** @brief Kratki feedback za pozitivni/desni pomak. */
 void clickRight();
+/** @brief Kratki feedback za negativni/lijevi pomak. */
 void clickLeft();
+/** @brief Melodija koja oznacava uspjesno rijesen level. */
 void playVictorySound();
+/** @brief Melodija koja oznacava neuspjesan zavrsetak levela. */
 void playLoseSound();
 
 void beepWithVibration(int frequency, int durationMs) {

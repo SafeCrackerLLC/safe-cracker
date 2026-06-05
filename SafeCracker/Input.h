@@ -1,6 +1,11 @@
 #ifndef INPUT_H
 #define INPUT_H
 
+/**
+ * @file Input.h
+ * @brief Obrada tipke i joysticka za navigaciju kroz ekrane.
+ */
+
 #include <Arduino.h>
 
 #include "Config.h"
@@ -9,10 +14,15 @@
 #include "SafeNetwork.h"
 #include "Power.h"
 
+/** @brief Obradjuje joystick i tipku za trenutno aktivni ekran. */
 void handleButtonActivity();
+/** @brief Uzorkuje joystick i sprema njegovu neutralnu vrijednost. */
 void calibrateJoystickCenter();
+/** @brief Pomice selekciju u glavnom meniju kada je joystick izvan deadzonea. */
 void handleJoystickLevelSelect();
+/** @brief Prebacuje akciju na ekranu s mreznim informacijama. */
 void handleJoystickNetworkInfo();
+/** @return Ukupan broj stavki u glavnom meniju. */
 int getMenuItemCount();
 
 int getMenuItemCount() {

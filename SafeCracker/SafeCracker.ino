@@ -2,6 +2,14 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+/**
+ * @file SafeCracker.ino
+ * @brief Arduino entry point za SafeCracker firmware.
+ *
+ * Datoteka inicijalizira hardver, definira globalno stanje iz State.h i
+ * pokrece glavnu petlju koja spaja mrezu, ulaze, logiku igre, prikaz i sleep.
+ */
+
 #include "Config.h"
 #include "Feedback.h"
 #include "GameLogic.h"
@@ -56,6 +64,7 @@ int replayEventTargetIndex[MAX_REPLAY_EVENTS];
 int replayEventType[MAX_REPLAY_EVENTS];
 unsigned long lastReplayEventTime = 0;
 float lastReplayEventFill = 0;
+/** Zadnje vrijeme ispisa statusa na Serial monitor. */
 unsigned long lastSerialStatusTime = 0;
 
 // --------------------
@@ -78,6 +87,9 @@ String networkStatusMessage = "";
 // --------------------
 // Arduino setup
 // --------------------
+/**
+ * @brief Inicijalizira pinove, OLED, ulazne uredjaje, sleep timer i mrezu.
+ */
 void setup() {
   pinMode(BUZZER_PIN, OUTPUT);
   pinMode(VIBRATION_PIN, OUTPUT);
@@ -128,6 +140,12 @@ void setup() {
 // --------------------
 // Arduino game loop
 // --------------------
+/**
+ * @brief Glavna Arduino petlja.
+ *
+ * Periodicki obradjuje WiFi, tipke/joystick, timer levela, potenciometar,
+ * crtanje ekrana i ulazak u deep sleep.
+ */
 void loop() {
   updateNetwork();
   handleButtonActivity();

@@ -1,7 +1,15 @@
+/**
+ * @file app.js
+ * @brief Crta trend vremena i stabilnosti na leaderboard stranici.
+ */
+
 const canvas = document.getElementById("trend");
 const rows = window.safeCrackerRecent || [];
 const TREND_CANVAS_HEIGHT = 180;
 
+/**
+ * @brief Ponovno iscrta trend graf prema trenutnoj sirini canvasa.
+ */
 function drawTrend() {
   if (!canvas) return;
 
@@ -51,6 +59,14 @@ function drawTrend() {
   ctx.fillText("stability", padding + 48, 16);
 }
 
+/**
+ * @brief Crta liniju i tocke za jedan niz podataka.
+ * @param {CanvasRenderingContext2D} ctx Canvas 2D kontekst.
+ * @param {Array<object>} data Scoreovi koji se prikazuju.
+ * @param {Function} xFor Funkcija koja indeks pretvara u X koordinatu.
+ * @param {Function} yFor Funkcija koja redak pretvara u Y koordinatu.
+ * @param {string} color CSS boja linije.
+ */
 function drawLine(ctx, data, xFor, yFor, color) {
   ctx.strokeStyle = color;
   ctx.lineWidth = 2;

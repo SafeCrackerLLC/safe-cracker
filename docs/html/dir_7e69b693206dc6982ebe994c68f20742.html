@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Opis direktorija webpage</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Traži',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('dir_7e69b693206dc6982ebe994c68f20742.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Opis direktorija webpage</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-subdirs" class="groupheader"><a id="subdirs" name="subdirs"></a>
+Direktoriji</h2></td></tr>
+<tr class="memitem:static" id="r_static"><td class="memItemLeft"><span class="iconfolder"><div class="folder-icon"></div></span>&#160;</td><td class="memItemRight"><a class="el" href="dir_3fca0f42cb490417e7301462423b5899.html">static</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-files" class="groupheader"><a id="files" name="files"></a>
+Datoteke</h2></td></tr>
+<tr class="memitem:app_2Epy" id="r_app_2Epy"><td class="memItemLeft"><a href="app_8py_source.html"><span class="icondoc"><div class="doc-icon"></div></span></a>&#160;</td><td class="memItemRight"><a class="el" href="app_8py.html">app.py</a></td></tr>
+<tr class="memdesc:app_8py"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flask webhook i leaderboard za SafeCracker rezultate. <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><h1 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+SafeCracker Web</h1>
+<p>Python/Flask webhook and leaderboard for ESP32 scores.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Run locally</h1>
+<div class="fragment"><div class="line">python -m venv .venv</div>
+<div class="line">. .venv/bin/activate</div>
+<div class="line">pip install -r requirements.txt</div>
+<div class="line">python app.py</div>
+</div><!-- fragment --><p>The app listens on <span class="tt"><a href="http://localhost:8000">http://localhost:8000</a></span> when run directly.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Run on server with Podman</h1>
+<div class="fragment"><div class="line">podman compose -f webpage/compose.yaml up -d --build</div>
+</div><!-- fragment --><p>Caddy can proxy Cloudflare traffic to:</p>
+<div class="fragment"><div class="line">ruc-esp.nerizz.com {</div>
+<div class="line">  reverse_proxy 127.0.0.1:18080</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>The compose file maps host port <span class="tt">18080</span> to container port <span class="tt">8000</span>, so it will not conflict with another host service already using <span class="tt">8000</span>.</p>
+<p>If Caddy also runs as a container in the same Podman network, remove the <span class="tt">ports</span> block and proxy directly to the service name:</p>
+<div class="fragment"><div class="line">ruc-esp.nerizz.com {</div>
+<div class="line">  reverse_proxy safecracker-web:8000</div>
+<div class="line">}</div>
+</div><!-- fragment --><p>ESP32 posts scores to:</p>
+<div class="fragment"><div class="line">POST https://ruc-esp.nerizz.com/api/scores</div>
+</div><!-- fragment --><p><span class="tt">POST /</span> also accepts the same payload, so a device configured with only <span class="tt"><a href="https://ruc-esp.nerizz.com">https://ruc-esp.nerizz.com</a></span> will still upload scores.</p>
+<p>Example payload:</p>
+<div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;device_id&quot;: &quot;SC-1234&quot;,</div>
+<div class="line">  &quot;level&quot;: 1,</div>
+<div class="line">  &quot;level_name&quot;: &quot;Level 1&quot;,</div>
+<div class="line">  &quot;time_ms&quot;: 18500,</div>
+<div class="line">  &quot;stability&quot;: 92,</div>
+<div class="line">  &quot;targets_hit&quot;: 5,</div>
+<div class="line">  &quot;target_count&quot;: 5</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_7e69b693206dc6982ebe994c68f20742.html">webpage</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

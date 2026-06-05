@@ -1,6 +1,11 @@
 #ifndef GAME_LOGIC_H
 #define GAME_LOGIC_H
 
+/**
+ * @file GameLogic.h
+ * @brief Pravila levela, pogodak ciljeva, score, replay i napredak igre.
+ */
+
 #include <Arduino.h>
 
 #include "Config.h"
@@ -10,40 +15,94 @@
 #include "Power.h"
 #include "State.h"
 
+/** @brief Pokrece zadani level i resetira stanje trenutne partije. */
 void startLevel(const Level& level);
+/** @brief Pokrece trenutno odabrani level iz glavnog menija. */
 void startSelectedLevel();
+/** @brief Vraca igru na ekran za izbor levela. */
 void showLevelSelect();
+/**
+ * @brief Zavrsava aktivni level, racuna score i po potrebi salje rezultat.
+ * @param wasWon true ako su svi ciljevi pogodjeni prije isteka vremena.
+ */
 void finishLevel(bool wasWon);
+/** @return Level koji se trenutno igra. */
 const Level& getCurrentLevel();
+/** @return Level koji je trenutno odabran u meniju. */
 const Level& getSelectedLevel();
+/** @return Cilj koji igrac trenutno treba pogoditi. */
 const LevelTarget& getCurrentTarget();
+/** @return true ako su pogodjeni svi ciljevi trenutnog levela. */
 bool isLevelComplete();
+/** @return true ako je isteklo vrijeme trenutnog levela. */
 bool isLevelOutOfTime();
+/** @return Broj pogodjenih ciljeva. */
 int getTargetsHit();
+/** @return Ukupan broj ciljeva u levelu. */
 int getTotalTargets();
+/** @return Preostale sekunde levela. */
 int getRemainingSeconds();
+/** @return Kratka poruka za smjer disanja/okretanja. */
 const char* getBreathMessage();
+/** @return Napredak vremena levela od 0.0 do 1.0. */
 float getGameProgress();
+/** @return Napredak kroz ciljeve levela od 0.0 do 1.0. */
 float getLevelProgress();
+/** @return Ciljana popunjenost trake za trenutni cilj. */
 float getTargetFillAmount();
+/** @return Relativni napredak prema trenutnom cilju. */
 float getTargetProgress();
+/** @return Poruka koja pomaze igracu pogoditi ili zadrzati cilj. */
 const char* getTargetMessage();
+/** @return Mali animacijski pomak teksta disanja. */
 int getBreathTextMoveOffset();
+/** @return Y koordinata animirane strelice cilja. */
 int getTargetArrowY();
+/** @return X koordinata trenutnog cilja na traci. */
 int getTargetX();
+/** @return true ako je trenutna popunjenost trake unutar tolerancije cilja. */
 bool isCurrentTargetHit();
+/**
+ * @brief Pomice selekciju levela/menu stavke za zadani smjer.
+ * @param direction Smjer pomaka, tipicno -1 za gore ili 1 za dolje.
+ */
 void moveSelectedLevel(int direction);
+/** @brief Provjerava istek vremena levela. */
 void updateLevelTimer();
+/** @brief Obradjuje zadrzavanje na cilju i prelazak na iduci cilj. */
 void updateTargetProgress();
+/** @brief Resetira statistiku stabilnosti i replay podatke. */
 void resetLevelStats();
+/**
+ * @brief Uzorkuje odstupanje od cilja za izracun stabilnosti.
+ * @param potDiff Promjena ADC vrijednosti potenciometra od zadnjeg citanja.
+ */
 void recordLevelStability(int potDiff);
+/**
+ * @brief Sprema replay dogadjaj ako je dovoljno bitan ili forsiran.
+ * @param eventType Tip dogadjaja, jedna od REPLAY_EVENT_* konstanti.
+ * @param force true ako se dogadjaj sprema bez interval/delta filtriranja.
+ */
 void recordReplayEvent(int eventType, bool force);
+/** @return Stabilnost cijelog levela od 0 do 100. */
 int calculateLevelStability();
+/**
+ * @brief Racuna stabilnost jednog cilja.
+ * @param targetIndex Indeks cilja za koji se racuna stabilnost.
+ * @return Stabilnost jednog cilja od 0 do 100.
+ */
 int calculateTargetStability(int targetIndex);
+/** @brief Racuna stabilnost za sve ciljeve trenutnog pokusaja. */
 void calculateAllTargetStabilityScores();
+/**
+ * @brief Pretvara ADC vrijednost potenciometra u popunjenost trake.
+ * @param potValue ADC vrijednost potenciometra.
+ */
 void updateTurnBarFromPot(int potValue);
+/** @brief Cita potenciometar, rotira bravu, biljezi replay i azurira cilj. */
 void updateVaultRotationFromPot();
 
+/** Pokazivac na level koji se trenutno igra. */
 const Level* currentLevel = &LEVELS[0];
 
 void startLevel(const Level& level) {

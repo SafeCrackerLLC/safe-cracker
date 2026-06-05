@@ -1,6 +1,11 @@
 #ifndef RENDERING_H
 #define RENDERING_H
 
+/**
+ * @file Rendering.h
+ * @brief OLED renderiranje svih ekrana igre.
+ */
+
 #include <Arduino.h>
 
 #include "Config.h"
@@ -8,17 +13,29 @@
 #include "SafeNetwork.h"
 #include "State.h"
 
+/** @brief Crta vertikalni napredak kroz ciljeve. */
 void drawProgressBar();
+/** @brief Crta preostalo vrijeme trenutnog levela. */
 void drawTimer();
+/** @brief Crta poruku INHALE/EXHALE/DONE/TIME. */
 void drawBreathMessage();
+/** @brief Crta pomocnu poruku za trenutni cilj. */
 void drawTargetMessage();
+/** @brief Crta horizontalnu traku okretanja i marker cilja. */
 void drawTurnBar();
+/** @brief Crta animiranu strelicu iznad cilja. */
 void drawTargetArrow();
+/** @brief Crta animirani kotac brave. */
 void drawVaultWheel();
+/** @brief Crta glavni meni s levelima i WiFi opcijama. */
 void drawLevelSelectScreen();
+/** @brief Crta ekran rezultata nakon zavrsetka levela. */
 void drawFinishedScreen();
+/** @brief Crta upute za spajanje na konfiguracijski WiFi portal. */
 void drawWifiConfigScreen();
+/** @brief Crta SSID, webhook i akcije za ponovno podesavanje mreze. */
 void drawNetworkInfoScreen();
+/** @brief Crta ekran prema trenutnom gameScreen stanju. */
 void drawGame();
 
 void drawProgressBar() {

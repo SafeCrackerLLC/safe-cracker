@@ -1,0 +1,1531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SafeCracker: Opis datoteke State.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SafeCracker
+   </div>
+   <div id="projectbrief">ESP32 safe cracking game with WiFi leaderboard</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generirao Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Traži',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_state_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Učitavam...</div>
+<div class="SRStatus" id="Searching">Tražim...</div>
+<div class="SRStatus" id="NoMatches">Nema traženih podataka</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Opis datoteke State.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Globalno stanje firmwarea dijeljeno izmedju modula.  
+<a href="#details">Opširnije...</a></p>
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &lt;Adafruit_SSD1306.h&gt;</code><br />
+<code>#include &lt;esp_timer.h&gt;</code><br />
+</div>
+<p><a href="_state_8h_source.html">Izvorni kod</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Varijable</h2></td></tr>
+<tr class="memitem:ab90955ee2e481997c47040f24594f6a7" id="r_ab90955ee2e481997c47040f24594f6a7"><td class="memItemLeft">Adafruit_SSD1306&#160;</td><td class="memItemRight"><a class="el" href="#ab90955ee2e481997c47040f24594f6a7">display</a></td></tr>
+<tr class="memdesc:ab90955ee2e481997c47040f24594f6a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">OLED driver instanca.  <br /></td></tr>
+<tr class="memitem:ac948bc97d4abc9834a5736534fb75c71" id="r_ac948bc97d4abc9834a5736534fb75c71"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ac948bc97d4abc9834a5736534fb75c71">vaultAngle</a></td></tr>
+<tr class="memdesc:ac948bc97d4abc9834a5736534fb75c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trenutni kut animirane brave u radijanima.  <br /></td></tr>
+<tr class="memitem:a69115c35be6c18f2e6413033e28c09d4" id="r_a69115c35be6c18f2e6413033e28c09d4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a69115c35be6c18f2e6413033e28c09d4">barFill</a></td></tr>
+<tr class="memdesc:a69115c35be6c18f2e6413033e28c09d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trenutna popunjenost trake od -1.0 do 1.0.  <br /></td></tr>
+<tr class="memitem:ae421326684dec7af95f315d95b9d90ec" id="r_ae421326684dec7af95f315d95b9d90ec"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae421326684dec7af95f315d95b9d90ec">lastValue</a></td></tr>
+<tr class="memdesc:ae421326684dec7af95f315d95b9d90ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zadnja ocitana ADC vrijednost potenciometra.  <br /></td></tr>
+<tr class="memitem:a41fa5f8180f242644514539058456813" id="r_a41fa5f8180f242644514539058456813"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a41fa5f8180f242644514539058456813">currentTargetIndex</a></td></tr>
+<tr class="memdesc:a41fa5f8180f242644514539058456813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indeks cilja koji igrac trenutno pogadja.  <br /></td></tr>
+<tr class="memitem:a0bfe2d2aa5f691bd08207e4ddf759964" id="r_a0bfe2d2aa5f691bd08207e4ddf759964"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0bfe2d2aa5f691bd08207e4ddf759964">selectedLevelIndex</a></td></tr>
+<tr class="memdesc:a0bfe2d2aa5f691bd08207e4ddf759964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indeks trenutno odabrane stavke u glavnom meniju.  <br /></td></tr>
+<tr class="memitem:a6ffe85ffca1af90d9c7c5230c66cc225" id="r_a6ffe85ffca1af90d9c7c5230c66cc225"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6ffe85ffca1af90d9c7c5230c66cc225">selectedNetworkInfoAction</a></td></tr>
+<tr class="memdesc:a6ffe85ffca1af90d9c7c5230c66cc225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Odabrana akcija na ekranu mreznih informacija.  <br /></td></tr>
+<tr class="memitem:ab3cfa0d4080bf5ad5847aa85b3431557" id="r_ab3cfa0d4080bf5ad5847aa85b3431557"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ab3cfa0d4080bf5ad5847aa85b3431557">gameScreen</a></td></tr>
+<tr class="memdesc:ab3cfa0d4080bf5ad5847aa85b3431557"><td class="mdescLeft">&#160;</td><td class="mdescRight">Trenutni ekran aplikacije, jedna od GAME_SCREEN_* konstanti.  <br /></td></tr>
+<tr class="memitem:a4ab1e53ce890129bc067a3594cddf591" id="r_a4ab1e53ce890129bc067a3594cddf591"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a4ab1e53ce890129bc067a3594cddf591">levelWasWon</a></td></tr>
+<tr class="memdesc:a4ab1e53ce890129bc067a3594cddf591"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oznacava je li zadnji zavrseni level uspjesno rijesen.  <br /></td></tr>
+<tr class="memitem:a905271ee143caff5f5b4adc41b30566c" id="r_a905271ee143caff5f5b4adc41b30566c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a905271ee143caff5f5b4adc41b30566c">joystickCenterValue</a></td></tr>
+<tr class="memdesc:a905271ee143caff5f5b4adc41b30566c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kalibrirana neutralna ADC vrijednost joystick Y osi.  <br /></td></tr>
+<tr class="memitem:aba7816ec1877980bd8a7f385282f33c5" id="r_aba7816ec1877980bd8a7f385282f33c5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aba7816ec1877980bd8a7f385282f33c5">joystickMenuReady</a></td></tr>
+<tr class="memdesc:aba7816ec1877980bd8a7f385282f33c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oznacava smije li joystick ponovno pomaknuti meni.  <br /></td></tr>
+<tr class="memitem:aac3cf5c2c085c5785c04e05d1f4efc3e" id="r_aac3cf5c2c085c5785c04e05d1f4efc3e"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#aac3cf5c2c085c5785c04e05d1f4efc3e">gameStartTime</a></td></tr>
+<tr class="memdesc:aac3cf5c2c085c5785c04e05d1f4efc3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme pocetka trenutnog levela iz millis().  <br /></td></tr>
+<tr class="memitem:a325d1c78bc84fe70a0a5dd771f10d444" id="r_a325d1c78bc84fe70a0a5dd771f10d444"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#a325d1c78bc84fe70a0a5dd771f10d444">levelFinishedTime</a></td></tr>
+<tr class="memdesc:a325d1c78bc84fe70a0a5dd771f10d444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme zavrsetka levela iz millis(); 0 dok level jos traje.  <br /></td></tr>
+<tr class="memitem:ab967a0a6ada16581e979b2a4d83a2ac0" id="r_ab967a0a6ada16581e979b2a4d83a2ac0"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#ab967a0a6ada16581e979b2a4d83a2ac0">targetHitStartTime</a></td></tr>
+<tr class="memdesc:ab967a0a6ada16581e979b2a4d83a2ac0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme od kada je trenutni cilj unutar tolerancije.  <br /></td></tr>
+<tr class="memitem:af149df421c92a52e55075968d2811cc5" id="r_af149df421c92a52e55075968d2811cc5"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#af149df421c92a52e55075968d2811cc5">lastJoystickMoveTime</a></td></tr>
+<tr class="memdesc:af149df421c92a52e55075968d2811cc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme zadnjeg pomaka joysticka kroz meni.  <br /></td></tr>
+<tr class="memitem:ac7e0e01a3dfcfa54df59e93b9395c309" id="r_ac7e0e01a3dfcfa54df59e93b9395c309"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#ac7e0e01a3dfcfa54df59e93b9395c309">levelSolvedTimeMs</a></td></tr>
+<tr class="memdesc:ac7e0e01a3dfcfa54df59e93b9395c309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ukupno vrijeme rjesavanja zadnjeg levela u milisekundama.  <br /></td></tr>
+<tr class="memitem:aea1bcb681cd3a43565f1b8e6655f877a" id="r_aea1bcb681cd3a43565f1b8e6655f877a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aea1bcb681cd3a43565f1b8e6655f877a">levelStabilityScore</a></td></tr>
+<tr class="memdesc:aea1bcb681cd3a43565f1b8e6655f877a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stabilnost zadnjeg pokusaja od 0 do 100.  <br /></td></tr>
+<tr class="memitem:a934d97484c86a5fc3bd5e78a535aa6bc" id="r_a934d97484c86a5fc3bd5e78a535aa6bc"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a934d97484c86a5fc3bd5e78a535aa6bc">stabilitySampleCount</a></td></tr>
+<tr class="memdesc:a934d97484c86a5fc3bd5e78a535aa6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj uzoraka koristenih za stabilnost cijelog levela.  <br /></td></tr>
+<tr class="memitem:a2d72b49a7e36221374a3634b87dbda96" id="r_a2d72b49a7e36221374a3634b87dbda96"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a2d72b49a7e36221374a3634b87dbda96">stabilityErrorSum</a></td></tr>
+<tr class="memdesc:a2d72b49a7e36221374a3634b87dbda96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zbroj normaliziranih odstupanja od cilja za stabilnost levela.  <br /></td></tr>
+<tr class="memitem:a68800ba2194a159a73fc5dabbbf313ac" id="r_a68800ba2194a159a73fc5dabbbf313ac"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a68800ba2194a159a73fc5dabbbf313ac">stabilityOvershootCount</a></td></tr>
+<tr class="memdesc:a68800ba2194a159a73fc5dabbbf313ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj prelazaka preko dozvoljenog cilja tijekom levela.  <br /></td></tr>
+<tr class="memitem:a4ecf2491fd0838d97170e950b9473516" id="r_a4ecf2491fd0838d97170e950b9473516"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4ecf2491fd0838d97170e950b9473516">stabilityDirectionChanges</a></td></tr>
+<tr class="memdesc:a4ecf2491fd0838d97170e950b9473516"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj promjena smjera potenciometra tijekom levela.  <br /></td></tr>
+<tr class="memitem:ac3445237e37153abfcf55cff3cd0b365" id="r_ac3445237e37153abfcf55cff3cd0b365"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ac3445237e37153abfcf55cff3cd0b365">lastPotDirection</a></td></tr>
+<tr class="memdesc:ac3445237e37153abfcf55cff3cd0b365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zadnji smjer pomaka potenciometra: -1, 0 ili 1.  <br /></td></tr>
+<tr class="memitem:abd78630e561ad9bde243a7b0c1179887" id="r_abd78630e561ad9bde243a7b0c1179887"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#abd78630e561ad9bde243a7b0c1179887">currentRunTargetCount</a></td></tr>
+<tr class="memdesc:abd78630e561ad9bde243a7b0c1179887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj ciljeva kopiranih za trenutni replay/score payload.  <br /></td></tr>
+<tr class="memitem:ada73b8fd5ee79a292ec81c06355955d5" id="r_ada73b8fd5ee79a292ec81c06355955d5"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ada73b8fd5ee79a292ec81c06355955d5">currentRunTargets</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:ada73b8fd5ee79a292ec81c06355955d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ciljne fill vrijednosti trenutnog pokusaja.  <br /></td></tr>
+<tr class="memitem:afa403de54a199f1f51b0565c7ac9ade4" id="r_afa403de54a199f1f51b0565c7ac9ade4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#afa403de54a199f1f51b0565c7ac9ade4">targetStabilityScore</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:afa403de54a199f1f51b0565c7ac9ade4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Izracunata stabilnost za svaki cilj trenutnog pokusaja.  <br /></td></tr>
+<tr class="memitem:aab195d62dd6d0c29223f8f04059b0f3c" id="r_aab195d62dd6d0c29223f8f04059b0f3c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aab195d62dd6d0c29223f8f04059b0f3c">targetStabilitySampleCount</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:aab195d62dd6d0c29223f8f04059b0f3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj uzoraka stabilnosti po cilju.  <br /></td></tr>
+<tr class="memitem:a4462483b8abe2774c3df55fdd264be2a" id="r_a4462483b8abe2774c3df55fdd264be2a"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a4462483b8abe2774c3df55fdd264be2a">targetStabilityErrorSum</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:a4462483b8abe2774c3df55fdd264be2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zbroj normaliziranih odstupanja po cilju.  <br /></td></tr>
+<tr class="memitem:aec347ef48815f73b069532dddb5e6763" id="r_aec347ef48815f73b069532dddb5e6763"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aec347ef48815f73b069532dddb5e6763">targetStabilityOvershootCount</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:aec347ef48815f73b069532dddb5e6763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj overshoot dogadjaja po cilju.  <br /></td></tr>
+<tr class="memitem:a206b3c4ba17030a562cb21d5abd8750a" id="r_a206b3c4ba17030a562cb21d5abd8750a"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a206b3c4ba17030a562cb21d5abd8750a">targetStabilityDirectionChanges</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:a206b3c4ba17030a562cb21d5abd8750a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj promjena smjera potenciometra po cilju.  <br /></td></tr>
+<tr class="memitem:a2433fe4659ae32e5baac26a81f48ea10" id="r_a2433fe4659ae32e5baac26a81f48ea10"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a2433fe4659ae32e5baac26a81f48ea10">targetLastPotDirection</a> [<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td></tr>
+<tr class="memdesc:a2433fe4659ae32e5baac26a81f48ea10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zadnji smjer potenciometra zapamcen zasebno za svaki cilj.  <br /></td></tr>
+<tr class="memitem:a0c954a6466504da079206dfc86711860" id="r_a0c954a6466504da079206dfc86711860"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0c954a6466504da079206dfc86711860">replayEventCount</a></td></tr>
+<tr class="memdesc:a0c954a6466504da079206dfc86711860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Broj spremljenih replay dogadjaja.  <br /></td></tr>
+<tr class="memitem:ab1c2ab1ecb4c6ab8a4092178521f9d9d" id="r_ab1c2ab1ecb4c6ab8a4092178521f9d9d"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#ab1c2ab1ecb4c6ab8a4092178521f9d9d">replayEventTimeMs</a> [<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td></tr>
+<tr class="memdesc:ab1c2ab1ecb4c6ab8a4092178521f9d9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme svakog replay dogadjaja relativno na pocetak levela.  <br /></td></tr>
+<tr class="memitem:a32ba21d95d795c2e7228de7a4b8ec69d" id="r_a32ba21d95d795c2e7228de7a4b8ec69d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a32ba21d95d795c2e7228de7a4b8ec69d">replayEventFill</a> [<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td></tr>
+<tr class="memdesc:a32ba21d95d795c2e7228de7a4b8ec69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill vrijednost trake u svakom replay dogadjaju.  <br /></td></tr>
+<tr class="memitem:a287598f8a68be4005373d031e1c5f161" id="r_a287598f8a68be4005373d031e1c5f161"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a287598f8a68be4005373d031e1c5f161">replayEventTargetIndex</a> [<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td></tr>
+<tr class="memdesc:a287598f8a68be4005373d031e1c5f161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indeks aktivnog cilja u svakom replay dogadjaju.  <br /></td></tr>
+<tr class="memitem:a38b31c1acc5a2cc00afeb7e77892fd3b" id="r_a38b31c1acc5a2cc00afeb7e77892fd3b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a38b31c1acc5a2cc00afeb7e77892fd3b">replayEventType</a> [<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td></tr>
+<tr class="memdesc:a38b31c1acc5a2cc00afeb7e77892fd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tip svakog replay dogadjaja, jedna od REPLAY_EVENT_* konstanti.  <br /></td></tr>
+<tr class="memitem:ae04eb02255eeb641711a35a0530318ce" id="r_ae04eb02255eeb641711a35a0530318ce"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#ae04eb02255eeb641711a35a0530318ce">lastReplayEventTime</a></td></tr>
+<tr class="memdesc:ae04eb02255eeb641711a35a0530318ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apsolutno millis() vrijeme zadnjeg spremljenog replay dogadjaja.  <br /></td></tr>
+<tr class="memitem:ae39d7c953fa7556fdabe7faad29af93b" id="r_ae39d7c953fa7556fdabe7faad29af93b"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ae39d7c953fa7556fdabe7faad29af93b">lastReplayEventFill</a></td></tr>
+<tr class="memdesc:ae39d7c953fa7556fdabe7faad29af93b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill vrijednost zadnjeg spremljenog replay dogadjaja.  <br /></td></tr>
+<tr class="memitem:a94f69c5109e8c3076144a0ab061802fb" id="r_a94f69c5109e8c3076144a0ab061802fb"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#a94f69c5109e8c3076144a0ab061802fb">lastActivityTime</a></td></tr>
+<tr class="memdesc:a94f69c5109e8c3076144a0ab061802fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zadnje vrijeme korisnicke aktivnosti iz millis().  <br /></td></tr>
+<tr class="memitem:ac46c84ccf708cfbace5861163e8df18b" id="r_ac46c84ccf708cfbace5861163e8df18b"><td class="memItemLeft">volatile bool&#160;</td><td class="memItemRight"><a class="el" href="#ac46c84ccf708cfbace5861163e8df18b">sleepRequested</a></td></tr>
+<tr class="memdesc:ac46c84ccf708cfbace5861163e8df18b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag koji timer postavlja kada uredjaj treba u deep sleep.  <br /></td></tr>
+<tr class="memitem:a9d1d9baf7e4b82c52435ce86a725a269" id="r_a9d1d9baf7e4b82c52435ce86a725a269"><td class="memItemLeft">esp_timer_handle_t&#160;</td><td class="memItemRight"><a class="el" href="#a9d1d9baf7e4b82c52435ce86a725a269">sleepTimer</a></td></tr>
+<tr class="memdesc:a9d1d9baf7e4b82c52435ce86a725a269"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP timer koji prati neaktivnost uredjaja.  <br /></td></tr>
+<tr class="memitem:a5e66d0eae2fd3b4672530cb0419a7f68" id="r_a5e66d0eae2fd3b4672530cb0419a7f68"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a5e66d0eae2fd3b4672530cb0419a7f68">wifiConfigPortalActive</a></td></tr>
+<tr class="memdesc:a5e66d0eae2fd3b4672530cb0419a7f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oznacava radi li konfiguracijski WiFi portal.  <br /></td></tr>
+<tr class="memitem:a23d9b97ae74e417e64f6eecbae5654d8" id="r_a23d9b97ae74e417e64f6eecbae5654d8"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a23d9b97ae74e417e64f6eecbae5654d8">wifiConnectInProgress</a></td></tr>
+<tr class="memdesc:a23d9b97ae74e417e64f6eecbae5654d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oznacava da je u tijeku pokusaj spajanja na WiFi.  <br /></td></tr>
+<tr class="memitem:a0e0450c722705de916982c67323c2928" id="r_a0e0450c722705de916982c67323c2928"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0e0450c722705de916982c67323c2928">wifiHasCredentials</a></td></tr>
+<tr class="memdesc:a0e0450c722705de916982c67323c2928"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oznacava postoje li spremljeni WiFi credentiali.  <br /></td></tr>
+<tr class="memitem:a110ed8ba7a149b4a8ec44feae275cf59" id="r_a110ed8ba7a149b4a8ec44feae275cf59"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a110ed8ba7a149b4a8ec44feae275cf59">wifiOfflineMode</a></td></tr>
+<tr class="memdesc:a110ed8ba7a149b4a8ec44feae275cf59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oznacava da uredjaj namjerno radi bez WiFi slanja scoreova.  <br /></td></tr>
+<tr class="memitem:a7d0b2c1dd70a2b44881435c6108444d0" id="r_a7d0b2c1dd70a2b44881435c6108444d0"><td class="memItemLeft">unsigned long&#160;</td><td class="memItemRight"><a class="el" href="#a7d0b2c1dd70a2b44881435c6108444d0">wifiConnectStartedAt</a></td></tr>
+<tr class="memdesc:a7d0b2c1dd70a2b44881435c6108444d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vrijeme pocetka trenutnog WiFi spajanja iz millis().  <br /></td></tr>
+<tr class="memitem:af3e497f7d313a0ad768f4df0dc630b0e" id="r_af3e497f7d313a0ad768f4df0dc630b0e"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#af3e497f7d313a0ad768f4df0dc630b0e">configuredSsid</a></td></tr>
+<tr class="memdesc:af3e497f7d313a0ad768f4df0dc630b0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spremljeni ili trenutno uneseni WiFi SSID.  <br /></td></tr>
+<tr class="memitem:a5f4ed5fa581a078b862f1777f02e9396" id="r_a5f4ed5fa581a078b862f1777f02e9396"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a5f4ed5fa581a078b862f1777f02e9396">configuredPassword</a></td></tr>
+<tr class="memdesc:a5f4ed5fa581a078b862f1777f02e9396"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spremljena ili trenutno unesena WiFi lozinka.  <br /></td></tr>
+<tr class="memitem:a5082bfaa1fd7d8aa2b412a417b2aa057" id="r_a5082bfaa1fd7d8aa2b412a417b2aa057"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a5082bfaa1fd7d8aa2b412a417b2aa057">configuredWebhookUrl</a></td></tr>
+<tr class="memdesc:a5082bfaa1fd7d8aa2b412a417b2aa057"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spremljeni webhook URL za slanje scoreova.  <br /></td></tr>
+<tr class="memitem:a59f5d414ddd8ae744696f1ddc496d9ee" id="r_a59f5d414ddd8ae744696f1ddc496d9ee"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a59f5d414ddd8ae744696f1ddc496d9ee">wifiPortalSsid</a></td></tr>
+<tr class="memdesc:a59f5d414ddd8ae744696f1ddc496d9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">SSID lokalnog konfiguracijskog AP-a.  <br /></td></tr>
+<tr class="memitem:a910bf3740bca72522ea6ea72baa8a8b0" id="r_a910bf3740bca72522ea6ea72baa8a8b0"><td class="memItemLeft">String&#160;</td><td class="memItemRight"><a class="el" href="#a910bf3740bca72522ea6ea72baa8a8b0">networkStatusMessage</a></td></tr>
+<tr class="memdesc:a910bf3740bca72522ea6ea72baa8a8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detaljnija tekstualna poruka mreznog statusa.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detaljno objašnjenje</h2>
+<div class="textblock"><p>Globalno stanje firmwarea dijeljeno izmedju modula. </p>
+<p>Definicije varijabli nalaze se u <a class="el" href="_safe_cracker_8ino.html">SafeCracker.ino</a>, a ostali headeri ovdje dobivaju pristup stanju bez dupliciranja memorije. </p>
+
+<p class="definition">Definirano u datoteci <a class="el" href="_state_8h_source.html">State.h</a>.</p>
+</div><a name="doc-var-members" id="doc-var-members"></a><h2 id="header-doc-var-members" class="groupheader">Dokumentacija varijable</h2>
+<a id="a69115c35be6c18f2e6413033e28c09d4" name="a69115c35be6c18f2e6413033e28c09d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69115c35be6c18f2e6413033e28c09d4">&#9670;&#160;</a></span>barFill</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float barFill</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trenutna popunjenost trake od -1.0 do 1.0. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00100">drawTurnBar()</a>, <a class="el" href="_game_logic_8h_source.html#l00254">getTargetProgress()</a>, <a class="el" href="_game_logic_8h_source.html#l00319">isCurrentTargetHit()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a>, <a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>, <a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a><a class="el" href="_game_logic_8h_source.html#l00532">updateTurnBarFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a5f4ed5fa581a078b862f1777f02e9396" name="a5f4ed5fa581a078b862f1777f02e9396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4ed5fa581a078b862f1777f02e9396">&#9670;&#160;</a></span>configuredPassword</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String configuredPassword</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spremljena ili trenutno unesena WiFi lozinka. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00128">sendWifiConfigPage()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a><a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a>.</p>
+
+</div>
+</div>
+<a id="af3e497f7d313a0ad768f4df0dc630b0e" name="af3e497f7d313a0ad768f4df0dc630b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e497f7d313a0ad768f4df0dc630b0e">&#9670;&#160;</a></span>configuredSsid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String configuredSsid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spremljeni ili trenutno uneseni WiFi SSID. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00235">drawNetworkInfoScreen()</a>, <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00128">sendWifiConfigPage()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a><a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a>.</p>
+
+</div>
+</div>
+<a id="a5082bfaa1fd7d8aa2b412a417b2aa057" name="a5082bfaa1fd7d8aa2b412a417b2aa057"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5082bfaa1fd7d8aa2b412a417b2aa057">&#9670;&#160;</a></span>configuredWebhookUrl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String configuredWebhookUrl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spremljeni webhook URL za slanje scoreova. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00084">getConfiguredWebhookUrl()</a>, <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a><a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="abd78630e561ad9bde243a7b0c1179887" name="abd78630e561ad9bde243a7b0c1179887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd78630e561ad9bde243a7b0c1179887">&#9670;&#160;</a></span>currentRunTargetCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentRunTargetCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj ciljeva kopiranih za trenutni replay/score payload. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00498">calculateAllTargetStabilityScores()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="ada73b8fd5ee79a292ec81c06355955d5" name="ada73b8fd5ee79a292ec81c06355955d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada73b8fd5ee79a292ec81c06355955d5">&#9670;&#160;</a></span>currentRunTargets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float currentRunTargets[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ciljne fill vrijednosti trenutnog pokusaja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a41fa5f8180f242644514539058456813" name="a41fa5f8180f242644514539058456813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41fa5f8180f242644514539058456813">&#9670;&#160;</a></span>currentTargetIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int currentTargetIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indeks cilja koji igrac trenutno pogadja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00172">getCurrentTarget()</a>, <a class="el" href="_game_logic_8h_source.html#l00236">getLevelProgress()</a>, <a class="el" href="_game_logic_8h_source.html#l00185">getTargetsHit()</a>, <a class="el" href="_game_logic_8h_source.html#l00176">isLevelComplete()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a>, <a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a><a class="el" href="_game_logic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="ab90955ee2e481997c47040f24594f6a7" name="ab90955ee2e481997c47040f24594f6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90955ee2e481997c47040f24594f6a7">&#9670;&#160;</a></span>display</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Adafruit_SSD1306 display</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>OLED driver instanca. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00064">drawBreathMessage()</a>, <a class="el" href="_rendering_8h_source.html#l00185">drawFinishedScreen()</a>, <a class="el" href="_rendering_8h_source.html#l00278">drawGame()</a>, <a class="el" href="_rendering_8h_source.html#l00145">drawLevelSelectScreen()</a>, <a class="el" href="_rendering_8h_source.html#l00235">drawNetworkInfoScreen()</a>, <a class="el" href="_rendering_8h_source.html#l00041">drawProgressBar()</a>, <a class="el" href="_rendering_8h_source.html#l00115">drawTargetArrow()</a>, <a class="el" href="_rendering_8h_source.html#l00081">drawTargetMessage()</a>, <a class="el" href="_rendering_8h_source.html#l00056">drawTimer()</a>, <a class="el" href="_rendering_8h_source.html#l00100">drawTurnBar()</a>, <a class="el" href="_rendering_8h_source.html#l00130">drawVaultWheel()</a>, <a class="el" href="_rendering_8h_source.html#l00214">drawWifiConfigScreen()</a><a class="el" href="_power_8h_source.html#l00057">goToSleep()</a>.</p>
+
+</div>
+</div>
+<a id="ab3cfa0d4080bf5ad5847aa85b3431557" name="ab3cfa0d4080bf5ad5847aa85b3431557"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cfa0d4080bf5ad5847aa85b3431557">&#9670;&#160;</a></span>gameScreen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gameScreen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trenutni ekran aplikacije, jedna od GAME_SCREEN_* konstanti. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00278">drawGame()</a>, <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="_input_8h_source.html#l00104">handleButtonActivity()</a>, <a class="el" href="_input_8h_source.html#l00044">handleJoystickLevelSelect()</a>, <a class="el" href="_input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>, <a class="el" href="_safe_network_8h_source.html#l00193">handleWifiOffline()</a>, <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00129">showLevelSelect()</a>, <a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_game_logic_8h_source.html#l00504">updateLevelTimer()</a><a class="el" href="_game_logic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="aac3cf5c2c085c5785c04e05d1f4efc3e" name="aac3cf5c2c085c5785c04e05d1f4efc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3cf5c2c085c5785c04e05d1f4efc3e">&#9670;&#160;</a></span>gameStartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long gameStartTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vrijeme pocetka trenutnog levela iz millis(). </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="_game_logic_8h_source.html#l00225">getGameProgress()</a>, <a class="el" href="_game_logic_8h_source.html#l00197">getRemainingSeconds()</a>, <a class="el" href="_game_logic_8h_source.html#l00180">isLevelOutOfTime()</a>, <a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a><a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a905271ee143caff5f5b4adc41b30566c" name="a905271ee143caff5f5b4adc41b30566c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905271ee143caff5f5b4adc41b30566c">&#9670;&#160;</a></span>joystickCenterValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int joystickCenterValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kalibrirana neutralna ADC vrijednost joystick Y osi. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_input_8h_source.html#l00032">calibrateJoystickCenter()</a>, <a class="el" href="_input_8h_source.html#l00044">handleJoystickLevelSelect()</a><a class="el" href="_input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="aba7816ec1877980bd8a7f385282f33c5" name="aba7816ec1877980bd8a7f385282f33c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7816ec1877980bd8a7f385282f33c5">&#9670;&#160;</a></span>joystickMenuReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool joystickMenuReady</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oznacava smije li joystick ponovno pomaknuti meni. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_input_8h_source.html#l00032">calibrateJoystickCenter()</a>, <a class="el" href="_input_8h_source.html#l00044">handleJoystickLevelSelect()</a><a class="el" href="_input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="a94f69c5109e8c3076144a0ab061802fb" name="a94f69c5109e8c3076144a0ab061802fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94f69c5109e8c3076144a0ab061802fb">&#9670;&#160;</a></span>lastActivityTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long lastActivityTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zadnje vrijeme korisnicke aktivnosti iz millis(). </p>
+
+<p class="reference">Referencirano od <a class="el" href="_power_8h_source.html#l00045">resetSleepTimer()</a>.</p>
+
+</div>
+</div>
+<a id="af149df421c92a52e55075968d2811cc5" name="af149df421c92a52e55075968d2811cc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af149df421c92a52e55075968d2811cc5">&#9670;&#160;</a></span>lastJoystickMoveTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long lastJoystickMoveTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vrijeme zadnjeg pomaka joysticka kroz meni. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_input_8h_source.html#l00044">handleJoystickLevelSelect()</a><a class="el" href="_input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="ac3445237e37153abfcf55cff3cd0b365" name="ac3445237e37153abfcf55cff3cd0b365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3445237e37153abfcf55cff3cd0b365">&#9670;&#160;</a></span>lastPotDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lastPotDirection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zadnji smjer pomaka potenciometra: -1, 0 ili 1. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="ae39d7c953fa7556fdabe7faad29af93b" name="ae39d7c953fa7556fdabe7faad29af93b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39d7c953fa7556fdabe7faad29af93b">&#9670;&#160;</a></span>lastReplayEventFill</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float lastReplayEventFill</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill vrijednost zadnjeg spremljenog replay dogadjaja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="ae04eb02255eeb641711a35a0530318ce" name="ae04eb02255eeb641711a35a0530318ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae04eb02255eeb641711a35a0530318ce">&#9670;&#160;</a></span>lastReplayEventTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long lastReplayEventTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Apsolutno millis() vrijeme zadnjeg spremljenog replay dogadjaja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="ae421326684dec7af95f315d95b9d90ec" name="ae421326684dec7af95f315d95b9d90ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae421326684dec7af95f315d95b9d90ec">&#9670;&#160;</a></span>lastValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int lastValue</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zadnja ocitana ADC vrijednost potenciometra. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a><a class="el" href="_game_logic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a325d1c78bc84fe70a0a5dd771f10d444" name="a325d1c78bc84fe70a0a5dd771f10d444"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a325d1c78bc84fe70a0a5dd771f10d444">&#9670;&#160;</a></span>levelFinishedTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long levelFinishedTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vrijeme zavrsetka levela iz millis(); 0 dok level jos traje. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="_game_logic_8h_source.html#l00197">getRemainingSeconds()</a>, <a class="el" href="_game_logic_8h_source.html#l00129">showLevelSelect()</a><a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="ac7e0e01a3dfcfa54df59e93b9395c309" name="ac7e0e01a3dfcfa54df59e93b9395c309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7e0e01a3dfcfa54df59e93b9395c309">&#9670;&#160;</a></span>levelSolvedTimeMs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long levelSolvedTimeMs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ukupno vrijeme rjesavanja zadnjeg levela u milisekundama. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00185">drawFinishedScreen()</a>, <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a><a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="aea1bcb681cd3a43565f1b8e6655f877a" name="aea1bcb681cd3a43565f1b8e6655f877a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea1bcb681cd3a43565f1b8e6655f877a">&#9670;&#160;</a></span>levelStabilityScore</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int levelStabilityScore</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Stabilnost zadnjeg pokusaja od 0 do 100. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00185">drawFinishedScreen()</a>, <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a><a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a4ab1e53ce890129bc067a3594cddf591" name="a4ab1e53ce890129bc067a3594cddf591"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab1e53ce890129bc067a3594cddf591">&#9670;&#160;</a></span>levelWasWon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool levelWasWon</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oznacava je li zadnji zavrseni level uspjesno rijesen. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00185">drawFinishedScreen()</a>, <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="_game_logic_8h_source.html#l00129">showLevelSelect()</a><a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a910bf3740bca72522ea6ea72baa8a8b0" name="a910bf3740bca72522ea6ea72baa8a8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a910bf3740bca72522ea6ea72baa8a8b0">&#9670;&#160;</a></span>networkStatusMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String networkStatusMessage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detaljnija tekstualna poruka mreznog statusa. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a><a class="el" href="_safe_network_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a0c954a6466504da079206dfc86711860" name="a0c954a6466504da079206dfc86711860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c954a6466504da079206dfc86711860">&#9670;&#160;</a></span>replayEventCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replayEventCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj spremljenih replay dogadjaja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>, <a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a32ba21d95d795c2e7228de7a4b8ec69d" name="a32ba21d95d795c2e7228de7a4b8ec69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ba21d95d795c2e7228de7a4b8ec69d">&#9670;&#160;</a></span>replayEventFill</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float replayEventFill[<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fill vrijednost trake u svakom replay dogadjaju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a287598f8a68be4005373d031e1c5f161" name="a287598f8a68be4005373d031e1c5f161"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a287598f8a68be4005373d031e1c5f161">&#9670;&#160;</a></span>replayEventTargetIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replayEventTargetIndex[<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indeks aktivnog cilja u svakom replay dogadjaju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="ab1c2ab1ecb4c6ab8a4092178521f9d9d" name="ab1c2ab1ecb4c6ab8a4092178521f9d9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1c2ab1ecb4c6ab8a4092178521f9d9d">&#9670;&#160;</a></span>replayEventTimeMs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long replayEventTimeMs[<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vrijeme svakog replay dogadjaja relativno na pocetak levela. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a38b31c1acc5a2cc00afeb7e77892fd3b" name="a38b31c1acc5a2cc00afeb7e77892fd3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b31c1acc5a2cc00afeb7e77892fd3b">&#9670;&#160;</a></span>replayEventType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int replayEventType[<a class="el" href="_config_8h.html#a07057828941e1243c6fc1bcb9f7dba2d">MAX_REPLAY_EVENTS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tip svakog replay dogadjaja, jedna od REPLAY_EVENT_* konstanti. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00445">recordReplayEvent()</a>.</p>
+
+</div>
+</div>
+<a id="a0bfe2d2aa5f691bd08207e4ddf759964" name="a0bfe2d2aa5f691bd08207e4ddf759964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfe2d2aa5f691bd08207e4ddf759964">&#9670;&#160;</a></span>selectedLevelIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int selectedLevelIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indeks trenutno odabrane stavke u glavnom meniju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00145">drawLevelSelectScreen()</a>, <a class="el" href="_game_logic_8h_source.html#l00136">finishLevel()</a>, <a class="el" href="_game_logic_8h_source.html#l00168">getSelectedLevel()</a>, <a class="el" href="_input_8h_source.html#l00104">handleButtonActivity()</a><a class="el" href="_game_logic_8h_source.html#l00514">moveSelectedLevel()</a>.</p>
+
+</div>
+</div>
+<a id="a6ffe85ffca1af90d9c7c5230c66cc225" name="a6ffe85ffca1af90d9c7c5230c66cc225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ffe85ffca1af90d9c7c5230c66cc225">&#9670;&#160;</a></span>selectedNetworkInfoAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int selectedNetworkInfoAction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Odabrana akcija na ekranu mreznih informacija. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00235">drawNetworkInfoScreen()</a>, <a class="el" href="_input_8h_source.html#l00104">handleButtonActivity()</a><a class="el" href="_input_8h_source.html#l00076">handleJoystickNetworkInfo()</a>.</p>
+
+</div>
+</div>
+<a id="ac46c84ccf708cfbace5861163e8df18b" name="ac46c84ccf708cfbace5861163e8df18b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac46c84ccf708cfbace5861163e8df18b">&#9670;&#160;</a></span>sleepRequested</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile bool sleepRequested</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag koji timer postavlja kada uredjaj treba u deep sleep. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_power_8h_source.html#l00030">handleSleepTimerExpired()</a>, <a class="el" href="_power_8h_source.html#l00045">resetSleepTimer()</a><a class="el" href="_power_8h_source.html#l00065">sleepIfInactive()</a>.</p>
+
+</div>
+</div>
+<a id="a9d1d9baf7e4b82c52435ce86a725a269" name="a9d1d9baf7e4b82c52435ce86a725a269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1d9baf7e4b82c52435ce86a725a269">&#9670;&#160;</a></span>sleepTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">esp_timer_handle_t sleepTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>ESP timer koji prati neaktivnost uredjaja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_power_8h_source.html#l00034">initializeSleepTimer()</a><a class="el" href="_power_8h_source.html#l00045">resetSleepTimer()</a>.</p>
+
+</div>
+</div>
+<a id="a4ecf2491fd0838d97170e950b9473516" name="a4ecf2491fd0838d97170e950b9473516"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ecf2491fd0838d97170e950b9473516">&#9670;&#160;</a></span>stabilityDirectionChanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stabilityDirectionChanges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj promjena smjera potenciometra tijekom levela. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00472">calculateLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a2d72b49a7e36221374a3634b87dbda96" name="a2d72b49a7e36221374a3634b87dbda96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d72b49a7e36221374a3634b87dbda96">&#9670;&#160;</a></span>stabilityErrorSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float stabilityErrorSum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zbroj normaliziranih odstupanja od cilja za stabilnost levela. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00472">calculateLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a68800ba2194a159a73fc5dabbbf313ac" name="a68800ba2194a159a73fc5dabbbf313ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68800ba2194a159a73fc5dabbbf313ac">&#9670;&#160;</a></span>stabilityOvershootCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stabilityOvershootCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj prelazaka preko dozvoljenog cilja tijekom levela. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00472">calculateLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a934d97484c86a5fc3bd5e78a535aa6bc" name="a934d97484c86a5fc3bd5e78a535aa6bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934d97484c86a5fc3bd5e78a535aa6bc">&#9670;&#160;</a></span>stabilitySampleCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stabilitySampleCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj uzoraka koristenih za stabilnost cijelog levela. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00472">calculateLevelStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="ab967a0a6ada16581e979b2a4d83a2ac0" name="ab967a0a6ada16581e979b2a4d83a2ac0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab967a0a6ada16581e979b2a4d83a2ac0">&#9670;&#160;</a></span>targetHitStartTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long targetHitStartTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vrijeme od kada je trenutni cilj unutar tolerancije. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00129">showLevelSelect()</a>, <a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a><a class="el" href="_game_logic_8h_source.html#l00339">updateTargetProgress()</a>.</p>
+
+</div>
+</div>
+<a id="a2433fe4659ae32e5baac26a81f48ea10" name="a2433fe4659ae32e5baac26a81f48ea10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2433fe4659ae32e5baac26a81f48ea10">&#9670;&#160;</a></span>targetLastPotDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int targetLastPotDirection[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zadnji smjer potenciometra zapamcen zasebno za svaki cilj. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a206b3c4ba17030a562cb21d5abd8750a" name="a206b3c4ba17030a562cb21d5abd8750a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206b3c4ba17030a562cb21d5abd8750a">&#9670;&#160;</a></span>targetStabilityDirectionChanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int targetStabilityDirectionChanges[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj promjena smjera potenciometra po cilju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00485">calculateTargetStability()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="a4462483b8abe2774c3df55fdd264be2a" name="a4462483b8abe2774c3df55fdd264be2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4462483b8abe2774c3df55fdd264be2a">&#9670;&#160;</a></span>targetStabilityErrorSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float targetStabilityErrorSum[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zbroj normaliziranih odstupanja po cilju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00485">calculateTargetStability()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="aec347ef48815f73b069532dddb5e6763" name="aec347ef48815f73b069532dddb5e6763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec347ef48815f73b069532dddb5e6763">&#9670;&#160;</a></span>targetStabilityOvershootCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int targetStabilityOvershootCount[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj overshoot dogadjaja po cilju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00485">calculateTargetStability()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="aab195d62dd6d0c29223f8f04059b0f3c" name="aab195d62dd6d0c29223f8f04059b0f3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab195d62dd6d0c29223f8f04059b0f3c">&#9670;&#160;</a></span>targetStabilitySampleCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int targetStabilitySampleCount[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Broj uzoraka stabilnosti po cilju. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00485">calculateTargetStability()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>, <a class="el" href="_game_logic_8h_source.html#l00395">recordLevelStability()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="afa403de54a199f1f51b0565c7ac9ade4" name="afa403de54a199f1f51b0565c7ac9ade4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa403de54a199f1f51b0565c7ac9ade4">&#9670;&#160;</a></span>targetStabilityScore</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int targetStabilityScore[<a class="el" href="_config_8h.html#a1fa78ee57ac2e625e5d1d78d369c69ab">MAX_LEVEL_TARGETS</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Izracunata stabilnost za svaki cilj trenutnog pokusaja. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_game_logic_8h_source.html#l00498">calculateAllTargetStabilityScores()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a><a class="el" href="_game_logic_8h_source.html#l00369">resetLevelStats()</a>.</p>
+
+</div>
+</div>
+<a id="ac948bc97d4abc9834a5736534fb75c71" name="ac948bc97d4abc9834a5736534fb75c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac948bc97d4abc9834a5736534fb75c71">&#9670;&#160;</a></span>vaultAngle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float vaultAngle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Trenutni kut animirane brave u radijanima. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00130">drawVaultWheel()</a>, <a class="el" href="_game_logic_8h_source.html#l00108">startLevel()</a><a class="el" href="_game_logic_8h_source.html#l00537">updateVaultRotationFromPot()</a>.</p>
+
+</div>
+</div>
+<a id="a5e66d0eae2fd3b4672530cb0419a7f68" name="a5e66d0eae2fd3b4672530cb0419a7f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e66d0eae2fd3b4672530cb0419a7f68">&#9670;&#160;</a></span>wifiConfigPortalActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wifiConfigPortalActive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oznacava radi li konfiguracijski WiFi portal. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00328">getWifiStatusLabel()</a>, <a class="el" href="_power_8h_source.html#l00065">sleepIfInactive()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00270">stopWifiConfigPortal()</a><a class="el" href="_safe_network_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a23d9b97ae74e417e64f6eecbae5654d8" name="a23d9b97ae74e417e64f6eecbae5654d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23d9b97ae74e417e64f6eecbae5654d8">&#9670;&#160;</a></span>wifiConnectInProgress</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wifiConnectInProgress</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oznacava da je u tijeku pokusaj spajanja na WiFi. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00328">getWifiStatusLabel()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a>, <a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>, <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a><a class="el" href="_safe_network_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a7d0b2c1dd70a2b44881435c6108444d0" name="a7d0b2c1dd70a2b44881435c6108444d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d0b2c1dd70a2b44881435c6108444d0">&#9670;&#160;</a></span>wifiConnectStartedAt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long wifiConnectStartedAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vrijeme pocetka trenutnog WiFi spajanja iz millis(). </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00224">startWifiConnection()</a><a class="el" href="_safe_network_8h_source.html#l00300">updateNetwork()</a>.</p>
+
+</div>
+</div>
+<a id="a0e0450c722705de916982c67323c2928" name="a0e0450c722705de916982c67323c2928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e0450c722705de916982c67323c2928">&#9670;&#160;</a></span>wifiHasCredentials</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wifiHasCredentials</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oznacava postoje li spremljeni WiFi credentiali. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a><a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+<a id="a110ed8ba7a149b4a8ec44feae275cf59" name="a110ed8ba7a149b4a8ec44feae275cf59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110ed8ba7a149b4a8ec44feae275cf59">&#9670;&#160;</a></span>wifiOfflineMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wifiOfflineMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Oznacava da uredjaj namjerno radi bez WiFi slanja scoreova. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00145">drawLevelSelectScreen()</a>, <a class="el" href="_safe_network_8h_source.html#l00328">getWifiStatusLabel()</a>, <a class="el" href="_input_8h_source.html#l00104">handleButtonActivity()</a>, <a class="el" href="_safe_network_8h_source.html#l00151">handleWifiSave()</a>, <a class="el" href="_safe_network_8h_source.html#l00199">initializeNetwork()</a>, <a class="el" href="_safe_network_8h_source.html#l00348">postScoreWebhook()</a>, <a class="el" href="_safe_network_8h_source.html#l00280">setWifiOfflineMode()</a><a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+<a id="a59f5d414ddd8ae744696f1ddc496d9ee" name="a59f5d414ddd8ae744696f1ddc496d9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f5d414ddd8ae744696f1ddc496d9ee">&#9670;&#160;</a></span>wifiPortalSsid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String wifiPortalSsid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>SSID lokalnog konfiguracijskog AP-a. </p>
+
+<p class="reference">Referencirano od <a class="el" href="_rendering_8h_source.html#l00214">drawWifiConfigScreen()</a><a class="el" href="_safe_network_8h_source.html#l00238">startWifiConfigPortal()</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_d0a4d8d19b9a3f79a042b305c88d665b.html">SafeCracker</a></li><li class="navelem"><a href="_state_8h.html">State.h</a></li>
+    <li class="footer">Generirao <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

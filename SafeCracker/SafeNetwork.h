@@ -1,6 +1,11 @@
 #ifndef SAFE_NETWORK_H
 #define SAFE_NETWORK_H
 
+/**
+ * @file SafeNetwork.h
+ * @brief WiFi konfiguracijski portal i slanje rezultata na leaderboard webhook.
+ */
+
 #include <Arduino.h>
 #include <HTTPClient.h>
 #include <Preferences.h>
@@ -11,19 +16,50 @@
 #include "Config.h"
 #include "State.h"
 
+/** @brief Ucitava spremljene WiFi postavke i pokrece konekciju ili setup portal. */
 void initializeNetwork();
+/** @brief Obradjuje WiFi portal i timeout spajanja. */
 void updateNetwork();
+/**
+ * @brief Pokrece lokalni AP i web formu za unos WiFi podataka.
+ * @param clearCredentials true ako prije setupa treba obrisati spremljeni SSID i lozinku.
+ */
 void startWifiConfigPortal(bool clearCredentials);
+/** @brief Zaustavlja konfiguracijski web server i AP. */
 void stopWifiConfigPortal();
+/**
+ * @brief Ukljucuje ili iskljucuje offline nacin rada.
+ * @param offline true za offline mode, false za povratak na WiFi.
+ */
 void setWifiOfflineMode(bool offline);
+/** @brief Pokrece spajanje na spremljeni WiFi SSID. */
 void startWifiConnection();
+/** @return true ako je ESP32 trenutno spojen na WiFi. */
 bool isWifiConnected();
+/** @return Kratka oznaka WiFi statusa za OLED. */
 const char* getWifiStatusLabel();
+/** @return Stabilni kratki ID uredjaja izveden iz ESP32 MAC-a. */
 String getDeviceId();
+/** @return Spremljeni webhook URL ili zadani SCORE_WEBHOOK_URL. */
 String getConfiguredWebhookUrl();
+/** @return HTML-escaped kopija proslijedjene vrijednosti. */
 String htmlEscape(const String& value);
+/** @return JSON-escaped kopija proslijedjene vrijednosti. */
 String jsonEscape(const String& value);
+/** @return Tekstualni naziv replay dogadjaja. */
 const char* getReplayEventName(int eventType);
+/**
+ * @brief Salje rezultat levela na konfigurirani webhook.
+ *
+ * Payload ukljucuje osnovni score, ciljeve, statistiku po cilju i replay uzorke.
+ *
+ * @param levelNumber Redni broj levela koji se salje backendu.
+ * @param levelName Naziv levela koji se salje backendu.
+ * @param timeMs Vrijeme rjesavanja levela u milisekundama.
+ * @param stability Stabilnost pokusaja od 0 do 100.
+ * @param targetsHit Broj pogodjenih ciljeva.
+ * @param targetCount Ukupan broj ciljeva u levelu.
+ */
 void postScoreWebhook(
   int levelNumber,
   const char* levelName,
@@ -33,7 +69,9 @@ void postScoreWebhook(
   int targetCount
 );
 
+/** Lokalni HTTP server za WiFi konfiguracijski portal. */
 WebServer wifiConfigServer(80);
+/** ESP32 Preferences storage za WiFi i webhook postavke. */
 Preferences wifiPreferences;
 
 String getDeviceId() {
@@ -86,6 +124,7 @@ const char* getReplayEventName(int eventType) {
   return "move";
 }
 
+/** @brief Salje HTML formu konfiguracijskog WiFi portala. */
 void sendWifiConfigPage() {
   String currentSsid = htmlEscape(configuredSsid);
   String currentWebhookUrl = htmlEscape(getConfiguredWebhookUrl());
@@ -108,6 +147,7 @@ void sendWifiConfigPage() {
   wifiConfigServer.send(200, "text/html", page);
 }
 
+/** @brief Sprema WiFi/webhook podatke poslane s konfiguracijske forme. */
 void handleWifiSave() {
   String ssid = wifiConfigServer.arg("ssid");
   String password = wifiConfigServer.arg("password");
@@ -149,6 +189,7 @@ void handleWifiSave() {
   gameScreen = GAME_SCREEN_LEVEL_SELECT;
 }
 
+/** @brief Obradjuje odabir offline nacina rada iz konfiguracijskog portala. */
 void handleWifiOffline() {
   wifiConfigServer.send(200, "text/html", "<!doctype html><html><body><h1>Offline mode</h1><p>SafeCracker nece slati scoreove dok opet ne pokrenes WiFi setup.</p></body></html>");
   setWifiOfflineMode(true);

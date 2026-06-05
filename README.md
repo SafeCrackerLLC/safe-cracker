@@ -1,4 +1,7 @@
 # Safe Cracker
+
+@brief ESP32 igra sefa sa OLED prikazom, fizickim kontrolama i WiFi leaderboardom.
+
 ## Opis
 Aplikacija koja na ekranu prikazuje bravu sefa koju je potrebno okretati desno ili lijevo kako bi se otkuljučao sef. Puhanje bravu okreće desno, dok udisanje okreće bravu lijevo. Aplikacija bi imala više težina i mogućnost slanja razultata WiFi-om. Hardware će biti zatvoren u ručno izrađeno kučište.
 
@@ -29,3 +32,8 @@ Aplikacija koja na ekranu prikazuje bravu sefa koju je potrebno okretati desno i
 - Glavni meni ima `Network info` za pregled SSID-a/webhooka i otvaranje novog setupa te `Go offline`/`Go online`.
 - Nakon uspjesno rijesenog levela ESP32 salje `POST` na spremljeni webhook s levelom, vremenom, stabilnosti i brojem pogodjenih targeta.
 - Python webhook i leaderboard su u `webpage/`; server se pokrece preko `podman compose -f webpage/compose.yaml up -d --build`.
+
+## Doxygen dokumentacija
+- Lokalno generiranje dokumentacije: `doxygen Doxyfile`
+- HTML izlaz se generira u `docs/html/index.html`
+- GitHub Actions workflow `.github/workflows/doxygen.yml` generira dokumentaciju na `main` grani i objavljuje je preko GitHub Pages.

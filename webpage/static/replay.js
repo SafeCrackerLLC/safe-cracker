@@ -1,3 +1,8 @@
+/**
+ * @file replay.js
+ * @brief Interaktivni replay kretanja trake za jedan SafeCracker score.
+ */
+
 const replayStage = document.getElementById("replayStage");
 const toggle = document.getElementById("replayToggle");
 const scrub = document.getElementById("replayScrub");
@@ -12,15 +17,28 @@ let animationFrame = 0;
 const durationMs = replay.length ? replay[replay.length - 1].t : 0;
 const elements = {};
 
+/**
+ * @brief Pretvara fill vrijednost od -1.0 do 1.0 u CSS postotak.
+ * @param {number|string} fill Popunjenost trake.
+ * @returns {string} CSS postotak od 0% do 100%.
+ */
 function fillToPercent(fill) {
   return `${Math.max(0, Math.min(100, ((Number(fill) + 1) / 2) * 100))}%`;
 }
 
+/**
+ * @brief Normalizira naziv replay dogadjaja za prikaz.
+ * @param {string} eventName Naziv dogadjaja iz API payload-a.
+ * @returns {string} Kratka oznaka dogadjaja.
+ */
 function eventLabel(eventName) {
   if (eventName === "target_hit") return "target hit";
   return eventName || "move";
 }
 
+/**
+ * @brief Gradi DOM elemente replay trake, markera i targeta.
+ */
 function buildReplayStage() {
   if (!replayStage) return;
 
@@ -76,6 +94,11 @@ function buildReplayStage() {
   elements.targets = Array.from(targetLayer.children);
 }
 
+/**
+ * @brief Interpolira replay stanje za zadani trenutak.
+ * @param {number} timeMs Vrijeme u milisekundama od pocetka pokusaja.
+ * @returns {object} Interpolirano stanje replaya.
+ */
 function interpolateEvent(timeMs) {
   if (!replay.length) {
     return { t: 0, fill: 0, target_index: 0, event: "empty" };
@@ -105,6 +128,10 @@ function interpolateEvent(timeMs) {
   };
 }
 
+/**
+ * @brief Renderira replay marker, aktivni target i tekstualni readout.
+ * @param {number} timeMs Vrijeme u milisekundama od pocetka pokusaja.
+ */
 function renderReplay(timeMs) {
   if (!replayStage || !elements.marker) return;
 
@@ -121,6 +148,10 @@ function renderReplay(timeMs) {
   });
 }
 
+/**
+ * @brief Postavlja trenutno vrijeme replaya i sinkronizira scrub kontrolu.
+ * @param {number} timeMs Novo vrijeme replaya u milisekundama.
+ */
 function setTime(timeMs) {
   const bounded = Math.max(0, Math.min(durationMs, timeMs));
   pausedAt = bounded;
@@ -136,6 +167,10 @@ function setTime(timeMs) {
   renderReplay(bounded);
 }
 
+/**
+ * @brief Animation-frame callback za automatsku reprodukciju replaya.
+ * @param {DOMHighResTimeStamp} timestamp Vrijeme koje salje requestAnimationFrame.
+ */
 function tick(timestamp) {
   if (!startedAt) {
     startedAt = timestamp - pausedAt;

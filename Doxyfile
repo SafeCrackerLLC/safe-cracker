@@ -1,0 +1,43 @@
+PROJECT_NAME           = "SafeCracker"
+PROJECT_BRIEF          = "ESP32 safe cracking game with WiFi leaderboard"
+OUTPUT_DIRECTORY       = ./docs
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = Croatian
+USE_MDFILE_AS_MAINPAGE = README.md
+
+INPUT                  = README.md \
+                         SafeCracker \
+                         webpage/README.md \
+                         webpage/app.py \
+                         webpage/static/app.js \
+                         webpage/static/replay.js
+FILE_PATTERNS          = *.ino *.h *.hpp *.c *.cpp *.py *.js *.md
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */__pycache__/* \
+                         */.venv/* \
+                         *.sqlite3 \
+                         *.pyc
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+QT_AUTOBRIEF           = YES
+MARKDOWN_SUPPORT       = YES
+
+FULL_PATH_NAMES        = NO
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+GENERATE_TREEVIEW      = YES
+SEARCHENGINE           = YES
+GENERATE_LATEX         = NO
+
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES

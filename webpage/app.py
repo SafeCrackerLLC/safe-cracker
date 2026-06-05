@@ -1,3 +1,10 @@
+"""! @file app.py
+@brief Flask webhook i leaderboard za SafeCracker rezultate.
+
+Aplikacija prima scoreove koje salje ESP32, sprema ih u SQLite bazu i prikazuje
+leaderboard, statistiku te detaljni replay pojedinog pokusaja.
+"""
+
 import json
 import os
 import sqlite3
@@ -13,6 +20,7 @@ app = Flask(__name__)
 
 
 def get_db():
+    """! @brief Vraca SQLite konekciju za trenutni Flask request."""
     if "db" not in g:
         database_dir = os.path.dirname(DATABASE_PATH)
         if database_dir:
@@ -24,12 +32,14 @@ def get_db():
 
 @app.teardown_appcontext
 def close_db(error=None):
+    """! @brief Zatvara SQLite konekciju na kraju Flask requesta."""
     db = g.pop("db", None)
     if db is not None:
         db.close()
 
 
 def init_db():
+    """! @brief Kreira ili migrira tablicu scoreova."""
     db = get_db()
     db.execute(
         """
@@ -63,10 +73,12 @@ def init_db():
 
 @app.before_request
 def ensure_db():
+    """! @brief Osigurava da baza postoji prije obrade rute."""
     init_db()
 
 
 def row_to_dict(row):
+    """! @brief Pretvara SQLite redak scorea u JSON/template rjecnik."""
     return {
         "id": row["id"],
         "device_id": row["device_id"],
@@ -84,6 +96,7 @@ def row_to_dict(row):
 
 
 def clamp_int(value, minimum, maximum, field_name):
+    """! @brief Parsira cijeli broj i ogranicava ga na zadani raspon."""
     try:
         parsed = int(value)
     except (TypeError, ValueError):
@@ -92,6 +105,7 @@ def clamp_int(value, minimum, maximum, field_name):
 
 
 def parse_json_list(value, field_name, max_items):
+    """! @brief Parsira JSON listu iz requesta i ogranicava maksimalan broj stavki."""
     if value is None or value == "":
         return []
 
@@ -108,6 +122,7 @@ def parse_json_list(value, field_name, max_items):
 
 
 def load_json_list(row, column_name):
+    """! @brief Sigurno ucitava JSON listu iz SQLite stupca."""
     value = row[column_name]
     if not value:
         return []
@@ -122,6 +137,7 @@ def load_json_list(row, column_name):
 
 @app.get("/")
 def index():
+    """! @brief Prikazuje leaderboard, pending scoreove, trend i agregirane statistike."""
     db = get_db()
     leaderboard = db.execute(
         """
@@ -185,6 +201,7 @@ def index():
 @app.post("/")
 @app.post("/api/scores")
 def create_score():
+    """! @brief Prima novi score s ESP32 uredjaja ili HTML forme."""
     payload = request.get_json(silent=True) or request.form
     try:
         device_id = str(payload.get("device_id", "unknown"))[:80]
@@ -244,12 +261,14 @@ def create_score():
 
 @app.get("/api/scores")
 def list_scores():
+    """! @brief Vraca zadnjih 100 scoreova kao JSON."""
     rows = get_db().execute("SELECT * FROM scores ORDER BY created_at DESC LIMIT 100").fetchall()
     return jsonify([row_to_dict(row) for row in rows])
 
 
 @app.get("/api/scores/<int:score_id>")
 def get_score(score_id):
+    """! @brief Vraca detalje jednog scorea, ukljucujuci targete i replay."""
     row = get_db().execute("SELECT * FROM scores WHERE id = ?", (score_id,)).fetchone()
     if row is None:
         return jsonify({"error": "score not found"}), 404
@@ -263,6 +282,7 @@ def get_score(score_id):
 
 @app.get("/scores/<int:score_id>")
 def score_detail(score_id):
+    """! @brief Renderira HTML detalj jednog scorea."""
     row = get_db().execute("SELECT * FROM scores WHERE id = ?", (score_id,)).fetchone()
     if row is None:
         return redirect(url_for("index"))
@@ -282,6 +302,7 @@ def score_detail(score_id):
 
 @app.post("/scores/<int:score_id>/claim")
 def claim_score(score_id):
+    """! @brief Sprema ime igraca za prethodno zaprimljeni score."""
     player_name = request.form.get("player_name", "").strip()[:40]
     token = request.form.get("token", "").strip()
 
@@ -302,6 +323,7 @@ def claim_score(score_id):
 
 @app.get("/healthz")
 def healthz():
+    """! @brief Health-check endpoint za container/proxy nadzor."""
     return jsonify({"ok": True})
 
 
