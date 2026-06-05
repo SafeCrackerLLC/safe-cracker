@@ -93,56 +93,140 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Safe Cracker </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>ESP32 igra sefa sa OLED prikazom, fizickim kontrolama i WiFi leaderboardom. <a class="anchor" id="md_README"></a> </p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p><blockquote class="doxtable">
+<p>&zwj;Interaktivna ESP32 igra otključavanja sefa s OLED prikazom, fizičkim kontrolama i WiFi leaderboardom. </p>
+</blockquote>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Opis</h1>
-<p>Aplikacija koja na ekranu prikazuje bravu sefa koju je potrebno okretati desno ili lijevo kako bi se otkuljučao sef. Puhanje bravu okreće desno, dok udisanje okreće bravu lijevo. Aplikacija bi imala više težina i mogućnost slanja razultata WiFi-om. Hardware će biti zatvoren u ručno izrađeno kučište.</p>
+Opis projekta</h1>
+<p>Ovaj projekt je rezultat timskog rada u sklopu projektnog zadatka kolegija <b>Razvoj ugradbenih sustava</b> na <b>Tehničkom veleučilištu u Zagrebu</b>.</p>
+<p><b>Safe Cracker</b> je interaktivna igra otključavanja sefa izrađena pomoću ESP32 mikrokontrolera, OLED zaslona i fizičkih kontrola. Igrač mora precizno okretati bravu sefa kako bi pogodio zadane ciljeve i otključao sef.</p>
+<p>Cilj projekta bio je izraditi funkcionalan ugradbeni sustav koji povezuje hardver, softver, korisničko sučelje i bežičnu komunikaciju. Projekt uključuje prikaz igre na OLED zaslonu, upravljanje pomoću fizičkih kontrola, zvučni feedback, mjerenje vremena, izračun rezultata te slanje rezultata na web leaderboard.</p>
+<p>Motivacija projekta bila je izraditi zabavan uređaj koji prikazuje primjenu ESP32 mikrokontrolera u interaktivnoj igri. Projekt simulira okretanje brave sefa, pri čemu se puhanje i udisanje u prototipu mogu simulirati potenciometrom.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Komponente</h1>
-<table class="markdownTable">
-<tr class="markdownTableHead">
-<th class="markdownTableHeadNone">Komponenta   </th><th class="markdownTableHeadNone">Dimenzije (cm)   </th><th class="markdownTableHeadNone">Cijena    </th></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">ESP32   </td><td class="markdownTableBodyNone">1.6 x 5.5 (10) x 3   </td><td class="markdownTableBodyNone">5€    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Potenciometar   </td><td class="markdownTableBodyNone">3 x 1.2 x 1.2   </td><td class="markdownTableBodyNone">1€    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Pasivni Zujalica   </td><td class="markdownTableBodyNone">1.2 x 1.2 x 1.8   </td><td class="markdownTableBodyNone">1€    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Joystick   </td><td class="markdownTableBodyNone">3.5 x 4 (5) x 3   </td><td class="markdownTableBodyNone">3€    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">OLED Ekran   </td><td class="markdownTableBodyNone">2.4 x 2.8 x 0.5   </td><td class="markdownTableBodyNone">-    </td></tr>
-<tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone">Napajanje   </td><td class="markdownTableBodyNone">2.4 x 3.2 (8) x 5.2   </td><td class="markdownTableBodyNone">8€    </td></tr>
-<tr class="markdownTableRowOdd">
-<td class="markdownTableBodyNone">Baterija   </td><td class="markdownTableBodyNone">5 x 1.7 x 2.5   </td><td class="markdownTableBodyNone">4€   </td></tr>
-</table>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Funkcionalnosti</h1>
+Funkcijski zahtjevi</h1>
+<blockquote class="doxtable">
+<p>&zwj;Ključni zahtjevi projekta su: </p>
+</blockquote>
 <ul>
-<li><b>Prikaz brave</b> — OLED ekran prikazuje animaciju brave sefa</li>
-<li><b>Rotacija desno</b> — puhanje u mikrofon okreće bravu u desno (simulirano potenciometrom)</li>
-<li><b>Rotacija lijevo</b> — udisanje okreće bravu u lijevo (simulirano potenciometrom)</li>
-<li><b>Više težina</b> — različite kombinacije i duljine za različite razine težine</li>
-<li><b>Slanje rezultata</b> — WiFi webhoook za prijenos rezultata (vrijeme rješavanja, težina, ime)</li>
-<li><b>Zvučni feedback</b> — buzzer signalizira točne/netočne poteze i otključavanje</li>
-<li><b>Kućište</b> — sav hardware zatvoren u ručno izrađenom kučištu</li>
+<li>prikaz igre na OLED zaslonu</li>
+<li>upravljanje igrom pomoću fizičkih kontrola</li>
+<li>simulacija otključavanja sefa</li>
+<li>simulacija puhanja i udisanja pomoću potenciometra</li>
+<li>izbor razine težine</li>
+<li>mjerenje vremena rješavanja</li>
+<li>izračun i prikaz rezultata</li>
+<li>zvučni feedback pomoću pasivne zujalice</li>
+<li>WiFi konfiguracija uređaja</li>
+<li>slanje rezultata na web servis</li>
+<li>prikaz rezultata na web leaderboardu</li>
+<li>mogućnost rada u online i offline načinu rada</li>
+<li>lokalno generiranje dokumentacije pomoću Doxygena</li>
+<li>automatsko objavljivanje dokumentacije pomoću GitHub Actions i GitHub Pages</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Tehnologije</h1>
+<ul>
+<li>ESP32</li>
+<li>Arduino/C++</li>
+<li>OLED zaslon</li>
+<li>I2C komunikacija</li>
+<li>potenciometar</li>
+<li>joystick</li>
+<li>tipka</li>
+<li>pasivna zujalica</li>
+<li>WiFi</li>
+<li>Python</li>
+<li>Flask</li>
+<li>SQLite</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Doxygen</li>
+<li>GitHub Actions</li>
+<li>GitHub Pages</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
-WiFi i leaderboard</h1>
-<ul>
-<li>ESP32 na bootu proba spremljeni WiFi. Ako nema credentiala ili spajanje ne uspije, otvara hotspot <code>SafeCracker-XXXX</code> sa sifrom <code>safe1234</code>.</li>
-<li>Nakon spajanja na hotspot otvori <code><a href="http://192.168.4.1">http://192.168.4.1</a></code> i upisi SSID/password i webhook URL, ili odaberi offline mode. Default webhook je <code><a href="https://ruc-esp.nerizz.com/api/scores">https://ruc-esp.nerizz.com/api/scores</a></code>.</li>
-<li>Glavni meni ima <code>Network info</code> za pregled SSID-a/webhooka i otvaranje novog setupa te <code>Go offline</code>/<code>Go online</code>.</li>
-<li>Nakon uspjesno rijesenog levela ESP32 salje <code>POST</code> na spremljeni webhook s levelom, vremenom, stabilnosti i brojem pogodjenih targeta.</li>
-<li>Python webhook i leaderboard su u <code>webpage/</code>; server se pokrece preko <code>podman compose -f webpage/compose.yaml up -d --build</code>.</li>
-</ul>
+Instalacija</h1>
+<p>Kloniranje repozitorija:</p>
+<div class="fragment"><div class="line">git clone https://github.com/SafeCrackerLLC/safe-cracker.git</div>
+<div class="line">cd safe-cracker</div>
+</div><!-- fragment --><p>Za rad s ESP32 dijelom projekta potrebno je imati instalirano Arduino razvojno okruženje ili drugo kompatibilno okruženje za razvoj ESP32 aplikacija.</p>
+<p>Python webhook i leaderboard nalaze se u direktoriju <code>webpage/</code>.</p>
+<p>Pokretanje web servisa:</p>
+<div class="fragment"><div class="line">podman compose -f webpage/compose.yaml up -d --build</div>
+</div><!-- fragment --><p>Doxygen dokumentacija može se generirati lokalno naredbom:</p>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --><p>HTML dokumentacija generira se u:</p>
+<div class="fragment"><div class="line">docs/html/index.html</div>
+</div><!-- fragment --><p>GitHub Actions workflow <code>.github/workflows/doxygen.yml</code> generira dokumentaciju na <code>main</code> grani i objavljuje je preko GitHub Pages.</p>
 <h1><a class="anchor" id="autotoc_md5"></a>
-Doxygen dokumentacija</h1>
+Članovi tima</h1>
+<blockquote class="doxtable">
+<p>&zwj;Popis članova tima, linkovi i glavni doprinos. </p>
+</blockquote>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Član tima   </th><th class="markdownTableHeadNone">Glavni doprinos    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Luka Šarić   </td><td class="markdownTableBodyNone">ESP32 logika igre    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">David Gulić   </td><td class="markdownTableBodyNone">Web leaderboard i backend    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Leo Znika   </td><td class="markdownTableBodyNone">Dokumentacija, testiranje i kućište   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Kontribucije</h1>
+<blockquote class="doxtable">
+<p>&zwj;Pravila ovise o organizaciji tima i često su izdvojena u <code>CONTRIBUTING.md</code>. </p>
+</blockquote>
+<p>Pravila za doprinos projektu definirana su u dokumentu `CONTRIBUTING.md`.</p>
+<p>Članovi tima dogovorili su podjelu rada prema funkcionalnim cjelinama projekta. Komunikacija se odvija putem dogovorenih kanala tima, a promjene se prate kroz GitHub repozitorij.</p>
+<p>Prilikom rada na projektu očekuje se:</p>
 <ul>
-<li>Lokalno generiranje dokumentacije: <code>doxygen Doxyfile</code></li>
-<li>HTML izlaz se generira u <code>docs/html/index.html</code></li>
-<li>GitHub Actions workflow <code>.github/workflows/doxygen.yml</code> generira dokumentaciju na <code>main</code> grani i objavljuje je preko GitHub Pages. </li>
+<li>poštivanje dogovorene strukture projekta</li>
+<li>pisanje razumljivog i održivog koda</li>
+<li>dokumentiranje važnih dijelova sustava</li>
+<li>korištenje GitHub pull requestova ili dogovorenog načina spajanja promjena</li>
+<li>međusobno poštovanje članova tima</li>
+<li>poštivanje kodeksa ponašanja</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md7"></a>
+📝 Kodeks ponašanja @ref "/home/runner/work/safe-cracker/safe-cracker/CODE_OF_CONDUCT.md" "![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)"</h1>
+<p>Kao studenti upoznati smo s minimumom prihvatljivog ponašanja definiranim u kodeksu ponašanja studenata.</p>
+<p>Očekujemo poštivanje <a href="https://www.ieee.org/about/corporate/governance/p7-8.html">etičkog kodeksa IEEE-a</a>, koji ima važnu obrazovnu funkciju postavljanja visokih standarda integriteta, odgovornog ponašanja i etičkog djelovanja u profesionalnim aktivnostima.</p>
+<p>Kodeks ponašanja skup je provedivih pravila koja služe za jasnu komunikaciju očekivanja i zahtjeva za rad zajednice ili tima. Njime se definiraju obaveze, prava, neprihvatljiva ponašanja te odgovarajuće posljedice.</p>
+<p>U ovom repozitoriju koristi se jedan od široko prihvaćenih kodeksa ponašanja za rad u zajednici otvorenog koda: `Contributor Covenant`.</p>
+<blockquote class="doxtable">
+<p>&zwj;### Poboljšanje funkcioniranja tima:</p>
+<ul>
+<li>definirati način na koji će rad biti podijeljen među članovima grupe</li>
+<li>dogovoriti kako će grupa međusobno komunicirati</li>
+<li>ne gubiti vrijeme na dogovore o rješavanju sporova, već primijeniti postojeće standarde</li>
+<li>podrazumijeva se da će svi članovi grupe slijediti kodeks ponašanja </li>
+</ul>
+</blockquote>
+<p>Neprihvatljivo ponašanje može se prijaviti održavateljima projekta putem kontakt adrese navedene u dokumentu `CODE_OF_CONDUCT.md`.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+📝 Licenca</h1>
+<p>Ovaj projekt licenciran je pod <b>GNU General Public License v3.0</b> licencom.</p>
+<p>GNU GPL v3.0 omogućuje korištenje, proučavanje, mijenjanje i dijeljenje programskog koda, uz uvjet da se izvedene verzije distribuiraju pod istim licencnim uvjetima.</p>
+<p>Detalji licence nalaze se u datoteci [<code>LICENSE</code>](LICENSE).</p>
+<blockquote class="doxtable">
+<p>&zwj;### Napomena:</p>
+<p>Svi paketi, biblioteke i vanjski alati korišteni u projektu distribuiraju se pod vlastitim licencama. Svi upotrijebljeni materijali, uključujući slike, modele, animacije i druge resurse, distribuiraju se pod vlastitim licencama.</p>
+<p>Originalni predložak README dokumenta korišten u sklopu kolegija licenciran je pod CC0 1.0 Universal licencom. </p>
+</blockquote>
+<p>Originalni predložak:</p>
+<p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.hr"><img src="https://img.shields.io/badge/License-CC0--1.0-lightgrey.svg" alt="cc0-1.0" style="pointer-events: none;" class="inline"/></a></p>
+<blockquote class="doxtable">
+<p>&zwj;COPYING: All the content within the original template repository is dedicated to the public domain under the CC0 1.0 Universal Public Domain Dedication. </p>
+</blockquote>
+<p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.hr"><img src="https://licensebuttons.net/p/zero/1.0/88x31.png" alt="CC0-1.0" class="inline"/></a></p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Reference na licenciranje repozitorija</h1>
+<ul>
+<li><a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a></li>
+<li><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.hr">CC0 1.0 Universal</a> </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

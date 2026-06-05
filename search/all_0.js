@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['app_0',['app',['../namespaceapp.html',1,'app'],['../namespaceapp.html#a675b4ea702c13dc4b8c05f985a25b496',1,'app.app']]],
-  ['app_2ejs_1',['app.js',['../app_8js.html',1,'']]],
-  ['app_2epy_2',['app.py',['../app_8py.html',1,'']]]
+  ['1_204baaaa_20svg_0',['📝 Kodeks ponašanja @ref &quot;/home/runner/work/safe-cracker/safe-cracker/CODE_OF_CONDUCT.md&quot; &quot;![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)&quot;',['../index.html#autotoc_md7',1,'']]]
 ];
